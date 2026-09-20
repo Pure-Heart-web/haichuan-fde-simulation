@@ -1,0 +1,72 @@
+[
+  {
+    "order_id": "SO-DEMO-01",
+    "customer_name": "ABC MARINE",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "CP90",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-02",
+    "customer_name": "ABC-Marine BV",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "SIM-S200",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-03",
+    "customer_name": "Bluewater Demo",
+    "customer_id": "CUST-DEMO-002",
+    "sku": "SIM-C100",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-04",
+    "customer_name": "ABC Marine",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "CP90",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-05",
+    "customer_name": "ABC MARINE",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "SIM-S200",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-06",
+    "customer_name": "ABC-Marine BV",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "SIM-C100",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-07",
+    "customer_name": "Bluewater Demo",
+    "customer_id": "CUST-DEMO-002",
+    "sku": "CP90",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-08",
+    "customer_name": "ABC Marine",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "SIM-S200",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-09",
+    "customer_name": "ABC MARINE",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "SIM-C100",
+    "status": "synthetic_completed"
+  },
+  {
+    "order_id": "SO-DEMO-10",
+    "customer_name": "ABC-Marine BV",
+    "customer_id": "CUST-DEMO-001",
+    "sku": "CP90",
+    "status": "synthetic_completed"
+  }
+]

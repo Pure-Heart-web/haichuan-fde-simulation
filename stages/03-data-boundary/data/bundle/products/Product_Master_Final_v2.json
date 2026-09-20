@@ -1,0 +1,11 @@
+[
+  {
+    "sku": "CP90",
+    "flow_min": 75,
+    "flow_max": 95,
+    "head_min": 32,
+    "head_max": 40,
+    "material": "SS304",
+    "sales_description": "synthetic commercial listing"
+  }
+]

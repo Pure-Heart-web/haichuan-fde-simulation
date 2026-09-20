@@ -1,0 +1,19 @@
+{
+  "dataset_id": "stage4-100-synthetic-v0",
+  "engine": "regex-baseline-v1",
+  "critical_field_accuracy": 0.9666666666666667,
+  "parse_failure_rate": 0.0,
+  "allowed_drop": 0.01,
+  "per_field_accuracy": {
+    "product_type": 1.0,
+    "quantity": 0.95,
+    "flow_m3h": 0.9,
+    "head_m": 0.95,
+    "medium_category": 1.0,
+    "temperature_c": 0.9,
+    "voltage_v": 1.0,
+    "frequency_hz": 1.0,
+    "destination_port": 1.0
+  },
+  "note": "仅为合成集回归基线；不表示达到 Pilot Release Gate。"
+}

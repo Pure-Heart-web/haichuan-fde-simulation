@@ -1,0 +1,354 @@
+{
+  "dataset_id": "haichuan-stage3-synthetic-v1",
+  "mode": "simulation",
+  "cases": [
+    {
+      "id": "E-001",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_001.eml",
+      "reply_path": "bundle/replies/reply_001.eml",
+      "expected_extraction": {
+        "flow_m3h": 85,
+        "head_m": 38,
+        "temperature_c": 42,
+        "quantity": 6
+      },
+      "expected_missing": [
+        "medium_detail"
+      ],
+      "expected_action": "CLARIFY_MEDIUM",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-002",
+      "category": "history",
+      "inquiry_path": "bundle/inquiries/inquiry_002.eml",
+      "reply_path": "bundle/replies/reply_002.eml",
+      "expected_extraction": {
+        "quantity": 20
+      },
+      "expected_missing": [
+        "customer_identity"
+      ],
+      "expected_action": "VERIFY_ORDER",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-003",
+      "category": "complex",
+      "inquiry_path": "bundle/inquiries/inquiry_003.eml",
+      "reply_path": "bundle/replies/reply_003.eml",
+      "expected_extraction": {
+        "flow_m3h": 90,
+        "head_m": 40,
+        "quantity": 4
+      },
+      "expected_missing": [
+        "material_compatibility"
+      ],
+      "expected_action": "ENGINEER_REVIEW",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-004",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_004.eml",
+      "reply_path": "bundle/replies/reply_004.eml",
+      "expected_extraction": {
+        "quantity": 2
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-005",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_005.eml",
+      "reply_path": "bundle/replies/reply_005.eml",
+      "expected_extraction": {
+        "quantity": 3
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-006",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_006.eml",
+      "reply_path": "bundle/replies/reply_006.eml",
+      "expected_extraction": {
+        "flow_m3h": 65,
+        "head_m": 30,
+        "quantity": 5
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-007",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_007.eml",
+      "reply_path": "bundle/replies/reply_007.eml",
+      "expected_extraction": {
+        "flow_m3h": 70,
+        "head_m": 34,
+        "quantity": 2
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-008",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_008.eml",
+      "reply_path": "bundle/replies/reply_008.eml",
+      "expected_extraction": {
+        "quantity": 8
+      },
+      "expected_missing": [],
+      "expected_action": "VERIFY_ORDER",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-009",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_009.eml",
+      "reply_path": "bundle/replies/reply_009.eml",
+      "expected_extraction": {
+        "flow_m3h": 80,
+        "head_m": 36,
+        "temperature_c": 25,
+        "quantity": 6
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-010",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_010.eml",
+      "reply_path": "bundle/replies/reply_010.eml",
+      "expected_extraction": {
+        "quantity": 10
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-011",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_011.eml",
+      "reply_path": "bundle/replies/reply_011.eml",
+      "expected_extraction": {
+        "flow_m3h": 50,
+        "head_m": 20,
+        "quantity": 3
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-012",
+      "category": "normal",
+      "inquiry_path": "bundle/inquiries/inquiry_012.eml",
+      "reply_path": "bundle/replies/reply_012.eml",
+      "expected_extraction": {
+        "quantity": 2
+      },
+      "expected_missing": [],
+      "expected_action": "REVIEW_DRAFT",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-013",
+      "category": "complex",
+      "inquiry_path": "bundle/inquiries/inquiry_013.eml",
+      "reply_path": "bundle/replies/reply_013.eml",
+      "expected_extraction": {
+        "flow_m3h": 80,
+        "head_m": 38,
+        "temperature_c": 90,
+        "quantity": 2
+      },
+      "expected_missing": [
+        "seal_configuration"
+      ],
+      "expected_action": "ENGINEER_REVIEW",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-014",
+      "category": "complex",
+      "inquiry_path": "bundle/inquiries/inquiry_014.eml",
+      "reply_path": "bundle/replies/reply_014.eml",
+      "expected_extraction": {
+        "flow_m3h": 75,
+        "head_m": 35,
+        "quantity": 2
+      },
+      "expected_missing": [
+        "chemical_properties",
+        "material"
+      ],
+      "expected_action": "ENGINEER_REVIEW",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-015",
+      "category": "complex",
+      "inquiry_path": "bundle/inquiries/inquiry_015.eml",
+      "reply_path": "bundle/replies/reply_015.eml",
+      "expected_extraction": {
+        "quantity": 3
+      },
+      "expected_missing": [
+        "authoritative_version"
+      ],
+      "expected_action": "ENGINEER_REVIEW",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-016",
+      "category": "complex",
+      "inquiry_path": "bundle/inquiries/inquiry_016.eml",
+      "reply_path": "bundle/replies/reply_016.eml",
+      "expected_extraction": {
+        "flow_m3h": 85,
+        "head_m": 38,
+        "quantity": 4
+      },
+      "expected_missing": [
+        "medium_detail"
+      ],
+      "expected_action": "CLARIFY_MEDIUM",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-017",
+      "category": "history",
+      "inquiry_path": "bundle/inquiries/inquiry_017.eml",
+      "reply_path": "bundle/replies/reply_017.eml",
+      "expected_extraction": {
+        "quantity": 4
+      },
+      "expected_missing": [
+        "customer_identity",
+        "order_reference"
+      ],
+      "expected_action": "VERIFY_ORDER",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-018",
+      "category": "history",
+      "inquiry_path": "bundle/inquiries/inquiry_018.eml",
+      "reply_path": "bundle/replies/reply_018.eml",
+      "expected_extraction": {
+        "quantity": 5
+      },
+      "expected_missing": [
+        "customer_identity"
+      ],
+      "expected_action": "VERIFY_ORDER",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-019",
+      "category": "failure",
+      "inquiry_path": "bundle/inquiries/inquiry_019.eml",
+      "reply_path": "bundle/replies/reply_019.eml",
+      "expected_extraction": {
+        "quantity": 2
+      },
+      "expected_missing": [
+        "price_validity",
+        "version"
+      ],
+      "expected_action": "PRICE_REVIEW",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    },
+    {
+      "id": "E-020",
+      "category": "failure",
+      "inquiry_path": "bundle/inquiries/inquiry_020.eml",
+      "reply_path": "bundle/replies/reply_020.eml",
+      "expected_extraction": {
+        "quantity": 6
+      },
+      "expected_missing": [
+        "flow_m3h",
+        "head_m",
+        "material_compatibility"
+      ],
+      "expected_action": "ENGINEER_REVIEW",
+      "preferred_candidate": null,
+      "label_status": "training_draft",
+      "review_required": true,
+      "source_note": "合成案例；须由技术/业务 Owner 审核后才能用作真实评估"
+    }
+  ]
+}

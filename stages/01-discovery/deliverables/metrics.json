@@ -1,0 +1,141 @@
+{
+  "dataset_id": "haichuan-discovery-sim-v1",
+  "mode": "simulation",
+  "generated_at": "2026-09-20T07:29:52+00:00",
+  "metrics": {
+    "sample_count": 6,
+    "sales_active_minutes": {
+      "n": 6,
+      "total": 202,
+      "mean": 33.666666666666664,
+      "median": 33.5,
+      "p90": 52.5
+    },
+    "simple_active_minutes": {
+      "n": 3,
+      "total": 49,
+      "mean": 16.333333333333332,
+      "median": 15,
+      "p90": 18.2
+    },
+    "complex_active_minutes": {
+      "n": 3,
+      "total": 153,
+      "mean": 51,
+      "median": 50,
+      "p90": 54.0
+    },
+    "first_reply_minutes": {
+      "n": 6,
+      "total": 560.0,
+      "mean": 93.33333333333333,
+      "median": 82.5,
+      "p90": 165.0
+    },
+    "engineer_total_minutes": 56,
+    "escalated_count": 3,
+    "escalation_ratio": 0.5,
+    "complex_step_mean_minutes": {
+      "requirements": 12.333333333333334,
+      "lookup": 8,
+      "selection": 15,
+      "history": 7,
+      "quote": 3.3333333333333335,
+      "draft": 5.333333333333333
+    },
+    "daily_valid_inquiries": null,
+    "engineer_daily_consultations": null
+  },
+  "gate": {
+    "status": "SIMULATION_READY",
+    "complete": true,
+    "checks": [
+      {
+        "criterion": "观察至少 3 个询盘流程",
+        "passed": true,
+        "evidence": [
+          "O001",
+          "O002",
+          "O003",
+          "O004",
+          "O005",
+          "O006"
+        ]
+      },
+      {
+        "criterion": "访谈老板、销售、工程师",
+        "passed": true,
+        "evidence": [
+          "E01",
+          "E02",
+          "E03"
+        ]
+      },
+      {
+        "criterion": "知道复杂询盘主要耗时",
+        "passed": true,
+        "evidence": [
+          "O004",
+          "O005",
+          "O006",
+          "E05"
+        ],
+        "note": "演练回读确认样本复杂询盘的选型与需求整理耗时突出，非总体结论。"
+      },
+      {
+        "criterion": "知道专家升级原因",
+        "passed": true,
+        "evidence": [
+          "E03",
+          "O004",
+          "O005",
+          "O006"
+        ],
+        "note": "缺参数、历史歧义、版本冲突有具体回放；比例待扩样。"
+      },
+      {
+        "criterion": "初步知道错误成本",
+        "passed": true,
+        "evidence": [
+          "E04",
+          "E01"
+        ],
+        "note": "初步知道一次内部返工为 2.5 人时；财务和极端错误成本未知。"
+      },
+      {
+        "criterion": "拿到一批历史询盘样本",
+        "passed": true,
+        "evidence": [
+          "H01"
+        ]
+      },
+      {
+        "criterion": "拿到基础产品资料",
+        "passed": true,
+        "evidence": [
+          "K01",
+          "K02"
+        ]
+      },
+      {
+        "criterion": "建立第一版业务指标 Baseline",
+        "passed": true,
+        "evidence": [
+          "O001",
+          "O002",
+          "O003",
+          "O004",
+          "O005",
+          "O006"
+        ]
+      },
+      {
+        "criterion": "明确至少一个 V1 Non-goal",
+        "passed": true,
+        "evidence": [
+          "人工填写 assessment.non_goals"
+        ]
+      }
+    ]
+  }
+}

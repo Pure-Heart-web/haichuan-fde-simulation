@@ -1,0 +1,51 @@
+[
+  {
+    "domain": "technical_product_parameters",
+    "source_id": "SRC-TECH",
+    "owner": "Technical",
+    "status": "approved_in_simulation",
+    "caveat": "型号适用性仍待曲线与工况审核"
+  },
+  {
+    "domain": "commercial_product_description",
+    "source_id": "SRC-MASTER",
+    "owner": "Sales",
+    "status": "provisional",
+    "caveat": "技术字段不可使用"
+  },
+  {
+    "domain": "customer_history",
+    "source_id": "SRC-ORD",
+    "owner": "Sales Operations",
+    "status": "provisional",
+    "caveat": "身份归并需确认"
+  },
+  {
+    "domain": "standard_price",
+    "source_id": "SRC-QUOTE",
+    "owner": "Sales",
+    "status": "out_of_v1",
+    "caveat": "时效与审批待核"
+  },
+  {
+    "domain": "special_discount",
+    "source_id": "SRC-DISC",
+    "owner": "Management",
+    "status": "human_only",
+    "caveat": "不进入模型上下文"
+  },
+  {
+    "domain": "warranty",
+    "source_id": null,
+    "owner": "Sales/Legal",
+    "status": "missing",
+    "caveat": "需当前批准政策"
+  },
+  {
+    "domain": "certifications",
+    "source_id": null,
+    "owner": "Quality",
+    "status": "missing",
+    "caveat": "需证书库和有效期"
+  }
+]

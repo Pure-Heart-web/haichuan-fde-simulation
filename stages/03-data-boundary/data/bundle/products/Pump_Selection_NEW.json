@@ -1,0 +1,29 @@
+[
+  {
+    "sku": "CP80",
+    "flow_min": 70,
+    "flow_max": 90,
+    "head_min": 32,
+    "head_max": 40,
+    "material": "SS316",
+    "status": "training_only"
+  },
+  {
+    "sku": "CP90",
+    "flow_min": 80,
+    "flow_max": 100,
+    "head_min": 35,
+    "head_max": 42,
+    "material": "SS316",
+    "status": "training_only"
+  },
+  {
+    "sku": "CP100",
+    "flow_min": 90,
+    "flow_max": 115,
+    "head_min": 38,
+    "head_max": 48,
+    "material": "SS316",
+    "status": "training_only"
+  }
+]

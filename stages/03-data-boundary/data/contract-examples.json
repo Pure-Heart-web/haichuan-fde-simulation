@@ -1,0 +1,69 @@
+{
+  "WorkItem": {
+    "id": "WI-SIM-001",
+    "tenant_id": "haichuan-training",
+    "source_type": "email",
+    "source_id": "E-001",
+    "sender": "sales@al-noor-engineering.example",
+    "subject": "Synthetic pump inquiry 001",
+    "body": "Need centrifugal pump. Flow 85 m3/h, head 38 m, 42 C water, 6 pcs, 380V/50Hz. Please quote CIF Jebel Ali.",
+    "attachments": [],
+    "received_at": "2026-09-14T09:00:00+08:00"
+  },
+  "InquiryRecord": {
+    "work_item_id": "WI-SIM-001",
+    "customer_name": "Al Noor Engineering",
+    "customer_id": null,
+    "country": "UAE",
+    "product_type": "centrifugal_pump",
+    "quantity": 6,
+    "flow_m3h": 85,
+    "head_m": 38,
+    "medium": null,
+    "temperature_c": 42,
+    "voltage": "380V",
+    "frequency": "50Hz",
+    "application": "cooling_water",
+    "destination_port": "Jebel Ali",
+    "missing_fields": ["medium_detail"],
+    "extraction_confidence": null,
+    "evidence": [
+      {"source_id": "E-001", "source_version": "synthetic-v1", "locator": "email body"}
+    ]
+  },
+  "ProductCandidate": {
+    "sku": "CP90",
+    "match_score": null,
+    "matched_conditions": ["flow_in_simulated_range", "head_in_simulated_range"],
+    "warnings": ["medium_unknown", "performance_curve_unavailable", "final_selection_prohibited"],
+    "rule_results": [],
+    "requires_engineer_review": true,
+    "evidence": [
+      {"source_id": "SRC-TECH", "source_version": "R2-simulated", "locator": "CP90"}
+    ]
+  },
+  "Recommendation": {
+    "id": "REC-SIM-001",
+    "inquiry_id": "E-001",
+    "candidate_products": ["CP90"],
+    "preferred_candidate": null,
+    "reasoning_summary": "仅可列为待验证候选；介质性质及性能曲线未确认。",
+    "missing_information": ["medium_detail"],
+    "risk_level": "high",
+    "required_reviewer": "engineer",
+    "evidence": [
+      {"source_id": "SRC-TECH", "source_version": "R2-simulated", "locator": "CP90"}
+    ]
+  },
+  "ReviewTask": {
+    "id": "RT-SIM-001",
+    "work_item_id": "WI-SIM-001",
+    "recommendation_id": "REC-SIM-001",
+    "review_type": "engineering",
+    "assignee_role": "engineer",
+    "status": "pending",
+    "decision": null,
+    "edits": [],
+    "comment": "等待介质详情和性能曲线。"
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "R-001",
+    "condition": "medium=seawater",
+    "action": "reject_cast_iron_candidate",
+    "status": "verified_in_simulation",
+    "owner": "Technical",
+    "source_ids": [
+      "SRC-CHAT",
+      "SRC-TECH"
+    ],
+    "scope": "teaching scenario only",
+    "exception": "specific materials require engineering review"
+  },
+  {
+    "id": "R-002",
+    "condition": "temperature_c>=80",
+    "action": "require_engineer_review",
+    "status": "verified_in_simulation",
+    "owner": "Technical",
+    "source_ids": [
+      "SRC-CHAT"
+    ],
+    "scope": "teaching scenario only",
+    "exception": "product-specific limits need current technical file"
+  },
+  {
+    "id": "R-003",
+    "condition": "candidate_near_curve_edge",
+    "action": "prefer_inner_duty_point",
+    "status": "candidate",
+    "owner": "Technical",
+    "source_ids": [
+      "SRC-TECH"
+    ],
+    "scope": "CP-series pending curves",
+    "exception": "cannot execute until curve data and acceptance threshold approved"
+  }
+]

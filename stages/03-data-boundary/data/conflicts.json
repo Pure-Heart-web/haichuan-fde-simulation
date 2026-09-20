@@ -1,0 +1,22 @@
+[
+  {
+    "id": "D-001",
+    "entity": "CP90",
+    "fields": [
+      "flow_min",
+      "flow_max",
+      "head_min",
+      "head_max",
+      "material"
+    ],
+    "source_ids": [
+      "SRC-TECH",
+      "SRC-MASTER"
+    ],
+    "decision_owner": "Technical",
+    "status": "resolved_for_technical_fields",
+    "decision": "以技术部 Pump_Selection_NEW 的技术参数为模拟权威；销售主数据仅用于商业描述。",
+    "evidence": "Stage 3 原始模拟会议中陈工确认技术表；真实环境仍需签署版本、生效日期。",
+    "residual_risk": "缺少性能曲线和应用/介质确认，不因此批准 CP90 最终选型。"
+  }
+]

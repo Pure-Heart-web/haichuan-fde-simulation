@@ -1,0 +1,9 @@
+[
+  {
+    "customer_id": "CUST-DEMO-001",
+    "sku": "CP90",
+    "special_price": 700,
+    "currency": "SIM",
+    "approved_by": "fictional_manager"
+  }
+]

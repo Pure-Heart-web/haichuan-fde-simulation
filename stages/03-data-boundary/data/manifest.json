@@ -1,0 +1,127 @@
+{
+  "dataset_id": "haichuan-stage3-synthetic-v1",
+  "mode": "simulation",
+  "sources": [
+    {
+      "id": "SRC-INQ",
+      "path": "bundle/inquiries",
+      "name": "Historical inquiry emails",
+      "kind": "Data",
+      "owner": "Sales",
+      "version": "synthetic-v1",
+      "sensitivity": "Confidential",
+      "model_context": "redacted_only",
+      "confidence": "sample_only"
+    },
+    {
+      "id": "SRC-REP",
+      "path": "bundle/replies",
+      "name": "Sales replies",
+      "kind": "Data",
+      "owner": "Sales",
+      "version": "synthetic-v1",
+      "sensitivity": "Confidential",
+      "model_context": "redacted_only",
+      "confidence": "sample_only"
+    },
+    {
+      "id": "SRC-TECH",
+      "path": "bundle/products/Pump_Selection_NEW.json",
+      "name": "Technical selection",
+      "kind": "Structured Data",
+      "owner": "Technical",
+      "version": "R2-simulated",
+      "sensitivity": "Internal",
+      "model_context": "approved_extract_only",
+      "confidence": "approved_in_simulation"
+    },
+    {
+      "id": "SRC-MASTER",
+      "path": "bundle/products/Product_Master_Final_v2.json",
+      "name": "Commercial product master",
+      "kind": "Structured Data",
+      "owner": "Sales",
+      "version": "R2-simulated",
+      "sensitivity": "Internal",
+      "model_context": "approved_extract_only",
+      "confidence": "conflicted_for_technical_fields"
+    },
+    {
+      "id": "SRC-CAT24",
+      "path": "bundle/products/Pump_Catalog_2024.md",
+      "name": "Public catalog 2024",
+      "kind": "Knowledge",
+      "owner": "Marketing",
+      "version": "2024",
+      "sensitivity": "Public",
+      "model_context": "retrieval_with_version",
+      "confidence": "archived"
+    },
+    {
+      "id": "SRC-CAT25",
+      "path": "bundle/products/Pump_Catalog_2025.md",
+      "name": "Public catalog 2025",
+      "kind": "Knowledge",
+      "owner": "Marketing/Technical",
+      "version": "2025",
+      "sensitivity": "Public",
+      "model_context": "retrieval_with_version",
+      "confidence": "may_lag"
+    },
+    {
+      "id": "SRC-ORD",
+      "path": "bundle/orders/orders.json",
+      "name": "Historical orders",
+      "kind": "Context",
+      "owner": "Sales Operations",
+      "version": "synthetic-v1",
+      "sensitivity": "Confidential",
+      "model_context": "redacted_only",
+      "confidence": "identity_pending"
+    },
+    {
+      "id": "SRC-FAQ",
+      "path": "bundle/faq.md",
+      "name": "FAQ",
+      "kind": "Knowledge",
+      "owner": "Sales",
+      "version": "synthetic-v1",
+      "sensitivity": "Internal",
+      "model_context": "approved_extract_only",
+      "confidence": "policy_missing"
+    },
+    {
+      "id": "SRC-CHAT",
+      "path": "bundle/tech_chat.txt",
+      "name": "Technical chat",
+      "kind": "Tacit Knowledge",
+      "owner": "Technical",
+      "version": "unversioned",
+      "sensitivity": "Confidential",
+      "model_context": "prohibited_until_verified",
+      "confidence": "candidate_only"
+    },
+    {
+      "id": "SRC-QUOTE",
+      "path": "bundle/pricing/Quote_2025.json",
+      "name": "Standard quote",
+      "kind": "Pricing Data",
+      "owner": "Sales",
+      "version": "2025",
+      "sensitivity": "Confidential",
+      "model_context": "prohibited_in_v1",
+      "confidence": "stale_possible"
+    },
+    {
+      "id": "SRC-DISC",
+      "path": "bundle/pricing/Special_Discount.json",
+      "name": "Special discount",
+      "kind": "Sensitive Policy",
+      "owner": "Management",
+      "version": "synthetic-v1",
+      "sensitivity": "Highly Sensitive",
+      "model_context": "prohibited",
+      "confidence": "approval_only"
+    }
+  ]
+}

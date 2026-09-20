@@ -1,0 +1,17 @@
+{
+  "status": "provisional",
+  "entities": [
+    {
+      "customer_id": "CUST-DEMO-001",
+      "canonical_name": "ABC Marine BV",
+      "aliases": [
+        "ABC Marine",
+        "ABC MARINE",
+        "ABC-Marine BV"
+      ],
+      "owner": "Sales Operations",
+      "evidence": "合成订单中的共享 customer_id；真实合同/CRM 身份待核",
+      "autolink_allowed": false
+    }
+  ]
+}

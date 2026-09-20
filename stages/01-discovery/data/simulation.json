@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "dataset_id": "haichuan-discovery-sim-v1",
+  "mode": "simulation",
+  "sources": [
+    {
+      "id": "E01",
+      "title": "王总访谈",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "E02",
+      "title": "Linda 访谈",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "E03",
+      "title": "陈工访谈",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "E04",
+      "title": "返工记录展示",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "E05",
+      "title": "会后回读",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "H01",
+      "title": "历史询盘样本包",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "K01",
+      "title": "产品目录",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "K02",
+      "title": "选型规则摘录",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "K03",
+      "title": "历史订单",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "O001",
+      "title": "Q001 操作观察",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "O002",
+      "title": "Q002 操作观察",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "O003",
+      "title": "Q003 操作观察",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "O004",
+      "title": "Q004 操作观察",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "O005",
+      "title": "Q005 操作观察",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    },
+    {
+      "id": "O006",
+      "title": "Q006 操作观察",
+      "path": "session-notes.md",
+      "origin": "simulation"
+    }
+  ],
+  "interviews": [
+    {
+      "role": "buyer",
+      "source_id": "E01"
+    },
+    {
+      "role": "sales",
+      "source_id": "E02"
+    },
+    {
+      "role": "engineer",
+      "source_id": "E03"
+    }
+  ],
+  "observations": [
+    {
+      "id": "Q001",
+      "complexity": "simple",
+      "source_id": "O001",
+      "received_at": "2026-09-14T09:00:00+08:00",
+      "first_reply_at": "2026-09-14T09:25:00+08:00",
+      "steps": {
+        "requirements": 4,
+        "lookup": 2,
+        "selection": 3,
+        "history": 0,
+        "quote": 3,
+        "draft": 3
+      },
+      "engineer_minutes": 0,
+      "escalated": false,
+      "escalation_reason": ""
+    },
+    {
+      "id": "Q002",
+      "complexity": "simple",
+      "source_id": "O002",
+      "received_at": "2026-09-14T10:00:00+08:00",
+      "first_reply_at": "2026-09-14T10:40:00+08:00",
+      "steps": {
+        "requirements": 3,
+        "lookup": 2,
+        "selection": 2,
+        "history": 2,
+        "quote": 3,
+        "draft": 3
+      },
+      "engineer_minutes": 0,
+      "escalated": false,
+      "escalation_reason": ""
+    },
+    {
+      "id": "Q003",
+      "complexity": "simple",
+      "source_id": "O003",
+      "received_at": "2026-09-15T09:00:00+08:00",
+      "first_reply_at": "2026-09-15T09:45:00+08:00",
+      "steps": {
+        "requirements": 4,
+        "lookup": 3,
+        "selection": 4,
+        "history": 1,
+        "quote": 3,
+        "draft": 4
+      },
+      "engineer_minutes": 0,
+      "escalated": false,
+      "escalation_reason": ""
+    },
+    {
+      "id": "Q004",
+      "complexity": "complex",
+      "source_id": "O004",
+      "received_at": "2026-09-14T11:00:00+08:00",
+      "first_reply_at": "2026-09-14T13:00:00+08:00",
+      "steps": {
+        "requirements": 12,
+        "lookup": 8,
+        "selection": 14,
+        "history": 6,
+        "quote": 3,
+        "draft": 5
+      },
+      "engineer_minutes": 18,
+      "escalated": true,
+      "escalation_reason": "关键参数缺失，需要工程师确定追问项"
+    },
+    {
+      "id": "Q005",
+      "complexity": "complex",
+      "source_id": "O005",
+      "received_at": "2026-09-15T10:00:00+08:00",
+      "first_reply_at": "2026-09-15T13:00:00+08:00",
+      "steps": {
+        "requirements": 14,
+        "lookup": 7,
+        "selection": 16,
+        "history": 8,
+        "quote": 4,
+        "draft": 6
+      },
+      "engineer_minutes": 22,
+      "escalated": true,
+      "escalation_reason": "历史型号歧义与旧版本需确认"
+    },
+    {
+      "id": "Q006",
+      "complexity": "complex",
+      "source_id": "O006",
+      "received_at": "2026-09-15T14:00:00+08:00",
+      "first_reply_at": "2026-09-15T16:30:00+08:00",
+      "steps": {
+        "requirements": 11,
+        "lookup": 9,
+        "selection": 15,
+        "history": 7,
+        "quote": 3,
+        "draft": 5
+      },
+      "engineer_minutes": 16,
+      "escalated": true,
+      "escalation_reason": "资料版本冲突"
+    }
+  ],
+  "inventory": [
+    {
+      "name": "6 条询盘与回放日志",
+      "source_id": "H01",
+      "kind": "inquiries",
+      "owner": "Linda",
+      "version": "演练 V1",
+      "quality": "定向样本；不是全量邮件，无二进制附件",
+      "access": "仅本地教学；真实访问权限待验证"
+    },
+    {
+      "name": "产品目录摘录",
+      "source_id": "K01",
+      "kind": "product",
+      "owner": "陈工",
+      "version": "R1",
+      "quality": "无真实性能曲线；与 R2 有冲突场景",
+      "access": "仅本地教学；真实访问权限待验证"
+    },
+    {
+      "name": "选型规则摘录",
+      "source_id": "K02",
+      "kind": "product",
+      "owner": "陈工",
+      "version": "R2",
+      "quality": "仅示例输入与升级规则；需确认版本权威性",
+      "access": "仅本地教学；真实访问权限待验证"
+    },
+    {
+      "name": "客户历史订单摘录",
+      "source_id": "K03",
+      "kind": "history",
+      "owner": "销售运营",
+      "version": "演练 V1",
+      "quality": "客户 DEMO-A 有多个历史型号；无真实客户映射",
+      "access": "仅本地教学；真实访问权限待验证"
+    }
+  ],
+  "assessment": {
+    "problem": "在这批模拟观察中，销售处理复杂询盘时，主动投入集中在产品选型和需求整理。缺参数、历史歧义、资料版本冲突触发专家介入，值得优先验证知识获取与需求结构化问题。",
+    "hypothesis": "提供可追溯的资料查找、需求缺口清单和历史线索，可能减少销售准备与工程师重复答疑时间；尚无系统对照实验验证收益。",
+    "non_goals": [
+      "V1 不自动对外发送邮件或报价。",
+      "V1 不替代工程师的最终适用性与版本确认。",
+      "本阶段不承诺准确率、上线日期或技术框架。"
+    ],
+    "evidence": [
+      {
+        "type": "Claim",
+        "text": "管理层期望提高销售产能和响应速度。",
+        "source_ids": [
+          "E01"
+        ]
+      },
+      {
+        "type": "Claim",
+        "text": "新人比熟手更依赖工程师，尚无同题对照。",
+        "source_ids": [
+          "E02"
+        ]
+      },
+      {
+        "type": "Fact",
+        "text": "6 条场景内观察包含 3 条技术升级；计时可复算。",
+        "source_ids": [
+          "O001",
+          "O002",
+          "O003",
+          "O004",
+          "O005",
+          "O006"
+        ]
+      },
+      {
+        "type": "Fact",
+        "text": "一次模拟内部返工记录为 2.5 人时，无财务损失金额。",
+        "source_ids": [
+          "E04"
+        ]
+      },
+      {
+        "type": "Hypothesis",
+        "text": "知识查找与需求整理支持可能是优先机会。",
+        "source_ids": [
+          "E05"
+        ]
+      },
+      {
+        "type": "Unknown",
+        "text": "每日有效询盘量、全年价值、系统 API 与真实数据访问条件未知。",
+        "source_ids": []
+      }
+    ],
+    "workflow": [
+      {
+        "step": "接收询盘与理解需求",
+        "owner": "销售",
+        "detail": "整理客户需求；缺关键参数时记录缺口",
+        "source_id": "O004"
+      },
+      {
+        "step": "查资料与候选型号",
+        "owner": "销售",
+        "detail": "目录/规则检索，版本冲突转工程师",
+        "source_id": "O006"
+      },
+      {
+        "step": "核对客户历史",
+        "owner": "销售",
+        "detail": "previous order 不唯一时核对订单并澄清",
+        "source_id": "O005"
+      },
+      {
+        "step": "专家升级",
+        "owner": "陈工",
+        "detail": "确认缺参数、历史版本或资料冲突的下一步",
+        "source_id": "E03"
+      },
+      {
+        "step": "报价准备与回复草稿",
+        "owner": "销售",
+        "detail": "资料齐全才形成报价；复杂案例首次回复可为澄清",
+        "source_id": "O004"
+      },
+      {
+        "step": "人工确认与发送",
+        "owner": "销售；技术部分由工程师确认",
+        "detail": "核实型号、报价、交期与对外表述",
+        "source_id": "E01"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "name": "需求是否足够",
+      "inputs": "介质、流量、扬程、环境等",
+      "basis": "缺参数先补问；不补造条件",
+      "owner": "销售/陈工",
+      "fallback": "整理澄清问题",
+      "boundary": "可辅助提取；工程师确认关键追问",
+      "source_id": "K02"
+    },
+    {
+      "name": "候选型号能否使用",
+      "inputs": "需求、目录、当前规则版本",
+      "basis": "需要权威版本与适用依据",
+      "owner": "陈工",
+      "fallback": "冲突时暂停确定型号",
+      "boundary": "可汇总证据；不自主确认适用性",
+      "source_id": "K02"
+    },
+    {
+      "name": "previous order 指哪一单",
+      "inputs": "客户标识、订单、型号与版本",
+      "basis": "同客户可能存在多个型号",
+      "owner": "销售运营/销售",
+      "fallback": "向客户确认订单号",
+      "boundary": "可列历史候选；不猜测唯一订单",
+      "source_id": "K03"
+    },
+    {
+      "name": "是否对外报价/发送",
+      "inputs": "已确认型号、价格、交期、完整草稿",
+      "basis": "商业承诺需人工确认",
+      "owner": "销售",
+      "fallback": "未确认则仅发送人工批准的澄清",
+      "boundary": "AI 只可辅助草稿；最终发送由人执行",
+      "source_id": "E01"
+    }
+  ],
+  "questions": [
+    {
+      "question": "每日有效询盘量及旺淡季差异？",
+      "owner": "Linda",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "连续完整工作日取样，扩展至旺淡季记录",
+      "impact": "频率与经济价值"
+    },
+    {
+      "question": "工程师每天咨询次数与实际投入？",
+      "owner": "陈工",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "逐事件日志，去重并区分主动与等待",
+      "impact": "专家瓶颈与工时基线"
+    },
+    {
+      "question": "新人和熟手差异有多大？",
+      "owner": "Linda",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "相同询盘盲测回放，控制复杂度",
+      "impact": "目标用户与培训收益"
+    },
+    {
+      "question": "首次回复速度是否影响成交？",
+      "owner": "王总/销售运营",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "先做关联分析并控制客户质量；后续设计对照",
+      "impact": "不提前承诺收入提升"
+    },
+    {
+      "question": "哪份产品资料为当前权威版本？",
+      "owner": "陈工",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "逐条核对目录、规则、停产替代关系",
+      "impact": "推荐和引用可行性"
+    },
+    {
+      "question": "邮件/CRM/ERP、API 与权限如何？",
+      "owner": "IT 联络人",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "列出系统和访问范围，确认数据处理约束",
+      "impact": "后续集成边界"
+    },
+    {
+      "question": "报价历史是否仍有效，错误成本范围？",
+      "owner": "销售运营/王总",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "抽样价格时效与返工/损失记录",
+      "impact": "商业风险与复核成本"
+    },
+    {
+      "question": "是否能拿到完整附件和更具代表性的样本？",
+      "owner": "Linda",
+      "due": "下一轮 Discovery 前（演练安排）",
+      "method": "补采连续时间窗内脱敏样本及附件",
+      "impact": "评估集和代表性"
+    }
+  ],
+  "checks": {
+    "bottleneck": {
+      "confirmed": true,
+      "note": "演练回读确认样本复杂询盘的选型与需求整理耗时突出，非总体结论。",
+      "source_ids": [
+        "O004",
+        "O005",
+        "O006",
+        "E05"
+      ]
+    },
+    "escalation": {
+      "confirmed": true,
+      "note": "缺参数、历史歧义、版本冲突有具体回放；比例待扩样。",
+      "source_ids": [
+        "E03",
+        "O004",
+        "O005",
+        "O006"
+      ]
+    },
+    "error_cost": {
+      "confirmed": true,
+      "note": "初步知道一次内部返工为 2.5 人时；财务和极端错误成本未知。",
+      "source_ids": [
+        "E04",
+        "E01"
+      ]
+    }
+  }
+}

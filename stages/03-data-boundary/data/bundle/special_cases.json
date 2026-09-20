@@ -1,0 +1,32 @@
+[
+  {
+    "id": "X-001",
+    "inquiry_id": "E-003",
+    "type": "rule_violation",
+    "lesson": "海水介质的材料限制需要规则和人工审查"
+  },
+  {
+    "id": "X-002",
+    "inquiry_id": "E-013",
+    "type": "high_temperature",
+    "lesson": "高温时密封配置需工程师确认"
+  },
+  {
+    "id": "X-003",
+    "inquiry_id": "E-015",
+    "type": "source_conflict",
+    "lesson": "CP90 技术字段冲突，暂停推荐"
+  },
+  {
+    "id": "X-004",
+    "inquiry_id": "E-019",
+    "type": "stale_price",
+    "lesson": "历史报价不可直接复用"
+  },
+  {
+    "id": "X-005",
+    "inquiry_id": "E-020",
+    "type": "missing_duty",
+    "lesson": "缺少工况不能正式报价"
+  }
+]
