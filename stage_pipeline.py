@@ -63,6 +63,14 @@ def main():
             code = check_baseline(output)
             if code:
                 return code
+            from stage8_vertical import run_demo as run_vertical, check_baseline as check_vertical
+            vertical_output = (args.output_root / 'stage-08-vertical').resolve()
+            code = run_vertical(vertical_output)
+            if code:
+                return code
+            code = check_vertical(vertical_output)
+            if code:
+                return code
         return 0
     except (AuditError, DataError, OSError, KeyError, TypeError, ValueError) as exc:
         print(f'检查失败：{exc}', file=sys.stderr)

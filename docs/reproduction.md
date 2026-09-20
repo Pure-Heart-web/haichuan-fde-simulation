@@ -41,3 +41,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 ## Stage 8：双客户产品化演练
 
 运行 `python3 stage8.py demo`、`python3 stage8.py eval --check-baseline`，核对 `outputs/stage-08/platform-status.json` 的启航 10 条、海川适配 1 条、租户作用域通过、真实用户 0。用 `trace --case QH-001` 查看资产维修来源和安全规则；用 `trace --tenant haichuan-training --case QH-001` 应得到当前租户找不到该 Trace 的错误。`incident` 对比不用/使用维修历史时的排序。完整步骤、危险案例和边界见 [Stage 8 入口](../stages/08-productization/README.md)。
+
+## Stage 8：双 Domain 纵向案例
+
+运行 `python3 stage8_vertical.py demo --check-baseline`，核对 `outputs/stage-08-vertical/episode-report.md`：启航 `QH-001`、海川 `P7-003` 都应有五步完整事件链、一次重复输入被去重、零对外发送和零真实用户。若要自己审核，用独立目录执行 `prepare`、`queue`、`review`、`close`；完整命令和工时记录方式见[纵向演练手册](../stages/08-productization/vertical/README.md)。

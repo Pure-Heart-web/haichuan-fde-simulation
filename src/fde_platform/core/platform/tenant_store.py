@@ -7,10 +7,11 @@ from pathlib import Path
 from fde_platform.core.models import utc_now
 from fde_platform.core.platform.contracts import FeedbackEvent
 
-KINDS = frozenset({'work_item', 'context', 'knowledge', 'rule', 'trace', 'eval', 'review_task', 'recommendation'})
+KINDS = frozenset({'case_record', 'work_item', 'context', 'knowledge', 'rule', 'trace',
+                   'eval', 'review_task', 'recommendation'})
 IDENTIFIER_FIELDS = {'work_item': 'id', 'context': 'serial_number', 'knowledge': 'document_id',
                      'rule': 'id', 'trace': 'trace_id', 'review_task': 'task_id',
-                     'recommendation': 'case_id'}
+                     'recommendation': 'case_id', 'case_record': 'case_record_id'}
 
 
 class TenantStore:
@@ -20,6 +21,7 @@ class TenantStore:
         self.tenant_domains = dict(tenant_domains)
         self.conn = sqlite3.connect(self.path)
         self.conn.row_factory = sqlite3.Row
+        self.conn.execute('PRAGMA foreign_keys = ON')
         self.conn.executescript('''
           CREATE TABLE IF NOT EXISTS artifacts (
             tenant_id TEXT NOT NULL, domain TEXT NOT NULL, kind TEXT NOT NULL,
@@ -94,6 +96,10 @@ class TenantSession:
         return [dict(x) for x in rows]
 
     def review(self, task_id, actor_id, actor_role, action, reason=''):
+        with self.store.conn:
+            return self._review_uncommitted(task_id, actor_id, actor_role, action, reason)
+
+    def _review_uncommitted(self, task_id, actor_id, actor_role, action, reason=''):
         task = self.get('review_task', task_id)
         if task is None:
             raise ValueError('任务不存在于当前租户')
@@ -114,10 +120,9 @@ class TenantSession:
         event_id = 'FB-' + hashlib.sha256((self.tenant_id + '|' + task_id + '|' + actor_id + '|' + action).encode()).hexdigest()[:16]
         event = FeedbackEvent(event_id, self.tenant_id, self.domain, task_id, task['trace_id'],
                               actor_id, actor_role, action, reason.strip(), utc_now())
-        with self.store.conn:
-            self.store.conn.execute('''INSERT INTO feedback_events
-              (tenant_id,domain,event_id,task_id,trace_id,actor_id,actor_role,action,reason,created_at)
-              VALUES (?,?,?,?,?,?,?,?,?,?)''',
-              (event.tenant_id, event.domain, event.event_id, event.task_id, event.trace_id,
-               event.actor_id, event.actor_role, event.action, event.reason, event.created_at))
+        self.store.conn.execute('''INSERT INTO feedback_events
+          (tenant_id,domain,event_id,task_id,trace_id,actor_id,actor_role,action,reason,created_at)
+          VALUES (?,?,?,?,?,?,?,?,?,?)''',
+          (event.tenant_id, event.domain, event.event_id, event.task_id, event.trace_id,
+           event.actor_id, event.actor_role, event.action, event.reason, event.created_at))
         return event

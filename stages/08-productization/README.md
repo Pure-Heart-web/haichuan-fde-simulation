@@ -17,6 +17,8 @@ python3 stage8.py review
 
 `review` 在 `http://127.0.0.1:8769/?user=zhou` 启动启航专用本机审核页，可切换 `engineer-chen`。角色选择**不是身份认证**。输出在 `outputs/stage-08/`：`service-artifacts/`、`haichuan-bridge.json`、`stage8-eval.md`、`shadow-incident.md`、`platform-status.json` 和 SQLite 队列。重复 demo 保留审核事件；更改源数据后请用新的 `--output outputs/my-stage8-run`。`python3 stage_pipeline.py all` 串联 Stage 1–8。
 
+新增的[双 Domain 纵向演练](vertical/README.md)从 `QH-001` 电话转写和 `P7-003` 邮件开始，走模拟建单、证据化内部建议、人工改写与独立合成结果记录。运行 `python3 stage8_vertical.py demo --check-baseline`；或者按手册使用 `prepare`、`queue`、`review`、`close` 逐步演练。它使用独立的 `outputs/stage-08-vertical/`，也已纳入 `stage_pipeline.py all`。
+
 ## 练习顺序
 
 1. 阅读[启航 Discovery 与安全边界](guides/discovery-and-safety.md)，先在[观察模板](templates/second-customer-notebook.md)写自己的 Problem Brief、流程和信息缺口。
@@ -37,5 +39,6 @@ python3 stage8.py review
 | `src/fde_platform/domains/foreign_trade/platform/` | 海川已有流程向共享契约的显式适配器；产品排序仍留在外贸 Domain |
 | `src/fde_platform/apps/service_review_web.py` | 启航设备视角的本机审核页，后台使用共享审核契约 |
 | `tests/test_stage8_productization.py` | 租户隔离、安全路由、上下文排序回归、页面权限及幂等重放 |
+| `vertical/`、`stage8_vertical.py`、`tests/test_stage8_vertical_slice.py` | 双案例输入、模拟接入、事件链、人工审核与结果回填、回归测试 |
 
 脚本的 10/10 Top-1 和 50/50 字段命中来自自造样本，只说明演练路径可复现，不说明维修准确率或现场安全。真实接入要补 CMMS/工单适配、来源签核、账号与权限、独立标注、专家流程、事故与责任边界、真实基线以及安全评审。

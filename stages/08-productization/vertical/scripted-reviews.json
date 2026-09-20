@@ -1,0 +1,7 @@
+{
+  "mode": "synthetic_role_play",
+  "reviews": [
+    {"tenant_id":"qihang-training","domain":"after_sales","case_id":"QH-001","actor_id":"engineer-chen","actor_role":"engineer","edited_action":"先核对 WO-QH-110 的装配待确认项；异响条件下不提供客户自行维修步骤","reason":"昨日保养和异响共同改变排查优先级"},
+    {"tenant_id":"haichuan-training","domain":"foreign_trade","case_id":"P7-003","actor_id":"anna","actor_role":"sales","edited_action":"保留 CP90 暂定候选，先向客户核实当前电气参数与现场工况，再由人工确认保修和 CE 文件适用范围","reason":"历史订单仅作参考，本次明确条件与文件适用性仍需确认"}
+  ]
+}

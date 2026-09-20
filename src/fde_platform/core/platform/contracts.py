@@ -31,6 +31,21 @@ class ContextRecord:
 
 
 @dataclass(frozen=True)
+class CaseRecord:
+    case_record_id: str
+    tenant_id: str
+    domain: str
+    case_id: str
+    kind: str
+    source_event_id: str
+    source_id: str
+    status: str
+
+    def to_dict(self):
+        return asdict(self)
+
+
+@dataclass(frozen=True)
 class DecisionOption:
     code: str
     label: str

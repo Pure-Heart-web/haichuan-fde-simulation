@@ -20,5 +20,7 @@ jobs:
         run: python3 stage7.py eval --check-baseline
       - name: Stage 8 synthetic two-tenant and safety regression
         run: python3 stage8.py eval --check-baseline
+      - name: Two-domain vertical workflow regression
+        run: python3 stage8_vertical.py demo --check-baseline
       - name: Stage 1–8 offline delivery walkthrough
         run: python3 stage_pipeline.py all

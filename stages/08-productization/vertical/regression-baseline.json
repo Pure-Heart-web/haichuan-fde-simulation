@@ -1,0 +1,13 @@
+{
+  "mode":"synthetic_vertical_regression_only",
+  "report":{"mode":"synthetic_vertical_replay","episode_count":2,"closed_count":2,
+            "duplicate_events_in_fixture":1,"shared_event_sequence":true,
+            "customer_messages_sent":0,"dispatches_created":0,"actual_customer_cases":0,
+            "delivery_time_savings_proven":false,"real_pilot_gate":"NOT_EVALUATED"},
+  "episodes":{
+    "QH-001":{"tenant_id":"qihang-training","domain":"after_sales","state":"closed",
+              "top_option":"review_maintenance_work_order","outcome_id":"SIM-CMMS-QH-001-CLOSE"},
+    "P7-003":{"tenant_id":"haichuan-training","domain":"foreign_trade","state":"closed",
+              "top_option":"CP90","outcome_id":"SIM-CRM-P7-003-CONFIRM"}
+  }
+}

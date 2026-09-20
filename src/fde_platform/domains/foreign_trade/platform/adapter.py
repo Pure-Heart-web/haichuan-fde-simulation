@@ -16,28 +16,39 @@ def bridge_haichuan(case, session, root):
     artifact, old_trace = simulate_case(case, root=root, provider=SimulatedContextProvider(root),
                                          index=KnowledgeIndex(root), products=load_components(root))
     old_rec = artifact['recommendation'] or {}
-    options = tuple(DecisionOption(x['sku'], '需销售/工程师核实的暂定产品候选',
-                                   x['score'], tuple(old_rec.get('source_ids', ())))
+    knowledge_ids = tuple(sorted({row['document_id'] for rows in artifact['knowledge_evidence'].values()
+                                  for row in rows}))
+    order_source = artifact['previous_order']['source_id'] if artifact['previous_order'] else None
+    rule_ids = tuple(x['rule_id'] for x in old_rec.get('triggered_rules', ()))
+    evidence_refs = tuple(sorted(set(knowledge_ids + rule_ids + ((order_source,) if order_source else ()))))
+    options = tuple(DecisionOption(x['sku'], f'{x["sku"]} 暂定候选；需人工核对当前工况与来源',
+                                   x['score'], evidence_refs)
                     for x in old_rec.get('candidates', ()))
     recommendation = Recommendation(options, ('sales_review',), tuple(old_rec.get('warnings', ())),
-                                    tuple(old_rec.get('source_ids', ())), 'low', True)
+                                    evidence_refs, 'low', True)
     work = from_text(case['text'], source_id=case['id'], tenant_id=session.tenant_id,
-                     domain=session.domain, sender=case['sender'])
+                     domain=session.domain, sender=case['sender'],
+                     subject=case.get('subject', ''), source_type=case.get('source_type', 'text'))
     trace_id = 'trace_' + hashlib.sha256((session.tenant_id + '|' + case['id']).encode()).hexdigest()[:16]
     trace = {'trace_id': trace_id, 'tenant_id': session.tenant_id, 'domain': session.domain,
              'case_id': case['id'], 'mode': 'synthetic_adapter',
              'input_digest': old_trace['input_digest'], 'raw_text_in_trace': False,
              'versions': old_trace['versions'], 'candidate_ids': [x.code for x in options],
+             'previous_order_source_id': order_source, 'knowledge_document_ids': list(knowledge_ids),
+             'rule_ids': list(rule_ids), 'draft_status': artifact['draft']['status'] if artifact['draft'] else None,
              'legacy_trace_id': old_trace['trace_id'], 'observed_api_cost_usd': 0.0}
     task = ReviewTask(case['id'] + '-PLATFORM-REVIEW', case['id'], trace_id, 'sales_draft', 'low',
-                      'sales', 'linda',
+                      'sales', case['owner'],
                       {'candidate_skus': [x.code for x in options], 'blocking_risk': False,
                        'note': '仅教学审核，不发送邮件或报价'},
-                      {'legacy_trace_id': old_trace['trace_id']}, tenant_id=session.tenant_id,
+                      {'legacy_trace_id': old_trace['trace_id'], 'knowledge_document_ids': list(knowledge_ids),
+                       'previous_order_source_id': order_source, 'rule_ids': list(rule_ids)},
+                      tenant_id=session.tenant_id,
                       domain=session.domain)
     session.put('work_item', work.id, work.to_dict())
     session.put('trace', trace_id, trace)
     session.put('recommendation', case['id'], {'tenant_id': session.tenant_id, 'domain': session.domain,
                                                 'case_id': case['id'], **recommendation.to_dict()})
     session.put('review_task', task.task_id, task.to_dict())
-    return {'trace': trace, 'recommendation': recommendation.to_dict(), 'review_task': task.to_dict()}
+    return {'work_item': work.to_dict(), 'trace': trace,
+            'recommendation': recommendation.to_dict(), 'review_task': task.to_dict()}
