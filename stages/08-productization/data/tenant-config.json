@@ -1,0 +1,14 @@
+{
+  "mode": "synthetic_training_only",
+  "tenants": [
+    {"tenant_id": "haichuan-training", "domain": "foreign_trade", "name": "海川工业泵（虚构）"},
+    {"tenant_id": "qihang-training", "domain": "after_sales", "name": "启航设备（虚构）"}
+  ],
+  "qihang_reviewers": [
+    {"actor_id": "zhou", "role": "support"},
+    {"actor_id": "engineer-chen", "role": "engineer"}
+  ],
+  "auto_customer_guidance": false,
+  "auto_dispatch": false,
+  "real_pilot_gate": "NOT_EVALUATED"
+}

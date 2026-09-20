@@ -14,6 +14,8 @@ class ReviewTask:
     evidence: dict
     prerequisite_task_id: str | None = None
     status: str = 'pending'
+    tenant_id: str = 'haichuan-training'
+    domain: str = 'foreign_trade'
 
     def to_dict(self):
         return asdict(self)

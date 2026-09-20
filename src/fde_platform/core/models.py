@@ -20,6 +20,7 @@ class WorkItem:
     attachments: list[dict[str, str]]
     received_at: str | None
     body_format: str = 'text'
+    domain: str = 'foreign_trade'
 
     def to_dict(self):
         return asdict(self)

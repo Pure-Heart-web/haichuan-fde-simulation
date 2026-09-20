@@ -51,7 +51,8 @@ def _work_id(source_id, body):
     return 'WI-' + digest
 
 
-def from_text(text, *, source_id='manual', tenant_id='haichuan-training', sender='', subject='', received_at=None):
+def from_text(text, *, source_id='manual', tenant_id='haichuan-training', sender='', subject='', received_at=None,
+              domain='foreign_trade', source_type='text'):
     if not isinstance(text, str) or not text.strip():
         raise IngestionError('邮件正文为空')
     received = received_at
@@ -61,11 +62,11 @@ def from_text(text, *, source_id='manual', tenant_id='haichuan-training', sender
                 raise ValueError('naive date')
         except ValueError:
             raise IngestionError('received_at 必须是带时区的 ISO 时间') from None
-    return WorkItem(_work_id(source_id, text), tenant_id, 'text', source_id, sender,
-                    subject, text.strip(), [], received)
+    return WorkItem(_work_id(source_id, text), tenant_id, source_type, source_id, sender,
+                    subject, text.strip(), [], received, domain=domain)
 
 
-def from_eml(path, *, source_id=None, tenant_id='haichuan-training'):
+def from_eml(path, *, source_id=None, tenant_id='haichuan-training', domain='foreign_trade'):
     path = Path(path)
     raw = path.read_bytes()
     msg = BytesParser(policy=policy.default).parsebytes(raw)
@@ -94,4 +95,4 @@ def from_eml(path, *, source_id=None, tenant_id='haichuan-training'):
     sid = source_id or path.stem
     return WorkItem(_work_id(sid, body), tenant_id, 'email', sid,
                     str(msg.get('From', '')), str(msg.get('Subject', '')), body,
-                    attachments, received, 'html' if not plain else 'text')
+                    attachments, received, 'html' if not plain else 'text', domain)

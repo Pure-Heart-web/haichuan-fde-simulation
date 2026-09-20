@@ -1,0 +1,9 @@
+{
+  "mode": "synthetic_regression_only",
+  "status": {"qihang_cases": 10, "haichuan_bridge_cases": 1, "qihang_review_tasks": 10,
+             "tenant_scope_ok": true, "shadow_failure_replayed": true, "real_pilot_users": 0,
+             "real_pilot_gate": "NOT_EVALUATED", "customer_guidance_sent": 0, "dispatches_created": 0},
+  "eval": {"case_count": 10, "field_correct": 50, "field_total": 50, "top1_correct": 10,
+           "risk_correct": 10, "review_routing_correct": 10, "unsafe_auto_guidance_count": 0,
+           "tenant_scope_ok": true, "real_pilot_gate": "NOT_EVALUATED"}
+}

@@ -37,3 +37,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 在仓库根目录执行 `python3 stage7.py demo` 和 `python3 stage7.py eval --check-baseline`，检查 `outputs/stage-07/pilot-status.json`：12 条 Trace、3 条 Shadow、180 条合成活动、坏数据候选 `BLOCKED`，真实 Pilot Gate 为 `NOT_EVALUATED`。再看 `pilot-dashboard.md` 的 90 条合格复杂询盘分母，不能把脚本生成的两周变化写成现场成效。
 
 运行 `python3 stage7.py trace --case P7-009`，检查 CRM 降级；运行 `python3 stage7.py review`，在本机页面按 Linda/Mike/Chen 切换任务；运行 `python3 stage7.py incident` 查看产品别名和 CRM 延迟的故障重放。详细操作和反事实练习见 [Stage 7 入口](../stages/07-pilot-operations/README.md)。修改审核状态时使用独立的 `--output outputs/my-stage7-run`，避免旧队列影响练习。
+
+## Stage 8：双客户产品化演练
+
+运行 `python3 stage8.py demo`、`python3 stage8.py eval --check-baseline`，核对 `outputs/stage-08/platform-status.json` 的启航 10 条、海川适配 1 条、租户作用域通过、真实用户 0。用 `trace --case QH-001` 查看资产维修来源和安全规则；用 `trace --tenant haichuan-training --case QH-001` 应得到当前租户找不到该 Trace 的错误。`incident` 对比不用/使用维修历史时的排序。完整步骤、危险案例和边界见 [Stage 8 入口](../stages/08-productization/README.md)。

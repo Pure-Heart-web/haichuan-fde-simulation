@@ -1,0 +1,8 @@
+{
+  "mode": "synthetic_training_only", "version": "qihang-assets-sim-v1",
+  "assets": [
+    {"serial_number": "QH7519238", "device_model": "QH-75", "installed_on": "2024-04-12", "status": "installed", "maintenance": [{"work_order_id": "WO-QH-110", "date": "2026-09-20", "status": "completed", "summary": "Intake filter replaced; assembly verification recorded as pending."}]},
+    {"serial_number": "QH7500401", "device_model": "QH-75", "installed_on": "2023-05-03", "status": "installed", "maintenance": [{"work_order_id": "WO-QH-031", "date": "2026-05-01", "status": "completed", "summary": "Routine inspection completed."}]},
+    {"serial_number": "QH9000212", "device_model": "QH-90", "installed_on": "2025-02-09", "status": "installed", "maintenance": [{"work_order_id": "WO-QH-209", "date": "2026-09-19", "status": "completed", "summary": "Scheduled maintenance; installation check pending engineer review."}]}
+  ]
+}
