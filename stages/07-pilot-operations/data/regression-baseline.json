@@ -1,0 +1,21 @@
+{
+  "mode":"synthetic_regression_only",
+  "status_expected":{
+    "trace_count":12,
+    "shadow_case_count":3,
+    "synthetic_activity_events":180,
+    "bad_data_release_status":"BLOCKED",
+    "actual_pilot_users":0,
+    "sent_messages":0,
+    "published_product_versions":0
+  },
+  "dashboard_expected":{
+    "mode":"synthetic_pilot_replay",
+    "real_pilot_release_gate":"NOT_EVALUATED",
+    "pilot_decision":"ITERATE_SIMULATION_ONLY",
+    "case_count":180,
+    "shadow_cases_visible_to_sales":0
+  },
+  "shadow_case_ids":["P7-006","P7-007","P7-008"],
+  "note":"只保护教学脚本边界，不能证明真实 Pilot 可发布。"
+}

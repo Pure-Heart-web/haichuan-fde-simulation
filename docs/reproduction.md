@@ -31,3 +31,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 先写原始记录和证据编号，再改 JSON；不要为了通过检查补造证据。观察数不足或缺访谈等属于 Discovery 未完成，允许生成缺口报告。负数、时间错序、悬空引用、步骤漏记属于数据质量错误，先修复再分析。
 
 真实项目需改用真实且授权的脱敏资料，逐项审阅 `assessment`、`decisions`、`questions` 和 `checks` 中人工填写的内容。工具仅检查结构与引用，不会验证证据是否真实、推断是否正确。`REAL_REVIEW_REQUIRED` 只表示可供负责人审阅，不是开工批准。
+
+## Stage 7：试点运营演练
+
+在仓库根目录执行 `python3 stage7.py demo` 和 `python3 stage7.py eval --check-baseline`，检查 `outputs/stage-07/pilot-status.json`：12 条 Trace、3 条 Shadow、180 条合成活动、坏数据候选 `BLOCKED`，真实 Pilot Gate 为 `NOT_EVALUATED`。再看 `pilot-dashboard.md` 的 90 条合格复杂询盘分母，不能把脚本生成的两周变化写成现场成效。
+
+运行 `python3 stage7.py trace --case P7-009`，检查 CRM 降级；运行 `python3 stage7.py review`，在本机页面按 Linda/Mike/Chen 切换任务；运行 `python3 stage7.py incident` 查看产品别名和 CRM 延迟的故障重放。详细操作和反事实练习见 [Stage 7 入口](../stages/07-pilot-operations/README.md)。修改审核状态时使用独立的 `--output outputs/my-stage7-run`，避免旧队列影响练习。

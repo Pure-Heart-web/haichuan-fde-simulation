@@ -13,7 +13,7 @@ from fde_stage3.audit import AuditError, report_stage2, report_stage3, save_repo
 
 def main():
     parser = argparse.ArgumentParser(description='海川 FDE 阶段演练与审计')
-    parser.add_argument('stage', choices=['stage1', 'stage2', 'stage3', 'stage4', 'stage5', 'stage6', 'all'])
+    parser.add_argument('stage', choices=['stage1', 'stage2', 'stage3', 'stage4', 'stage5', 'stage6', 'stage7', 'all'])
     parser.add_argument('--output-root', type=Path, default=ROOT / 'outputs')
     parser.add_argument('--stage3-data', type=Path, help='另一个 Stage 3 数据目录，用于审计修改后的副本')
     args = parser.parse_args()
@@ -45,8 +45,17 @@ def main():
             code = run_demo((args.output_root / 'stage-06').resolve())
             if code:
                 return code
+        if args.stage in ('stage7', 'all'):
+            from stage7 import run_demo, check_baseline
+            output = (args.output_root / 'stage-07').resolve()
+            code = run_demo(output)
+            if code:
+                return code
+            code = check_baseline(output)
+            if code:
+                return code
         return 0
-    except (AuditError, DataError, OSError, KeyError, TypeError) as exc:
+    except (AuditError, DataError, OSError, KeyError, TypeError, ValueError) as exc:
         print(f'检查失败：{exc}', file=sys.stderr)
         return 2
 

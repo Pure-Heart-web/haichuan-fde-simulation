@@ -1,0 +1,8 @@
+{
+  "mode":"hypothetical_pre_pilot_baseline",
+  "processing_minutes":{"senior":{"simple":4,"complex":18},"mid":{"simple":6,"complex":23},"junior":{"simple":9,"complex":31}},
+  "first_response_minutes":{"senior":{"simple":45,"complex":130},"mid":{"simple":65,"complex":170},"junior":{"simple":90,"complex":220}},
+  "engineer_consultations_per_day":18,
+  "evidence_status":"NOT_MEASURED_REAL_USERS",
+  "note":"演练用对照假设，不是客户前测实测值。真实试点前需按相同分类计时并冻结基线。"
+}

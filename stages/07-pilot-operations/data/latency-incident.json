@@ -1,0 +1,10 @@
+{
+  "mode":"synthetic_incident_replay",
+  "incident_id":"INC-SIM-002",
+  "before_p95_ms":3800,
+  "during_p95_ms":12400,
+  "stage_durations_ms":{"knowledge_retrieval":700,"reply_generation":2300,"crm_context":8100,"other":1300},
+  "recent_change":"simulated CRM connector slowdown",
+  "expected_classification":"context_integration_bottleneck",
+  "note":"与 Stage 7 原稿一样是教学故障数字，不来自实际生产监控。"
+}

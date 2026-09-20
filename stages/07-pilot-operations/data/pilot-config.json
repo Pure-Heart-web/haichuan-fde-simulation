@@ -1,0 +1,14 @@
+{
+  "mode":"simulation_only",
+  "duration_business_days":10,
+  "pilot_dates":{"start":"2026-09-21","end":"2026-10-02"},
+  "users":[
+    {"user_id":"linda","name":"Linda","role":"sales","experience":"senior"},
+    {"user_id":"mike","name":"Mike","role":"sales","experience":"junior"},
+    {"user_id":"anna","name":"Anna","role":"sales","experience":"mid"},
+    {"user_id":"chen","name":"Chen","role":"engineer","experience":"expert"}
+  ],
+  "scope":{"product_family":"centrifugal_pump","language":"en","standard_only":true,"auto_send":false,"auto_quote":false},
+  "daily_inquiries_per_sales_user":6,
+  "note":"所有用户、日期、活动和成本均为演练假设；没有真实邮箱接入或试点部署。"
+}

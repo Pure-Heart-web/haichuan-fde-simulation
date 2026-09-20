@@ -1,0 +1,1 @@
+{"version":"v13-bad-simulated","status":"candidate","products":[{"sku":"CP80","material":"SS316","flow_min":70,"flow_max":90},{"sku":"CP90","material":"Stainless Steel 316","flow_min":80,"flow_max":100},{"sku":"CP100","material":"SS316","flow_min":90,"flow_max":115}]}

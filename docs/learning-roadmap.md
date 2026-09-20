@@ -24,16 +24,20 @@
 
 从已审核 InquiryRecord 加载 Stage 3 权威技术字段与 Stage 5 明示模拟扩展，经硬筛、受控规则、代理排序生成暂定候选和工程师升级。24 条合成 Golden Draft 用于计算 Candidate Recall@5、Top-3 Acceptance、安全违规和升级误差；本机页面练习 Approve/Choose Another/Escalate。原稿中的 100 条历史案例及业务改善数值并非真实证据。见 [Stage 5 入口](../stages/05-product-recommendation/README.md)。
 
-## Stage 6：Customer Context、Enterprise Knowledge 与 Reply Draft（本次新增）
+## Stage 6：Customer Context、Enterprise Knowledge 与 Reply Draft
 
 把具体客户历史与一般企业知识分流：前者依赖身份确认及最近相关已完成订单，后者依赖有版本、有状态、有生效日的文档检索。结构化 Claim 先经过证据和审批政策，再由租户风格生成可审核邮件草稿；知识缺口弃答并回流治理。12 条身份/订单、50 条知识检索和 10 条草稿案例均为教学合成，真实销售接受率尚无数据。见 [Stage 6 入口](../stages/06-context-knowledge-reply/README.md)。
+
+## Stage 7：Pilot Deployment、Human Workflow 与 Adoption
+
+用 10 个工作日、3 位虚构销售和 1 位工程师的合成活动，演练受控范围、假设前测、按角色审核、工程师升级、脱敏追踪、四层仪表盘、故障降级、数据版本发布门和复盘决策。12 个流程案例中有 3 个仅进入 Shadow；180 条活动事件用于练习分母和分群，并不代表真实用户行为。真实 Pilot Gate 仍为 `NOT_EVALUATED`。见 [Stage 7 入口](../stages/07-pilot-operations/README.md)。
 
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：扩展与集成 | 如何加入客户上下文和业务系统？ | 引用、权限、审核和集成测试 |
-| 后续：试点与运营 | 是否创造价值，谁负责运行？ | 试点对照、监控、回退、运行手册、培训与交接 |
+| 后续：真实受控试点 | 合成演练如何转为有授权的现场证据？ | 来源签核、权限/安全审查、真实前测、有限用户试点与退出判断 |
+| 后续：产品化 | 哪些机制可供第二个客户复用？ | 租户隔离、配置边界、运营和发布责任 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。
 

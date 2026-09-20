@@ -46,7 +46,7 @@ def load_style(root):
 
 
 def build_draft(work_item, inquiry, identity, previous_order, resolved_fields, knowledge_by_intent,
-                intents, claim_policy, style):
+                intents, claim_policy, style, *, context_unavailable=False, knowledge_unavailable=False):
     claims = [GeneratedClaim('acknowledgement', 'Thank you for your inquiry.')]
     plan = ['acknowledge_inquiry']
     gaps = []
@@ -66,7 +66,8 @@ def build_draft(work_item, inquiry, identity, previous_order, resolved_fields, k
         evidence = knowledge_by_intent.get(intent, ())
         if not evidence:
             gap_sku = by_field['sku'].value if 'sku' in by_field else 'unconfirmed model'
-            gaps.append({'intent': intent, 'query': f'{intent} for {gap_sku}', 'reason': 'no_active_applicable_evidence',
+            gaps.append({'intent': intent, 'query': f'{intent} for {gap_sku}',
+                         'reason': 'knowledge_service_unavailable' if knowledge_unavailable else 'no_active_applicable_evidence',
                          'owner': 'knowledge_owner_confirmation_required'})
             plan.append(f'abstain_{intent}')
             continue
@@ -120,6 +121,10 @@ def build_draft(work_item, inquiry, identity, previous_order, resolved_fields, k
         plan.append('request_identity_confirmation')
         claims.append(GeneratedClaim('acknowledgement',
                     'Please confirm your company and prior order reference so we can verify the configuration.'))
+    if context_unavailable:
+        plan.append('manual_previous_order_verification')
+        claims.append(GeneratedClaim('acknowledgement',
+                    'Customer history is temporarily unavailable. Please verify the prior order reference manually.'))
     for gap in gaps:
         claims.append(GeneratedClaim('acknowledgement',
                     f'We will verify the {gap["intent"].replace("_", " ").upper() if gap["intent"] in ("ce", "atex") else gap["intent"].replace("_", " ")} information for your configuration and follow up.'))
