@@ -1,0 +1,9 @@
+{
+  "version": "haichuan-ranking-sim-v1",
+  "status": "hypothesis_for_eval",
+  "owner": "FDE + Technical (simulation)",
+  "score_weights": {"flow_center_proxy": 0.45, "head_center_proxy": 0.45, "standard_configuration": 0.10},
+  "close_candidate_gap": 0.12,
+  "edge_warning_ratio": 0.20,
+  "note": "这些权重与阈值是教学假设，不等同泵性能曲线或真实商业偏好；不使用价格/库存。"
+}

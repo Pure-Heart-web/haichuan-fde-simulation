@@ -1,0 +1,54 @@
+{
+  "source_id": "ST5-SUPP",
+  "source_version": "supplement-sim-v1",
+  "owner": "Technical (simulation)",
+  "status": "training_only",
+  "note": "附加合成型号用于测试铸铁排除、停产和材质歧义；不代表 Stage 3 技术表或真实客户产品。",
+  "products": [
+    {
+      "sku": "CP85-CI",
+      "product_family": "centrifugal_pump",
+      "flow_min_m3h": 85,
+      "flow_max_m3h": 95,
+      "head_min_m": 33,
+      "head_max_m": 43,
+      "material": "CI",
+      "temperature_min_c": 0,
+      "temperature_max_c": 70,
+      "motor_power_kw": null,
+      "supported_frequency_hz": [50, 60],
+      "status": "active_simulated",
+      "standard_configuration": false
+    },
+    {
+      "sku": "CP70-OLD",
+      "product_family": "centrifugal_pump",
+      "flow_min_m3h": 60,
+      "flow_max_m3h": 90,
+      "head_min_m": 30,
+      "head_max_m": 42,
+      "material": "Cast Iron",
+      "temperature_min_c": 0,
+      "temperature_max_c": 70,
+      "motor_power_kw": null,
+      "supported_frequency_hz": [50],
+      "status": "retired",
+      "standard_configuration": true
+    },
+    {
+      "sku": "CPX-UNK",
+      "product_family": "centrifugal_pump",
+      "flow_min_m3h": 80,
+      "flow_max_m3h": 100,
+      "head_min_m": 35,
+      "head_max_m": 45,
+      "material": "Stainless Steel",
+      "temperature_min_c": null,
+      "temperature_max_c": null,
+      "motor_power_kw": null,
+      "supported_frequency_hz": [],
+      "status": "active_simulated",
+      "standard_configuration": true
+    }
+  ]
+}

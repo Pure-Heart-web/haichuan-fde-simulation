@@ -16,19 +16,22 @@
 
 审查 20 对合成邮件与回复、订单、产品表冲突、目录和聊天摘录；按业务域指定权威来源，处理身份歧义、规则候选和敏感数据。交付 Data Inventory、Source of Truth、AI Boundary、架构、数据契约、Golden Dataset V0、Release Gate V0。见 [Stage 3 入口](../stages/03-data-boundary/README.md)。
 
-## Stage 4：Build Sprint 1（本次新增）
+## Stage 4：Build Sprint 1
 
 实现 Email/Text/HTML → WorkItem → 提取 → 规范化/校验 → InquiryRecord → 本地人工审核和反馈 → 合成评估。可替换抽取接口目前用离线正则基线演练，未接真实模型；100 条合成集用于回归练习，真实 Pilot Gate 尚未评估。见 [Stage 4 入口](../stages/04-build-sprint-1/README.md)。
 
-## 后续路线（待你提供 Stage 5 需求）
+## Stage 5：Product Search、Rule Engine 与 Recommendation（本次新增）
+
+从已审核 InquiryRecord 加载 Stage 3 权威技术字段与 Stage 5 明示模拟扩展，经硬筛、受控规则、代理排序生成暂定候选和工程师升级。24 条合成 Golden Draft 用于计算 Candidate Recall@5、Top-3 Acceptance、安全违规和升级误差；本机页面练习 Approve/Choose Another/Escalate。原稿中的 100 条历史案例及业务改善数值并非真实证据。见 [Stage 5 入口](../stages/05-product-recommendation/README.md)。
+
+## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| Stage 5 | 如何从已审核询盘找到产品候选？ | ProductRecord、受控搜索、规则、Top-K 评估与工程师升级 |
 | 后续：扩展与集成 | 如何加入客户上下文和业务系统？ | 引用、权限、审核和集成测试 |
 | 后续：试点与运营 | 是否创造价值，谁负责运行？ | 试点对照、监控、回退、运行手册、培训与交接 |
 
-Stage 5 的方向来自你提供的 Stage 4 文档；更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。
+更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。
 
 ## 每轮学习的共同方法
 

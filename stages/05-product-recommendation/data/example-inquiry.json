@@ -1,0 +1,10 @@
+{
+  "work_item_id": "EXAMPLE-SEAWATER-001",
+  "product_type": "centrifugal_pump",
+  "flow_m3h": 88,
+  "head_m": 38,
+  "medium_category": "seawater",
+  "medium_description": "seawater",
+  "temperature_c": 42,
+  "frequency_hz": 50
+}

@@ -1,0 +1,12 @@
+{
+  "source_id": "ST5-EXT",
+  "source_version": "extension-sim-v1",
+  "owner": "Technical (simulation)",
+  "status": "training_approved_only",
+  "note": "仅补充模拟温度与频率范围，不改变 Stage 3 已登记的 Flow/Head/Material；无性能曲线。",
+  "by_sku": {
+    "CP80": {"temperature_min_c": 0, "temperature_max_c": 70, "supported_frequency_hz": [50, 60], "standard_configuration": true},
+    "CP90": {"temperature_min_c": 0, "temperature_max_c": 70, "supported_frequency_hz": [50, 60], "standard_configuration": true},
+    "CP100": {"temperature_min_c": 0, "temperature_max_c": 70, "supported_frequency_hz": [50, 60], "standard_configuration": true}
+  }
+}

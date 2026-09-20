@@ -1,0 +1,16 @@
+{
+  "version": "material-map-sim-v1",
+  "owner": "Technical (simulation)",
+  "status": "training_approved_only",
+  "aliases": {
+    "SS316": "SS316",
+    "316SS": "SS316",
+    "SUS316": "SS316",
+    "Stainless 316": "SS316",
+    "SS304": "SS304",
+    "SUS304": "SS304",
+    "CI": "CAST_IRON",
+    "Cast Iron": "CAST_IRON"
+  },
+  "quarantine_examples": ["Stainless Steel", "unknown alloy"]
+}

@@ -1,0 +1,42 @@
+{
+  "registry_version": "pump-rules-sim-v1",
+  "mode": "simulation",
+  "rules": [
+    {
+      "id": "PUMP_MATERIAL_001", "description": "海水场景排除铸铁候选",
+      "domain": "foreign_trade.centrifugal_pump", "version": "1.0", "effective_date": "2026-09-20",
+      "source_ids": ["R-001", "SRC-TECH"], "owner": "Technical (simulation)",
+      "severity": "critical", "status": "active_in_simulation",
+      "when": [{"field": "inquiry.medium_category", "op": "equals", "value": "seawater"},
+               {"field": "product.material", "op": "equals", "value": "CAST_IRON"}],
+      "actions": [{"type": "exclude_candidate", "reason": "seawater_cast_iron_not_allowed"}]
+    },
+    {
+      "id": "HIGH_TEMP_001", "description": "高温需要工程师复核密封和材料",
+      "domain": "foreign_trade.centrifugal_pump", "version": "1.0", "effective_date": "2026-09-20",
+      "source_ids": ["R-002"], "owner": "Technical (simulation)",
+      "severity": "high", "status": "active_in_simulation",
+      "when": [{"field": "inquiry.temperature_c", "op": "gte", "value": 80}],
+      "actions": [{"type": "require_review", "role": "engineer"},
+                  {"type": "add_warning", "text": "high_temperature_seal_review"}]
+    },
+    {
+      "id": "MEDIUM_UNKNOWN_001", "description": "未知介质不能形成确定的产品建议",
+      "domain": "foreign_trade.centrifugal_pump", "version": "1.0", "effective_date": "2026-09-20",
+      "source_ids": ["S2-E04"], "owner": "Technical (simulation)",
+      "severity": "high", "status": "active_in_simulation",
+      "when": [{"field": "inquiry.medium_category", "op": "exists", "value": false}],
+      "actions": [{"type": "add_requirement", "field": "medium_detail"},
+                  {"type": "require_review", "role": "engineer"}]
+    },
+    {
+      "id": "CURVE_EDGE_001", "description": "靠近性能曲线边缘的经验候选",
+      "domain": "foreign_trade.centrifugal_pump", "version": "0.1", "effective_date": null,
+      "source_ids": ["R-003"], "owner": "Technical (simulation)",
+      "severity": "medium", "status": "candidate",
+      "when": [{"field": "product.range_edge_proxy", "op": "lte", "value": 0.20}],
+      "actions": [{"type": "add_warning", "text": "near_curve_edge_unverified"},
+                  {"type": "require_review", "role": "engineer"}]
+    }
+  ]
+}
