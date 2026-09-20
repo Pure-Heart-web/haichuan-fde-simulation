@@ -1,0 +1,15 @@
+{
+  "source_id":"ST6-ORD",
+  "version":"training-orders-v1",
+  "status":"training_only",
+  "owner":"Sales Operations (simulation)",
+  "note":"独立的 Stage 6 合成订单，补足 Stage 3 样本缺失的日期与工况；不回填为真实订单。",
+  "orders":[
+    {"order_id":"S6-ORD-001","customer_id":"CUST-DEMO-001","order_date":"2024-07-10","status":"completed","product_family":"centrifugal_pump","sku":"CP80","quantity":10,"voltage_v":380,"frequency_hz":50},
+    {"order_id":"S6-ORD-002","customer_id":"CUST-DEMO-001","order_date":"2025-03-12","status":"completed","product_family":"centrifugal_pump","sku":"CP90","quantity":20,"voltage_v":380,"frequency_hz":50},
+    {"order_id":"S6-ORD-003","customer_id":"CUST-DEMO-001","order_date":"2026-01-15","status":"cancelled","product_family":"centrifugal_pump","sku":"CP100","quantity":5,"voltage_v":400,"frequency_hz":60},
+    {"order_id":"S6-ORD-004","customer_id":"CUST-DEMO-001","order_date":"2026-06-01","status":"completed","product_family":"submersible_pump","sku":"SIM-S200","quantity":2,"voltage_v":400,"frequency_hz":50},
+    {"order_id":"S6-ORD-005","customer_id":"CUST-DEMO-002","order_date":"2025-09-02","status":"completed","product_family":"centrifugal_pump","sku":"CP80","quantity":8,"voltage_v":415,"frequency_hz":50},
+    {"order_id":"S6-ORD-006","customer_id":"CUST-DEMO-003","order_date":"2026-02-20","status":"completed","product_family":"centrifugal_pump","sku":"CP90","quantity":4,"voltage_v":440,"frequency_hz":60}
+  ]
+}

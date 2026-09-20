@@ -1,0 +1,17 @@
+{
+  "version":"haichuan-claims-training-v1",
+  "status":"training_only",
+  "claim_types":{
+    "acknowledgement":{"allowed":true,"evidence_required":false,"reviewer":"sales"},
+    "historical_order":{"allowed":true,"evidence_required":true,"reviewer":"sales"},
+    "warranty":{"allowed":true,"evidence_required":true,"reviewer":"sales"},
+    "certification":{"allowed":true,"evidence_required":true,"reviewer":"sales"},
+    "typical_lead_time":{"allowed":true,"evidence_required":true,"reviewer":"sales","required_qualifier":"subject to production confirmation"},
+    "outdoor":{"allowed":true,"evidence_required":true,"reviewer":"engineer"},
+    "final_product":{"allowed":true,"evidence_required":true,"reviewer":"engineer","approval_required":true},
+    "specific_delivery":{"allowed":false},
+    "price":{"allowed":false},
+    "discount":{"allowed":false},
+    "contract_commitment":{"allowed":false}
+  }
+}

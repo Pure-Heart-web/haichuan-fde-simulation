@@ -1,0 +1,50 @@
+{"id": "KN-001", "query": "What is the warranty?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-002", "query": "Please share warranty terms.", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-003", "query": "Warranty for the pump?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-004", "query": "How long is the warranty?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-005", "query": "Need standard warranty information.", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-006", "query": "Can you confirm warranty?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-007", "query": "What warranty applies?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-008", "query": "Customer asks warranty period.", "intent": "warranty", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "WARRANTY-2026"}
+{"id": "KN-009", "query": "What was the warranty as of Jan 2025?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2025-01-01", "expected_document_id": null}
+{"id": "KN-010", "query": "Warranty for future order?", "intent": "warranty", "sku": null, "region": "global", "as_of": "2025-02-01", "expected_document_id": null}
+{"id": "KN-011", "query": "CE for CP90?", "intent": "ce", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": "CE-CP90-EU-2026"}
+{"id": "KN-012", "query": "Is CE documentation available?", "intent": "ce", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": "CE-CP90-EU-2026"}
+{"id": "KN-013", "query": "Need CE note.", "intent": "ce", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": "CE-CP90-EU-2026"}
+{"id": "KN-014", "query": "Please provide CE availability.", "intent": "ce", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": "CE-CP90-EU-2026"}
+{"id": "KN-015", "query": "CP90 EU CE certificate?", "intent": "ce", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": "CE-CP90-EU-2026"}
+{"id": "KN-016", "query": "CE for CP80 EU?", "intent": "ce", "sku": "CP80", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-017", "query": "Need CP80 CE.", "intent": "ce", "sku": "CP80", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-018", "query": "CE for CP90 US?", "intent": "ce", "sku": "CP90", "region": "US", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-019", "query": "US CP90 CE?", "intent": "ce", "sku": "CP90", "region": "US", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-020", "query": "CE, model not known.", "intent": "ce", "sku": null, "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-021", "query": "ATEX for CP90?", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-022", "query": "Do you provide ATEX?", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-023", "query": "Need ATEX certificate.", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-024", "query": "ATEX EU configuration?", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-025", "query": "Is CP90 ATEX approved?", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-026", "query": "ATEX availability", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-027", "query": "ATEX document", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-028", "query": "ATEX for chemical plant", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-029", "query": "Please confirm ATEX", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-030", "query": "Explosive atmosphere ATEX", "intent": "atex", "sku": "CP90", "region": "EU", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-031", "query": "What is the lead time?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-032", "query": "Typical lead time?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-033", "query": "Please share lead time.", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-034", "query": "Production lead time?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-035", "query": "Lead time for CP90?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-036", "query": "Need a lead time guide.", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-037", "query": "Lead time estimate?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-038", "query": "Customer asks delivery time.", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-039", "query": "How long is lead time?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-040", "query": "Any typical lead time?", "intent": "lead_time", "sku": null, "region": "global", "as_of": "2026-09-20", "expected_document_id": "LEADTIME-2026"}
+{"id": "KN-041", "query": "CP80 outdoor use?", "intent": "outdoor", "sku": "CP80", "region": "global", "as_of": "2026-09-20", "expected_document_id": "OUTDOOR-2026"}
+{"id": "KN-042", "query": "CP90 outdoor use?", "intent": "outdoor", "sku": "CP90", "region": "global", "as_of": "2026-09-20", "expected_document_id": "OUTDOOR-2026"}
+{"id": "KN-043", "query": "Outdoor installation CP80?", "intent": "outdoor", "sku": "CP80", "region": "global", "as_of": "2026-09-20", "expected_document_id": "OUTDOOR-2026"}
+{"id": "KN-044", "query": "Outdoor installation CP90?", "intent": "outdoor", "sku": "CP90", "region": "global", "as_of": "2026-09-20", "expected_document_id": "OUTDOOR-2026"}
+{"id": "KN-045", "query": "Need outdoor installation note for CP90.", "intent": "outdoor", "sku": "CP90", "region": "global", "as_of": "2026-09-20", "expected_document_id": "OUTDOOR-2026"}
+{"id": "KN-046", "query": "CP100 outdoor use?", "intent": "outdoor", "sku": "CP100", "region": "global", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-047", "query": "Outdoor CP100?", "intent": "outdoor", "sku": "CP100", "region": "global", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-048", "query": "CP100 outside?", "intent": "outdoor", "sku": "CP100", "region": "global", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-049", "query": "Need outdoor note for CP100.", "intent": "outdoor", "sku": "CP100", "region": "global", "as_of": "2026-09-20", "expected_document_id": null}
+{"id": "KN-050", "query": "CP100 outdoors?", "intent": "outdoor", "sku": "CP100", "region": "global", "as_of": "2026-09-20", "expected_document_id": null}

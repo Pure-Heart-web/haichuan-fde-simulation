@@ -1,0 +1,10 @@
+{"id":"S6-001","sender":"john@abcmarine.example","company_name":"ABC Marine","region":"EU","subject":"Repeat CP90 inquiry","text":"Hi Linda, same as previous order. Need 20 pcs CP90 centrifugal pump. Do you provide CE? What is the warranty?"}
+{"id":"S6-002","sender":"john@abcmarine.example","company_name":"ABC Marine BV","region":"EU","subject":"Changed electrical configuration","text":"Same as last order for a centrifugal pump, but this time 400V/60Hz. What is the warranty?"}
+{"id":"S6-003","sender":"unknown@unrelated.example","company_name":"ABC Marine","region":"EU","subject":"Previous order question","text":"Same as previous order. Need a centrifugal pump. What is the warranty?"}
+{"id":"S6-004","sender":"emma@abcmarine-equipment.example","company_name":"ABC Marine Equipment Ltd","region":"EU","subject":"Repeat CP80","text":"Same as previous order. Need CP80 centrifugal pump. Is outdoor installation supported?"}
+{"id":"S6-005","sender":"john@abcmarine.example","company_name":"ABC Marine BV","region":"EU","subject":"ATEX request","text":"Need CP90 centrifugal pump for a chemical plant. Do you have ATEX certification?"}
+{"id":"S6-006","sender":"john@abcmarine.example","company_name":"ABC Marine BV","region":"global","subject":"Lead time and quote","text":"Need a CP90 centrifugal pump. What is the lead time and final price?"}
+{"id":"S6-007","sender":"buyer@bluewater.example","company_name":"Bluewater Demo","region":"global","as_of":"2025-01-01","subject":"Warranty as of old date","text":"Need a centrifugal pump. What is the warranty?"}
+{"id":"S6-008","sender":"alice@abcmarine.example","company_name":"ABC Marine BV","region":"global","subject":"Outdoor CP90","text":"Need CP90 centrifugal pump. Can it be used outdoors?"}
+{"id":"S6-009","sender":"unknown@unrelated.example","company_name":"Unknown Trading","region":"global","subject":"Standard warranty","text":"Need a centrifugal pump. What is the warranty?"}
+{"id":"S6-010","sender":"john@abcmarine.example","company_name":"ABC Marine Equipment Ltd","region":"EU","subject":"Conflicting identity","text":"Same as previous order. Need CP90 centrifugal pump. Do you provide CE?"}

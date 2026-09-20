@@ -1,4 +1,4 @@
-name: FDE Stage 1–5 offline checks
+name: FDE Stage 1–6 offline checks
 on:
   push:
   pull_request:
@@ -14,5 +14,7 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Stage 4 synthetic extraction regression
         run: python3 stage4.py eval --check-baseline
-      - name: Stage 1–5 offline delivery walkthrough
+      - name: Stage 6 synthetic context, knowledge, and draft regression
+        run: python3 stage6.py eval --check-baseline
+      - name: Stage 1–6 offline delivery walkthrough
         run: python3 stage_pipeline.py all

@@ -1,0 +1,8 @@
+{
+  "version":"haichuan-reply-style-training-v1",
+  "tone":"concise_professional",
+  "greeting":"first_name_if_verified",
+  "existing_customer_reference":"subtle",
+  "max_paragraphs":5,
+  "status":"training_only"
+}

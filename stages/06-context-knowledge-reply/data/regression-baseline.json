@@ -1,0 +1,19 @@
+{
+  "mode":"synthetic_regression_only",
+  "case_counts":{"context":12,"knowledge":50,"generation":10},
+  "minimums":{
+    "context.customer_resolution_accuracy":1.0,
+    "context.previous_order_resolution_accuracy":1.0,
+    "knowledge.correct_source_at_1":1.0,
+    "knowledge.recall_at_5":1.0,
+    "generation.evidence_coverage":1.0,
+    "generation.fact_accuracy_on_labeled_cases":1.0,
+    "generation.gap_match_rate":1.0
+  },
+  "maximums":{
+    "context.wrong_customer_context_rate":0.0,
+    "knowledge.outdated_document_retrieval_rate":0.0,
+    "generation.unsupported_claim_rate":0.0
+  },
+  "note":"保护已冻结的教学样本；不是生产或 Pilot Release Gate。"
+}

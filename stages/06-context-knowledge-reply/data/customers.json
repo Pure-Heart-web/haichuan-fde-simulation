@@ -1,0 +1,10 @@
+{
+  "dataset_id": "stage6-customers-synthetic-v1",
+  "status": "training_only",
+  "owner": "Sales Operations (simulation)",
+  "customers": [
+    {"customer_id":"CUST-DEMO-001","canonical_name":"ABC Marine BV","aliases":["ABC Marine","ABC-Marine"],"domains":["abcmarine.example"],"contacts":["john@abcmarine.example","alice@abcmarine.example"],"country":"NL"},
+    {"customer_id":"CUST-DEMO-002","canonical_name":"ABC Marine Equipment Ltd","aliases":["ABC Marine","ABC Equipment"],"domains":["abcmarine-equipment.example"],"contacts":["emma@abcmarine-equipment.example"],"country":"GB"},
+    {"customer_id":"CUST-DEMO-003","canonical_name":"Bluewater Demo LLC","aliases":["Bluewater Demo"],"domains":["bluewater.example"],"contacts":["buyer@bluewater.example"],"country":"AE"}
+  ]
+}

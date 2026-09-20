@@ -1,0 +1,12 @@
+{"id": "CTX-001", "sender": "john@abcmarine.example", "company_name": "ABC Marine", "reference": true, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-001", "expected_order_id": "S6-ORD-002"}
+{"id": "CTX-002", "sender": "alice@abcmarine.example", "company_name": "ABC Marine BV", "reference": true, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-001", "expected_order_id": "S6-ORD-002"}
+{"id": "CTX-003", "sender": "sales@abcmarine.example", "company_name": "", "reference": true, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-001", "expected_order_id": "S6-ORD-002"}
+{"id": "CTX-004", "sender": "emma@abcmarine-equipment.example", "company_name": "ABC Marine Equipment Ltd", "reference": true, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-002", "expected_order_id": "S6-ORD-005"}
+{"id": "CTX-005", "sender": "buyer@bluewater.example", "company_name": "Bluewater Demo", "reference": true, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-003", "expected_order_id": "S6-ORD-006"}
+{"id": "CTX-006", "sender": "", "company_name": "ABC Marine", "reference": true, "expected_status": "needs_confirmation", "expected_customer_id": null, "expected_order_id": null}
+{"id": "CTX-007", "sender": "john@abcmarine.example", "company_name": "ABC Marine Equipment Ltd", "reference": true, "expected_status": "needs_confirmation", "expected_customer_id": null, "expected_order_id": null}
+{"id": "CTX-008", "sender": "unknown@unrelated.example", "company_name": "Unknown Trading", "reference": true, "expected_status": "unresolved", "expected_customer_id": null, "expected_order_id": null}
+{"id": "CTX-009", "sender": "john@abcmarine.example", "company_name": "ABC Marine BV", "reference": false, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-001", "expected_order_id": null}
+{"id": "CTX-010", "sender": "", "company_name": "Bluewater Demo", "reference": true, "expected_status": "resolved", "expected_customer_id": "CUST-DEMO-003", "expected_order_id": "S6-ORD-006"}
+{"id": "CTX-011", "sender": "unknown@gmail.com", "company_name": "ABC Marine", "reference": true, "expected_status": "needs_confirmation", "expected_customer_id": null, "expected_order_id": null}
+{"id": "CTX-012", "sender": "buyer@bluewater.example", "company_name": "ABC Marine", "reference": true, "expected_status": "needs_confirmation", "expected_customer_id": null, "expected_order_id": null}

@@ -205,6 +205,8 @@ class SprintOneTests(unittest.TestCase):
             finally:
                 proc.terminate()
                 proc.wait(timeout=5)
+                proc.stdout.close()
+                proc.stderr.close()
             store = Store(Path(tmp) / 'review.sqlite3')
             self.assertEqual(store.reviews(work.id)[0]['feedback'][0]['field'], 'medium_description')
             store.close()

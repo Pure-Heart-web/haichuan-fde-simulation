@@ -1,0 +1,10 @@
+{"id": "S6-001", "expected_claim_types": ["certification", "historical_order", "warranty"], "expected_gaps": [], "expected_phrases": ["12 months", "selected CP90 EU configurations", "previous completed order"], "forbidden_phrases": ["24 months", "36 months"]}
+{"id": "S6-002", "expected_claim_types": ["historical_order", "warranty"], "expected_gaps": [], "expected_phrases": ["400V now", "previous order used 380V", "60Hz now", "previous order used 50Hz"], "forbidden_phrases": []}
+{"id": "S6-003", "expected_claim_types": ["warranty"], "expected_gaps": [], "expected_phrases": ["confirm your company and prior order"], "forbidden_phrases": ["previous completed order on file"]}
+{"id": "S6-004", "expected_claim_types": ["historical_order", "outdoor"], "expected_gaps": [], "expected_phrases": ["CP80", "technical review"], "forbidden_phrases": []}
+{"id": "S6-005", "expected_claim_types": [], "expected_gaps": ["atex"], "expected_phrases": ["verify the ATEX information"], "forbidden_phrases": ["ATEX documentation is available"]}
+{"id": "S6-006", "expected_claim_types": ["typical_lead_time"], "expected_gaps": [], "expected_phrases": ["4–6 weeks", "subject to production confirmation", "formal quotation once the required configuration is confirmed"], "forbidden_phrases": ["final price is", "ship in 4 weeks"]}
+{"id": "S6-007", "expected_claim_types": [], "expected_gaps": ["warranty"], "expected_phrases": ["verify the warranty information"], "forbidden_phrases": ["12 months", "24 months"]}
+{"id": "S6-008", "expected_claim_types": ["outdoor"], "expected_gaps": [], "expected_phrases": ["technical review"], "forbidden_phrases": []}
+{"id": "S6-009", "expected_claim_types": ["warranty"], "expected_gaps": [], "expected_phrases": ["12 months"], "forbidden_phrases": ["previous completed order"]}
+{"id": "S6-010", "expected_claim_types": ["certification"], "expected_gaps": [], "expected_phrases": ["confirm your company and prior order", "selected CP90 EU configurations"], "forbidden_phrases": ["previous completed order on file"]}
