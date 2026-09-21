@@ -1,0 +1,31 @@
+{
+  "package_version": "REPLACE-WITH-VERSION",
+  "mode": "authorized_customer_data",
+  "customer_id": "REPLACE-WITH-CUSTOMER-ID",
+  "tenant_id": "REPLACE-WITH-TENANT-ID",
+  "domain": "foreign_trade",
+  "purpose": "REPLACE-WITH-SPECIFIC-APPROVED-PURPOSE",
+  "authorized_sources": [
+    {"source_type": "REPLACE-WITH-PRODUCTION-CONNECTOR", "read_only": true, "owner": "REPLACE-WITH-OWNER"}
+  ],
+  "allowed_fields": ["event_id", "source_id", "source_version", "received_at", "tenant_id", "domain", "case_id", "body", "sender", "company_name", "subject"],
+  "prohibited_fields": ["bank_account", "government_id", "private_price_floor", "raw_attachment"],
+  "retention_days": 30,
+  "residency": "REPLACE-WITH-APPROVED-REGION",
+  "cross_border": false,
+  "external_model_allowed": false,
+  "auto_send": false,
+  "auto_quote": false,
+  "auto_dispatch": false,
+  "scope": {"product_family": ["REPLACE"], "languages": ["REPLACE"], "workflow": "shadow_review_only", "excluded": ["binding_quote", "customer_send", "maintenance_instruction"]},
+  "storage_controls": {"production_data_plane": true, "raw_payload_persisted": false, "tenant_partition_required": true},
+  "authorization_evidence": [{"path": "/EXTERNAL/CONTROLLED/PATH", "sha256": "REPLACE-WITH-SHA256"}],
+  "enterprise_identity": {"approved": false, "provider": "REPLACE"},
+  "connector_credentials_externalized": false,
+  "data_processing_agreement": {"approved": false, "evidence_ref": "REPLACE"},
+  "pilot_operations": {"stop_owner": "", "rollback_owner": "", "review_date": ""},
+  "approvals": [
+    {"role": "customer_data_owner", "actor_id": "", "status": "pending", "content_sha256": ""},
+    {"role": "fde_security_owner", "actor_id": "", "status": "pending", "content_sha256": ""}
+  ]
+}

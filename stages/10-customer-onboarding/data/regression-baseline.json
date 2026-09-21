@@ -1,0 +1,17 @@
+{
+  "package_validation.status": "AUTHORIZED_FOR_SYNTHETIC_SHADOW",
+  "ingestion.created": 5,
+  "ingestion.updated": 1,
+  "ingestion.duplicate": 1,
+  "ingestion.rejected": 2,
+  "privacy.email_redactions": 2,
+  "privacy.phone_redactions": 2,
+  "shadow.cases_before_retention": 5,
+  "shadow.cases_after_retention": 4,
+  "shadow.reviewed": 4,
+  "shadow.external_side_effects": 0,
+  "retention.purged_event_count": 1,
+  "retention.purged_case_count": 1,
+  "real_customer_data_ingested": false,
+  "real_pilot_gate": "NOT_EVALUATED"
+}

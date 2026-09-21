@@ -49,3 +49,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 ## Stage 9：交付强化
 
 运行 `python3 stage9.py demo --check-baseline`，核对 `outputs/stage-09/hardening-report.json`：原 Stage 4 合成字段门槛通过、10 条挑战案例/3 处分歧、2 条闭环/1 条更新待审、一次依赖重试、2 条 `pending_send`、实际发送 0。用新目录执行 `prepare`、`login`、`review`、`close`、`confirm` 可亲自重放；模型端点、真人标注、旧队列导出和运行门详见[Stage 9 手册](../stages/09-hardening/README.md)。
+
+## Stage 10：客户接入与 Shadow Pilot
+
+运行 `python3 stage10.py demo --check-baseline`，核对 `outputs/stage-10/stage10-report.json`：新增 5、更新 1、重复 1、拒绝 2；到期清理后保留 4 个已审核案例；对外副作用、真实客户数据和真实用户均为 0。运行 `python3 stage10.py readiness` 应为 `NOT_READY_FOR_REAL_CUSTOMER_DATA`，并明确列出生产数据面、企业身份、授权证据等缺口。手动审核、反事实练习和真实切换步骤见[Stage 10 手册](../stages/10-customer-onboarding/README.md)。

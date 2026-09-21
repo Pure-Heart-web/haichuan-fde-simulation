@@ -1,0 +1,9 @@
+{
+  "mode": "synthetic_roleplay",
+  "reviews": [
+    {"case_id": "DP-001", "actor_id": "dp-engineer-wu", "actor_role": "engineer", "action": "accept", "reason": "字段与原文证据一致，边界候选经模拟工程审核后保留供影子比较"},
+    {"case_id": "DP-002", "actor_id": "dp-engineer-wu", "actor_role": "engineer", "action": "edit", "reason": "来源版本 2 已补齐扬程，重新核对边界候选"},
+    {"case_id": "DP-003", "actor_id": "dp-engineer-wu", "actor_role": "engineer", "action": "reject", "reason": "输入包含越权指令，隔离且不进入业务建议"},
+    {"case_id": "DP-004", "actor_id": "dp-sales-lin", "actor_role": "sales", "action": "escalate", "reason": "产品类型与介质适用条件需补充并升级工程师复核"}
+  ]
+}

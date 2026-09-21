@@ -1,0 +1,75 @@
+{
+  "package_version": "design-partner-alpha-v1",
+  "mode": "synthetic_design_partner",
+  "customer_id": "design-partner-alpha",
+  "tenant_id": "design-partner-alpha-training",
+  "domain": "foreign_trade",
+  "purpose": "在隔离的影子模式中验证询盘抽取、产品候选、路由和人工审核契约",
+  "authorized_sources": [
+    {
+      "source_type": "authorized_jsonl_drop",
+      "read_only": true,
+      "owner": "sim-data-owner"
+    }
+  ],
+  "allowed_fields": [
+    "event_id",
+    "source_id",
+    "source_version",
+    "received_at",
+    "tenant_id",
+    "domain",
+    "case_id",
+    "body",
+    "sender",
+    "company_name",
+    "subject"
+  ],
+  "prohibited_fields": [
+    "bank_account",
+    "government_id",
+    "private_price_floor",
+    "raw_attachment"
+  ],
+  "retention_days": 30,
+  "residency": "CN-training-volume",
+  "cross_border": false,
+  "external_model_allowed": false,
+  "auto_send": false,
+  "auto_quote": false,
+  "auto_dispatch": false,
+  "scope": {
+    "product_family": [
+      "centrifugal_pump"
+    ],
+    "languages": [
+      "en"
+    ],
+    "workflow": "shadow_review_only",
+    "excluded": [
+      "binding_quote",
+      "customer_send",
+      "maintenance_instruction"
+    ]
+  },
+  "storage_controls": {
+    "production_data_plane": false,
+    "encrypted_training_volume": true,
+    "raw_payload_persisted": false,
+    "tenant_partition_required": true
+  },
+  "approvals": [
+    {
+      "role": "customer_data_owner",
+      "actor_id": "sim-data-owner",
+      "status": "approved",
+      "content_sha256": "1eeaa1ae4c0b695ff17a990a17eecb374328aadf75bec187ee7c8725ecd40059"
+    },
+    {
+      "role": "fde_security_owner",
+      "actor_id": "sim-security-owner",
+      "status": "approved",
+      "content_sha256": "1eeaa1ae4c0b695ff17a990a17eecb374328aadf75bec187ee7c8725ecd40059"
+    }
+  ]
+}

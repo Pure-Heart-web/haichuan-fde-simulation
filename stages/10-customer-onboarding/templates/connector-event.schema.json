@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/fde/customer-source-event-v1.schema.json",
+  "title": "FDE Customer Source Event V1",
+  "type": "object",
+  "required": ["event_id", "source_id", "source_version", "received_at", "tenant_id", "domain", "case_id", "body", "sender", "company_name"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "source_version": {"type": "integer", "minimum": 1},
+    "received_at": {"type": "string", "format": "date-time"},
+    "tenant_id": {"type": "string", "minLength": 1},
+    "domain": {"enum": ["foreign_trade", "after_sales"]},
+    "case_id": {"type": "string", "minLength": 1},
+    "body": {"type": "string", "minLength": 1},
+    "subject": {"type": "string"},
+    "sender": {"type": "string", "minLength": 1},
+    "company_name": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}
