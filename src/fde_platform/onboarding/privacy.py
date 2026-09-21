@@ -67,8 +67,22 @@ class PrivacyFilter:
 
 
 def contains_direct_identifier(value):
-    text = str(value)
-    return bool(EMAIL.search(text) or PHONE.search(text))
+    """Inspect stored text values without turning telemetry numbers into text.
+
+    Stringifying a whole artifact can make an innocent float such as a latency
+    sample look like an eleven-digit phone number.  It can also join unrelated
+    fields into a phone-like sequence.  Walk the value tree instead so privacy
+    checks follow the data types that can actually contain customer text.
+    """
+    if isinstance(value, str):
+        return bool(EMAIL.search(value) or PHONE.search(value))
+    if isinstance(value, dict):
+        return any(contains_direct_identifier(item) for item in value.values())
+    if isinstance(value, (list, tuple, set, frozenset)):
+        return any(contains_direct_identifier(item) for item in value)
+    if isinstance(value, int) and not isinstance(value, bool):
+        return bool(PHONE.fullmatch(str(value)))
+    return False
 
 
 def detect_untrusted_instruction(text):

@@ -64,6 +64,11 @@ class CustomerOnboardingTests(unittest.TestCase):
         self.assertNotEqual(privacy.token('tenant-a', 'contact', event['sender']),
                             privacy.token('tenant-b', 'contact', event['sender']))
         self.assertFalse(contains_direct_identifier(first))
+        self.assertFalse(contains_direct_identifier(
+            {'latency_ms': 13800001234.125, 'offsets': [13, 24]}))
+        self.assertTrue(contains_direct_identifier(
+            {'nested': {'customer_text': 'call +86 138 0000 1234'}}))
+        self.assertTrue(contains_direct_identifier({'phone_number': 13800001234}))
         self.assertEqual((audit['email_redactions'], audit['phone_redactions']), (1, 1))
         with self.assertRaisesRegex(ValueError, '禁止字段'):
             privacy.sanitize(dict(event, bank_account='123'), self.manifest)
