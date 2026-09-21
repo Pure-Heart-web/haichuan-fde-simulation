@@ -61,3 +61,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 ## Stage 12：Model Evaluation, Safety & Canary
 
 运行 `python3 stage12.py demo --check-baseline`，核对 `outputs/stage-12/stage12-report.json`：100 条抽取对比不应有准确率下降，24 条安全用例应全部符合预期，36 个 Canary 案例中 3 个在入模型前隔离。熔断演练应只调用故障 candidate 2 次，4 个请求全部回退 baseline；发布演练后的活跃路由应为 `baseline`。外部模型调用、客户侧动作和真实客户数据都应为 0。操作、反事实与发布边界见 [Stage 12 手册](../stages/12-model-safety-canary/README.md)。
+
+## Stage 13：Design Partner Pilot Readiness
+
+运行 `python3 stage13.py demo --check-baseline`，核对 `outputs/stage-13/stage13-report.json`：授权包、RLS 契约、5 个训练 OIDC 账户、7 项工作台动作、4 个班次视角、3 次交接、1 个已解决事故和 SLO 门应全部通过。PostgreSQL 实际执行、企业 SSO、真实客户数据、客户动作和实际用户应明确为 `false` 或 0。浏览器工作台、班次练习和真实切换门见 [Stage 13 手册](../stages/13-pilot-readiness/README.md)。

@@ -54,11 +54,15 @@
 
 把候选模型放在 Model Gateway 后面，使用冻结的 100 条抽取集和 24 条独立攻防集判定发布门，再对 Stage 11 的 36 个工单执行稳定的 25% Canary。练习输入/输出策略、证据绑定、数据最小化遥测、成本门、超时熔断、双签和回滚。候选模型仍为本地 stand-in，未验证真实 LLM 或客户数据。见 [Stage 12 手册](../stages/12-model-safety-canary/README.md)。
 
+## Stage 13：Design Partner Pilot Readiness & Operator Workbench
+
+把 Delivery Room 和 Model Lab 放入同一次现场交付前演练：四方签核授权包、训练 OIDC 契约、PostgreSQL RLS DDL、统一人工工作台、三个 Operator 班次、Auditor 评审、SLO 和候选模型紧急回退。静态 DDL、本地 issuer 和 OTLP-shaped JSONL 保留明确限制，不被写成生产证据。见 [Stage 13 手册](../stages/13-pilot-readiness/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：真实受控试点 | Stage 10–12 的接入、运行和模型发布契约如何转为现场证据？ | 外部授权证据、生产数据面、企业身份、真实前测、有限用户试点与退出判断 |
+| 后续：授权 Shadow Pilot | Stage 13 的现场准备契约如何转为客户证据？ | 外置授权包、PostgreSQL 运行证据、企业 OIDC、Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

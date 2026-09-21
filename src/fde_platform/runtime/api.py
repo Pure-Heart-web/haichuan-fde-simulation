@@ -5,7 +5,7 @@ import threading
 from urllib.parse import parse_qs, urlparse
 
 
-def handler_for(service, worker, dispatcher):
+def handler_for(service, worker, dispatcher, console_html=None):
     class Handler(BaseHTTPRequestHandler):
         server_version = 'FDEDeliveryRoom/1'
 
@@ -48,7 +48,7 @@ def handler_for(service, worker, dispatcher):
             try:
                 parsed = urlparse(self.path)
                 if parsed.path == '/':
-                    return self._html(CONSOLE_HTML)
+                    return self._html(console_html or CONSOLE_HTML)
                 if parsed.path == '/health':
                     return self._json(200, {'status': 'ok', 'mode': 'local_training_runtime'})
                 if parsed.path == '/v1/cases':
@@ -114,8 +114,10 @@ async function load(path){const r=await fetch(path,{headers:{Authorization:'Bear
 document.querySelector('#result').textContent=JSON.stringify(await r.json(),null,2)}</script></body></html>'''
 
 
-def serve(service, worker, dispatcher, host='127.0.0.1', port=8781, auto_run=True):
-    server = ThreadingHTTPServer((host, port), handler_for(service, worker, dispatcher))
+def serve(service, worker, dispatcher, host='127.0.0.1', port=8781, auto_run=True,
+          console_html=None):
+    server = ThreadingHTTPServer((host, port), handler_for(
+        service, worker, dispatcher, console_html=console_html))
     print(f'Stage 11 Delivery Room API: http://{host}:{port}（仅本机教学）')
     stop = threading.Event()
     def background():

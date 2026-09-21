@@ -1,0 +1,22 @@
+{
+  "status": "SYNTHETIC_FIELD_REHEARSAL_READY",
+  "authorization.status": "SYNTHETIC_FIELD_BUNDLE_APPROVED",
+  "postgres.status": "POSTGRES_RLS_CONTRACT_READY",
+  "postgres.runtime_executed_against_postgres": false,
+  "identity.accounts_verified": 5,
+  "identity.negative_checks_blocked": 4,
+  "workbench.status": "SYNTHETIC_OPERATOR_WORKBENCH_READY",
+  "workbench.actions_present": 7,
+  "operations.shift_count": 4,
+  "operations.incident_count": 1,
+  "operations.all_incidents_resolved": true,
+  "operations.handoff_count": 3,
+  "telemetry.direct_identifier_rows": 0,
+  "slo.status": "SYNTHETIC_PILOT_SLOS_MET",
+  "delivery_room.workflow.case_count": 35,
+  "model_lab.security.correct": 24,
+  "model_lab.rollout.active_route": "baseline",
+  "real_customer_data_ingested": false,
+  "actual_pilot_users": 0,
+  "real_pilot_gate": "NOT_EVALUATED"
+}

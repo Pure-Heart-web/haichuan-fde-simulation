@@ -1,0 +1,79 @@
+{
+  "version": "pilot-authorization-bundle-v1",
+  "mode": "synthetic_field_rehearsal",
+  "customer_id": "design-partner-alpha",
+  "tenant_id": "design-partner-alpha-training",
+  "domain": "foreign_trade",
+  "customer_manifest": {
+    "path": "stages/10-customer-onboarding/data/customer-onboarding.json",
+    "sha256": "ddbb431c4935373e1cddcd6cd8c5f22abe5661bbb75be65a5d697699950e709a"
+  },
+  "data_boundary": {
+    "external_mount_required": true,
+    "customer_records_embedded": false,
+    "raw_payload_persisted": false,
+    "git_storage_allowed": false,
+    "retention_days": 30,
+    "residency": "CN-training-volume"
+  },
+  "identity": {
+    "protocol": "oidc_contract",
+    "training_issuer_only": true,
+    "issuer": "https://training.invalid/design-partner-alpha",
+    "audience": "fde-pilot-workbench",
+    "roles": [
+      "sales",
+      "engineer",
+      "release_manager",
+      "operator",
+      "auditor"
+    ]
+  },
+  "connector": {
+    "source": "sandbox_jsonl_replay",
+    "read_only_source": true,
+    "customer_write_enabled": false,
+    "delivery_target": "local_mock_only",
+    "idempotency_required": true,
+    "schema_drift_dead_letter_required": true
+  },
+  "operations": {
+    "stop_owner": "sim-operator-zhou",
+    "incident_owner": "sim-pilot-owner",
+    "release_owner": "sim-release-manager",
+    "real_customer_release": false,
+    "rollback_route": "regex-baseline-v2",
+    "decision": "synthetic_rehearsal_only"
+  },
+  "slo_thresholds": {
+    "intake_acceptance_rate_min": 1.0,
+    "worker_success_rate_min": 0.95,
+    "review_completion_rate_min": 1.0
+  },
+  "approvals": [
+    {
+      "role": "customer_sponsor",
+      "actor_id": "sim-customer-sponsor",
+      "status": "approved",
+      "content_sha256": "0567eefc8f966a2869d0b4f8f42819e1a951b116d2a93d12dd9557c8c2eac636"
+    },
+    {
+      "role": "customer_data_owner",
+      "actor_id": "sim-customer-data-owner",
+      "status": "approved",
+      "content_sha256": "0567eefc8f966a2869d0b4f8f42819e1a951b116d2a93d12dd9557c8c2eac636"
+    },
+    {
+      "role": "fde_security_owner",
+      "actor_id": "sim-fde-security-owner",
+      "status": "approved",
+      "content_sha256": "0567eefc8f966a2869d0b4f8f42819e1a951b116d2a93d12dd9557c8c2eac636"
+    },
+    {
+      "role": "pilot_owner",
+      "actor_id": "sim-pilot-owner",
+      "status": "approved",
+      "content_sha256": "0567eefc8f966a2869d0b4f8f42819e1a951b116d2a93d12dd9557c8c2eac636"
+    }
+  ]
+}

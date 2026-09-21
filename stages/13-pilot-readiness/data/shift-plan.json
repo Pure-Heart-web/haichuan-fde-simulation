@@ -1,0 +1,40 @@
+{
+  "version": "synthetic-field-shifts-v1",
+  "mode": "synthetic_roleplay",
+  "shifts": [
+    {
+      "shift_id": "SHIFT-A",
+      "operator": "dp-operator-zhou",
+      "events": [
+        {"type": "shift_start", "detail": "接收试点范围、值班表和停止权限"},
+        {"type": "queue_check", "detail": "核对 Inbox、Review Queue、Outbox 和 Dead Letter"},
+        {"type": "shift_handoff", "detail": "移交未决案例、指标快照和已知风险"},
+        {"type": "shift_end", "detail": "班次 A 结束，无客户侧动作"}
+      ]
+    },
+    {
+      "shift_id": "SHIFT-B",
+      "operator": "dp-operator-zhou",
+      "events": [
+        {"type": "shift_start", "detail": "复核上一班次交接内容"},
+        {"type": "incident_declared", "detail": "候选模型连续两次超时，启动停止流程", "incident_id": "INC-S13-001"},
+        {"type": "canary_stopped", "detail": "Canary 比例降为零", "incident_id": "INC-S13-001"},
+        {"type": "baseline_restored", "detail": "恢复 regex-baseline-v2 并确认队列可处理", "incident_id": "INC-S13-001"},
+        {"type": "incident_resolved", "detail": "回退完成，保留 Trace 与发布记录", "incident_id": "INC-S13-001"},
+        {"type": "shift_handoff", "detail": "移交事故复盘、基线路由和禁止重开 Canary 的决定"},
+        {"type": "shift_end", "detail": "班次 B 结束，系统保持 baseline"}
+      ]
+    },
+    {
+      "shift_id": "SHIFT-C",
+      "operator": "dp-operator-zhou",
+      "events": [
+        {"type": "shift_start", "detail": "确认 baseline 和工单队列状态"},
+        {"type": "queue_check", "detail": "检查隔离案例、死信和未批准投递"},
+        {"type": "shift_handoff", "detail": "移交 Pilot Review 所需指标、事故和剩余缺口"},
+        {"type": "shift_end", "detail": "班次 C 结束，进入合成试点评审"}
+      ]
+    }
+  ],
+  "audit_event": {"actor_id": "dp-auditor", "role": "auditor", "type": "pilot_reviewed", "shift_id": "PILOT-REVIEW", "detail": "核对授权包、SLO、事故、回滚和真实数据边界"}
+}

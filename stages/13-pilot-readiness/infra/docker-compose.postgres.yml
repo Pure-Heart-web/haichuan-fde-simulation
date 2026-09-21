@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: fde_training
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: stage13-training-only
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - ./postgresql-rls.sql:/docker-entrypoint-initdb.d/010-rls.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fde_training"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+  rls-check:
+    image: postgres:16-alpine
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGHOST: postgres
+      PGDATABASE: fde_training
+      PGUSER: postgres
+      PGPASSWORD: stage13-training-only
+    volumes:
+      - ./verify-rls.sh:/verify-rls.sh:ro
+    command: ["sh", "/verify-rls.sh"]
