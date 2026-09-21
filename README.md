@@ -1,6 +1,6 @@
 # 工业设备 · FDE 交付学习案例
 
-这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，以及 Stage 8 的启航设备售后与双客户产品化演练**。后续阶段按新需求继续扩展。
+这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，以及 Stage 9 的交付强化演练**。后续阶段按新需求继续扩展。
 
 企业、联系人、邮件、设备、型号、订单和指标均为教学虚构。样本中的数值用于练习分析，不是客户真实业务事实，也不是泵选型或设备维修依据。
 
@@ -13,7 +13,7 @@ python3 stage_pipeline.py all
 python3 -m unittest discover -s tests -v
 ```
 
-`all` 依次运行八个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–6 运行抽取、产品匹配与证据化草稿的合成评估，Stage 7 重放 12 个询盘流程案例和 180 条合成试点事件，Stage 8 重放 10 条启航售后工单及 1 条海川适配案例，并额外执行 `QH-001` / `P7-003` 双 Domain 纵向案例。结果保存在 `outputs/stage-01/` 至 `outputs/stage-08/` 及 `outputs/stage-08-vertical/`。已有人工审核不会因重复运行而覆盖；动态报告会更新。
+`all` 依次运行九个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–6 运行抽取、产品匹配与证据化草稿的合成评估，Stage 7 重放 12 个询盘流程案例和 180 条合成试点事件，Stage 8 执行双租户与 `QH-001` / `P7-003` 纵向案例，Stage 9 检查标注分歧、模拟服务重试、资料发布门、身份、旧队列迁移与运营记录。结果保存在 `outputs/stage-01/` 至 `outputs/stage-09/`，另有 `outputs/stage-08-vertical/`。已有人工审核不会因重复运行而覆盖；动态报告会更新。
 
 分析自己的演练记录：
 
@@ -23,7 +23,7 @@ python3 run.py analyze --input stages/01-discovery/data/simulation.json --output
 
 Stage 1 输入规范见 [数据说明](stages/01-discovery/data/README.md)。`run.py` 的退出码 `0` 表示检查通过或报告成功生成；`2` 表示数据无效；`3` 表示报告已生成但 Stage 1 退出条件尚未齐全。`stage_pipeline.py` 的 `0` 表示教学流程与回归检查已完成；Stage 4 会如实报告未达门槛字段。设计审计通过不表示已达到产品发布门槛。
 
-Stage 1–3 资料可用任意 Markdown 阅读器浏览；Stage 4–8 的原有人工复核需启动各自本地页面，新增纵向案例可直接通过命令行审核。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)和[双案例纵向演练](stage8_vertical.py)；这套工具没有调用外部大模型，生成结果可以直接追溯到本地输入。
+Stage 1–3 资料可用任意 Markdown 阅读器浏览；Stage 4–8 的原有人工复核需启动各自本地页面，新增纵向案例可直接通过命令行审核。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)和[交付强化](stage9.py)；默认不调用外部大模型，生成结果可以直接追溯到本地输入。
 
 ## 建议阅读和练习顺序
 
@@ -44,6 +44,7 @@ Stage 1–3 资料可用任意 Markdown 阅读器浏览；Stage 4–8 的原有�
 15. [Stage 7 入口](stages/07-pilot-operations/README.md)：演练受控试点、分角色审核、全链路追踪、分群采用率、数据发布门和故障降级。
 16. [Stage 8 入口](stages/08-productization/README.md)：模拟第二客户售后 Discovery，运行双租户、领域安全规则、上下文排序和产品化 Review。
 17. [双 Domain 纵向交付手册](stages/08-productization/vertical/README.md)：自己扮演工程师与销售，完成模拟接入、审核修改和结果记录。
+18. [Stage 9 交付强化手册](stages/09-hardening/README.md)：复现双角色标注、模拟外部服务、发布门、身份校验、迁移和运营决策。
 
 [模拟场景流程图](stages/01-discovery/guides/observed-workflow.md) 展示正常路径、专家升级和客户澄清回路。
 
@@ -65,20 +66,22 @@ stages/06-context-knowledge-reply/ 客户与订单样本、知识文档、评估
 stages/07-pilot-operations/ 合成试点事件、操作手册、事故复盘、ADR 和决策记录
 stages/08-productization/  启航合成资料、双客户抽象边界、故障复盘与产品化决策
   vertical/                  QH-001 / P7-003 模拟外部输入、审核和结果资料
+stages/09-hardening/         挑战集、双角色标注、曲线/安全签核、运营口径及演练手册
 src/fde_discovery/            校验、指标计算、报告与阶段检查代码
 src/fde_stage3/               Stage 2/3 资料审计代码
 src/fde_platform/             Sprint 1–3 抽取、推荐、知识、草稿、审核与评估代码
 scripts/                      合成资料与评估集重建脚本
 tests/                        指标计算、无效输入与阶段边界测试
 run.py                        命令行入口
-stage_pipeline.py             八阶段离线检查入口
+stage_pipeline.py             九阶段离线检查入口
 stage4.py                     Sprint 1 demo / eval / review / process 命令入口
 stage5.py                     Sprint 2 demo / eval / recommend / from-stage4 / review 入口
 stage6.py                     Sprint 3 demo / eval / draft / review 入口
 stage7.py                     Pilot demo / dashboard / trace / incident / review / eval 入口
 stage8.py                     双租户 demo / eval / trace / incident / review 入口
 stage8_vertical.py            双 Domain prepare / review / close / report / demo 入口
+stage9.py                     交付强化 demo / prepare / login / label / review / eval 入口
 outputs/                      本地演练结果（不纳入版本管理）
 ```
 
-八个阶段的“交付”是可追溯的问题定义、治理决定与可运行的抽取、推荐、审核、运营和双客户产品化演练。Stage 4 的合成字段微平均准确率 96.7%，但流量和温度均为 90%，未达到每字段至少 95% 的设计门槛；Stage 5–8 的高分与改善也来自自造样本。纵向案例验证了共享流程契约，但没有人工交付工时证据可证明节省时间。没有真实模型、授权客户现场测试、邮件自动发送、自动维修指导或实际 Pilot 成效。
+九个阶段的“交付”是可追溯的问题定义、治理决定与可运行的抽取、推荐、审核、运营和双客户产品化演练。Stage 4 修复后，原 100 条合成集字段微平均为 98.9%，流量和温度各 100%；Stage 5–9 的高分仍来自自造样本。纵向案例验证了共享流程契约，但没有人工交付工时证据可证明节省时间。没有真实模型、授权客户现场测试、邮件自动发送、自动维修指导或实际 Pilot 成效。

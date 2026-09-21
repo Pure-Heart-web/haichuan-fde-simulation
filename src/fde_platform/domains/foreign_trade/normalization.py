@@ -25,9 +25,9 @@ def integral(value, name):
 def normalize_flow(value, unit):
     amount = positive(value, 'flow')
     canonical = (unit or '').lower().replace('³', '3')
-    if canonical in ('m3/h', 'cmh'):
+    if canonical in ('m3/h', 'cmh', 'cubic meters per hour'):
         return round(amount, 4)
-    if canonical == 'l/min':
+    if canonical in ('l/min', 'liters per minute'):
         return round(amount * 0.06, 4)
     raise DomainValidationError(f'不支持的流量单位：{unit}')
 
@@ -37,9 +37,9 @@ def normalize_temperature(value, unit):
     if not math.isfinite(amount):
         raise DomainValidationError('temperature 必须是有限数字')
     canonical = (unit or '').lower().replace('°', '')
-    if canonical == 'c':
+    if canonical in ('c', 'degrees celsius'):
         return round(amount, 3)
-    if canonical == 'f':
+    if canonical in ('f', 'degrees fahrenheit'):
         return round((amount - 32) * 5 / 9, 3)
     raise DomainValidationError(f'不支持的温度单位：{unit}')
 

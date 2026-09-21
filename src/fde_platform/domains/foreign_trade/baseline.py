@@ -19,7 +19,7 @@ def match_field(body, patterns, *, group=1, unit_group=None):
 class RegexBaselineProvider:
     """Local baseline. It is not an LLM and has no external model calls."""
 
-    model_version = 'regex-baseline-v1'
+    model_version = 'regex-baseline-v2'
 
     def complete(self, work_item: WorkItem, prompt_version: str) -> str:
         body = work_item.body
@@ -27,11 +27,11 @@ class RegexBaselineProvider:
         body = re.split(r'\n(?:--\s*$|best regards[,\s]*$|regards[,\s]*$|sent from my)', body,
                         maxsplit=1, flags=re.IGNORECASE | re.MULTILINE)[0]
         result = {
-            'flow': match_field(body, [rf'(?:flow|capacity|流量)\s*[:=]?\s*{NUMBER}\s*(m3/h|m³/h|cmh|l/min)\b',
-                                       rf'{NUMBER}\s*(m3/h|m³/h|cmh|l/min)\b'], unit_group=2),
+            'flow': match_field(body, [rf'(?:flow|capacity|流量)\s*[:=]?\s*{NUMBER}\s*(m3/h|m³/h|cmh|l/min|cubic meters per hour|liters per minute)\b',
+                                       rf'{NUMBER}\s*(m3/h|m³/h|cmh|l/min|cubic meters per hour|liters per minute)\b'], unit_group=2),
             'head': match_field(body, [rf'(?:head|扬程)\s*[:=]?\s*{NUMBER}\s*(m(?:eters?)?)?\b',
                                         rf'{NUMBER}\s*m\s+head\b']),
-            'temperature': match_field(body, [rf'{NUMBER}\s*(°?c|°?f)\b'], unit_group=2),
+            'temperature': match_field(body, [rf'{NUMBER}\s*(°?c|°?f|degrees Celsius|degrees Fahrenheit)\b'], unit_group=2),
             'quantity': match_field(body, [rf'{NUMBER}\s*(pcs|pieces|sets|units)\b',
                                             rf'(?:qty|quantity)\s*[:=]?\s*{NUMBER}',
                                             rf'(?:数量)\s*[:=]?\s*{NUMBER}\s*台']),

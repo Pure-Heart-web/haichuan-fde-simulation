@@ -1,0 +1,145 @@
+{
+  "mode": "synthetic_training_only",
+  "version": "qihang-rules-sim-v1",
+  "rules": [
+    {
+      "id": "SERVICE_E37_003",
+      "status": "active",
+      "effective_date": "2026-01-01",
+      "severity": "critical",
+      "source_ids": [
+        "QH-SAFETY-2026"
+      ],
+      "when": [
+        {
+          "field": "error_code",
+          "op": "equals",
+          "value": "E37"
+        },
+        {
+          "field": "abnormal_noise",
+          "op": "equals",
+          "value": true
+        },
+        {
+          "field": "temperature_c",
+          "op": "gte",
+          "value": 95
+        }
+      ],
+      "actions": [
+        "block_remote_guidance",
+        "engineer_review",
+        "consider_safe_shutdown_sop"
+      ]
+    },
+    {
+      "id": "SERVICE_NOISE_001",
+      "status": "active",
+      "effective_date": "2026-01-01",
+      "severity": "high",
+      "source_ids": [
+        "QH-SAFETY-2026"
+      ],
+      "when": [
+        {
+          "field": "abnormal_noise",
+          "op": "equals",
+          "value": true
+        }
+      ],
+      "actions": [
+        "block_remote_guidance",
+        "engineer_review"
+      ]
+    },
+    {
+      "id": "SERVICE_TEMP_001",
+      "status": "active",
+      "effective_date": "2026-01-01",
+      "severity": "high",
+      "source_ids": [
+        "QH-SAFETY-2026"
+      ],
+      "when": [
+        {
+          "field": "temperature_c",
+          "op": "gte",
+          "value": 95
+        }
+      ],
+      "actions": [
+        "block_remote_guidance",
+        "engineer_review"
+      ]
+    },
+    {
+      "id": "SERVICE_ELECTRICAL_001",
+      "status": "active",
+      "effective_date": "2026-01-01",
+      "severity": "high",
+      "source_ids": [
+        "QH-SAFETY-2026"
+      ],
+      "when": [
+        {
+          "field": "electrical_cabinet",
+          "op": "equals",
+          "value": true
+        }
+      ],
+      "actions": [
+        "block_remote_guidance",
+        "engineer_review"
+      ]
+    },
+    {
+      "id": "SERVICE_VESSEL_001",
+      "status": "active",
+      "effective_date": "2026-01-01",
+      "severity": "high",
+      "source_ids": [
+        "QH-SAFETY-2026"
+      ],
+      "when": [
+        {
+          "field": "pressure_vessel",
+          "op": "equals",
+          "value": true
+        }
+      ],
+      "actions": [
+        "block_remote_guidance",
+        "engineer_review"
+      ]
+    },
+    {
+      "id": "SERVICE_ASSET_UNKNOWN_001",
+      "status": "active",
+      "effective_date": "2026-01-01",
+      "severity": "high",
+      "source_ids": [
+        "SIM-ASSET-IDENTITY-POLICY"
+      ],
+      "when": [
+        {
+          "field": "asset_known",
+          "op": "equals",
+          "value": false
+        }
+      ],
+      "actions": [
+        "block_remote_guidance",
+        "engineer_review",
+        "verify_asset_identity"
+      ]
+    }
+  ],
+  "approval": {
+    "status": "approved_in_simulation",
+    "role": "safety_owner",
+    "actor_id": "sim-safety-owner-wu",
+    "approved_at": "2026-09-20T11:00:00+08:00",
+    "content_sha256": "1a5d0aaede205b7ee006ff50aedf319eaafbe4e6b74b415a38cb4b24b1b94641"
+  }
+}

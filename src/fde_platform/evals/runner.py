@@ -28,7 +28,7 @@ def percentile(values, p):
     return ordered[lo] + (ordered[hi] - ordered[lo]) * (pos - lo)
 
 
-def evaluate(dataset_path):
+def evaluate(dataset_path, provider=None):
     lines = Path(dataset_path).read_text(encoding='utf-8').splitlines()
     cases = [json.loads(line) for line in lines if line.strip()]
     if not cases:
@@ -38,6 +38,7 @@ def evaluate(dataset_path):
     failures, latencies = [], []
     parse_failures = 0
     attachment_cases = 0
+    evidence_present = evidence_total = 0
     for case in cases:
         if case.get('mode') != 'simulation' or set(case.get('expected', {})) != set(CRITICAL_FIELDS):
             raise ValueError(f'{case.get("id")} 标签或模式无效')
@@ -47,11 +48,17 @@ def evaluate(dataset_path):
             work = replace(work, attachments=case['attachments'])
             attachment_cases += 1
         started = time.perf_counter()
-        result, record = process(work)
+        result, record = process(work, provider)
         latencies.append((time.perf_counter() - started) * 1000)
         if result.status == 'failed':
             parse_failures += 1
         actual = record.to_dict() if record else {}
+        for field in CRITICAL_FIELDS:
+            if actual.get(field) is not None:
+                evidence_total += 1
+                evidence_key = 'medium_description' if field == 'medium_category' else field
+                if evidence_key in actual.get('evidence', {}):
+                    evidence_present += 1
         for field in CRITICAL_FIELDS:
             expected, predicted = case['expected'][field], actual.get(field)
             stats = per_field[field]
@@ -81,16 +88,20 @@ def evaluate(dataset_path):
     absent_total = sum(x['absent_total'] for x in per_field.values())
     absent_correct = sum(x['absent_correct'] for x in per_field.values())
     return {
-        'dataset': str(dataset_path), 'mode': 'simulation', 'engine': 'regex-baseline-v1',
+        'dataset': str(dataset_path), 'mode': 'simulation',
+        'engine': getattr(provider, 'model_version', 'regex-baseline-v2'),
         'case_count': len(cases), 'field_count': total,
         'critical_field_accuracy': correct / total,
         'present_field_accuracy': present_correct / present_total if present_total else None,
         'absent_field_accuracy': absent_correct / absent_total if absent_total else None,
         'parse_failure_rate': parse_failures / len(cases),
         'attachment_cases': attachment_cases, 'attachment_content_processed': False,
+        'evidence_coverage_rate': evidence_present / evidence_total if evidence_total else None,
         'p95_latency_ms_local': percentile(latencies, .95),
         'median_latency_ms_local': statistics.median(latencies),
-        'cost_per_inquiry_usd': 0.0,
+        'cost_per_inquiry_usd': (getattr(provider, 'total_cost_usd', None) / len(cases)
+                                 if provider is not None and getattr(provider, 'total_cost_usd', None) is not None
+                                 else 0.0 if provider is None else None),
         'per_field': {key: {**stats,
                             'accuracy': stats['correct'] / stats['total'],
                             'present_accuracy': stats['present_correct'] / stats['present_total'] if stats['present_total'] else None,
@@ -114,7 +125,7 @@ def render_report(report):
     head = ['# Sprint 1 离线评估 · 合成样本', '',
             f'引擎：`{report["engine"]}`；案例数：{report["case_count"]}；关键字段比较数：{report["field_count"]}。', '',
             f'字段微平均准确率：**{percent(report["critical_field_accuracy"])}**；非空字段：{percent(report["present_field_accuracy"])}；空值字段：{percent(report["absent_field_accuracy"])}。',
-            f'解析失败率：{percent(report["parse_failure_rate"])}；本机 P95 处理耗时：{report["p95_latency_ms_local"]:.2f} ms；外部模型费用：0（离线正则基线）。', '',
+            f'解析失败率：{percent(report["parse_failure_rate"])}；本机 P95 处理耗时：{report["p95_latency_ms_local"]:.2f} ms；单案外部模型费用：{report["cost_per_inquiry_usd"] if report["cost_per_inquiry_usd"] is not None else "未提供"} USD。', '',
             '本报告不包含真实销售样本、人工复核时间或 LLM 性能。模板生成的合成集可用于回归练习，不能据此判定 Pilot Release Gate。', '',
             '## 字段结果', '']
     tail = ['', '## 错误分类', ''] + [f'- {k}: {v}' for k, v in report['failure_counts'].items()]

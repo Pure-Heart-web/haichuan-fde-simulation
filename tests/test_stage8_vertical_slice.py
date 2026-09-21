@@ -62,6 +62,10 @@ class VerticalSliceTests(unittest.TestCase):
         self.assertIn('S6-ORD-002', by_case['P7-003']['evidence_refs'])
         self.assertEqual(by_case['QH-001']['top_option'], 'review_maintenance_work_order')
         self.assertEqual(by_case['P7-003']['top_option'], 'CP90')
+        hc_artifact = json.loads((self.output / 'artifacts/haichuan-training/P7-003.json').read_text())
+        self.assertTrue(hc_artifact['trace']['customer_facing_product_recommendation_abstained'])
+        self.assertIn('request_current_operating_conditions',
+                      hc_artifact['recommendation']['actions'])
         self.assertIsNone(self.journal('haichuan-training').get(by_case['QH-001']['episode_id']))
         self.assertEqual(result['human_effort']['comparison_status'], 'INSUFFICIENT_LOGGED_HUMAN_EFFORT')
         self.assertFalse(result['delivery_time_savings_proven'])

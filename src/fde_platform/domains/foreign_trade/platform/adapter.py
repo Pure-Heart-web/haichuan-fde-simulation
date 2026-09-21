@@ -24,7 +24,12 @@ def bridge_haichuan(case, session, root):
     options = tuple(DecisionOption(x['sku'], f'{x["sku"]} 暂定候选；需人工核对当前工况与来源',
                                    x['score'], evidence_refs)
                     for x in old_rec.get('candidates', ()))
-    recommendation = Recommendation(options, ('sales_review',), tuple(old_rec.get('warnings', ())),
+    current_conditions_confirmed = bool(case.get('confirmed_operating_conditions'))
+    actions = ('sales_review',) if current_conditions_confirmed else (
+        'request_current_operating_conditions', 'sales_review')
+    warnings = tuple(old_rec.get('warnings', ())) + (() if current_conditions_confirmed else
+        ('customer_facing_product_recommendation_abstained_until_current_conditions_confirmed',))
+    recommendation = Recommendation(options, actions, warnings,
                                     evidence_refs, 'low', True)
     work = from_text(case['text'], source_id=case['id'], tenant_id=session.tenant_id,
                      domain=session.domain, sender=case['sender'],
@@ -36,11 +41,13 @@ def bridge_haichuan(case, session, root):
              'versions': old_trace['versions'], 'candidate_ids': [x.code for x in options],
              'previous_order_source_id': order_source, 'knowledge_document_ids': list(knowledge_ids),
              'rule_ids': list(rule_ids), 'draft_status': artifact['draft']['status'] if artifact['draft'] else None,
+             'customer_facing_product_recommendation_abstained': not current_conditions_confirmed,
              'legacy_trace_id': old_trace['trace_id'], 'observed_api_cost_usd': 0.0}
     task = ReviewTask(case['id'] + '-PLATFORM-REVIEW', case['id'], trace_id, 'sales_draft', 'low',
                       'sales', case['owner'],
                       {'candidate_skus': [x.code for x in options], 'blocking_risk': False,
-                       'note': '仅教学审核，不发送邮件或报价'},
+                       'customer_facing_product_recommendation_abstained': not current_conditions_confirmed,
+                       'note': '仅教学审核；当前工况未确认时必须先澄清，不发送邮件或报价'},
                       {'legacy_trace_id': old_trace['trace_id'], 'knowledge_document_ids': list(knowledge_ids),
                        'previous_order_source_id': order_source, 'rule_ids': list(rule_ids)},
                       tenant_id=session.tenant_id,

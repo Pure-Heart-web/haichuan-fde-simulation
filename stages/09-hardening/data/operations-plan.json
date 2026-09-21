@@ -1,0 +1,16 @@
+{
+  "mode":"synthetic_operations_contract",
+  "version":"ops-baseline-v1-frozen",
+  "baseline_source":"stages/07-pilot-operations/data/baseline.json",
+  "metric_definitions":{
+    "adoption":"使用建议的合格复杂询盘 / 合格复杂询盘；不能以登录次数代替",
+    "human_edit":"人工修改建议的已审核案例 / 全部已审核案例",
+    "error":"失败或死信输入 / 唯一有效输入",
+    "expert_burden":"工程师实际处理分钟及升级次数 / 工作日",
+    "dependency_failure":"依赖超时次数与恢复耗时，分别记录",
+    "cost":"模型实际账单 + 集成运维工时；本演练仅离线账面 0 USD"
+  },
+  "stop_if":["unsafe_guidance","cross_tenant_access","unapproved_rule_or_curve","sent_without_human_confirmation"],
+  "simulated_signoff":{"pilot_owner":"pilot-owner-linda","safety_owner":"ops-safety-wu","platform_owner":"platform-owner-li"},
+  "real_expand_requires":["authorized_customers","independent_labels","real_identity","real_safety_approval","measured_cost","incident_oncall"]
+}

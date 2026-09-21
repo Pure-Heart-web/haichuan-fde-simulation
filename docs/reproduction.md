@@ -45,3 +45,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 ## Stage 8：双 Domain 纵向案例
 
 运行 `python3 stage8_vertical.py demo --check-baseline`，核对 `outputs/stage-08-vertical/episode-report.md`：启航 `QH-001`、海川 `P7-003` 都应有五步完整事件链、一次重复输入被去重、零对外发送和零真实用户。若要自己审核，用独立目录执行 `prepare`、`queue`、`review`、`close`；完整命令和工时记录方式见[纵向演练手册](../stages/08-productization/vertical/README.md)。
+
+## Stage 9：交付强化
+
+运行 `python3 stage9.py demo --check-baseline`，核对 `outputs/stage-09/hardening-report.json`：原 Stage 4 合成字段门槛通过、10 条挑战案例/3 处分歧、2 条闭环/1 条更新待审、一次依赖重试、2 条 `pending_send`、实际发送 0。用新目录执行 `prepare`、`login`、`review`、`close`、`confirm` 可亲自重放；模型端点、真人标注、旧队列导出和运行门详见[Stage 9 手册](../stages/09-hardening/README.md)。

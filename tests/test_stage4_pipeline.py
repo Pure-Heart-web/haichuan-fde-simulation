@@ -158,10 +158,11 @@ class SprintOneTests(unittest.TestCase):
     def test_synthetic_eval_and_regression_check(self):
         result = evaluate(ROOT / 'stages/04-build-sprint-1/data/inquiry_eval_v0.jsonl')
         self.assertEqual(result['case_count'], 100)
-        self.assertAlmostEqual(result['critical_field_accuracy'], 0.9666666666666667)
+        self.assertAlmostEqual(result['critical_field_accuracy'], 0.9888888888888889)
         self.assertEqual(result['parse_failure_rate'], 0)
-        self.assertEqual(result['per_field']['flow_m3h']['accuracy'], 0.9)
-        self.assertFalse(result['offline_thresholds_met'])
+        self.assertEqual(result['per_field']['flow_m3h']['accuracy'], 1.0)
+        self.assertEqual(result['per_field']['temperature_c']['accuracy'], 1.0)
+        self.assertTrue(result['offline_thresholds_met'])
         with tempfile.TemporaryDirectory() as tmp:
             run = subprocess.run([sys.executable, str(ROOT / 'stage4.py'), 'eval',
                                   '--output', tmp, '--check-baseline'], capture_output=True, text=True)

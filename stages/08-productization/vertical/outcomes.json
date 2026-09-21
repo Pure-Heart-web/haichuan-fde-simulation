@@ -2,6 +2,6 @@
   "mode": "synthetic_outcomes_only",
   "outcomes": [
     {"outcome_id":"SIM-CMMS-QH-001-CLOSE","tenant_id":"qihang-training","domain":"after_sales","case_id":"QH-001","outcome_type":"confirmed_fault","value":"maintenance_assembly_alignment_issue","evidence_ref":"SIM-CMMS-WO-QH-111","observed_by":"engineer-chen","recorded_at":"2026-09-22T16:20:00+08:00","status":"synthetic_reviewed","note":"虚构现场复核结论，非真实设备故障"},
-    {"outcome_id":"SIM-CRM-P7-003-CONFIRM","tenant_id":"haichuan-training","domain":"foreign_trade","case_id":"P7-003","outcome_type":"customer_requirements_confirmed","value":"customer_confirmed_current_configuration_for_human_review","evidence_ref":"SIM-CRM-CONFIRM-P7-003","observed_by":"anna","recorded_at":"2026-09-22T11:30:00+08:00","status":"synthetic_reviewed","note":"虚构客户澄清记录，未发送邮件或报价"}
+    {"outcome_id":"SIM-CRM-P7-003-CONFIRM","tenant_id":"haichuan-training","domain":"foreign_trade","case_id":"P7-003","outcome_type":"customer_requirements_confirmed","value":"customer_confirmed_current_configuration_for_human_review","evidence_ref":"SIM-CRM-CONFIRM-P7-003","observed_by":"anna","recorded_at":"2026-09-22T11:30:00+08:00","status":"synthetic_reviewed","confirmed_operating_conditions":{"sku":"CP90","flow_m3h":85,"head_m":38,"medium":"water","temperature_c":20,"frequency_hz":50,"voltage_v":380},"note":"虚构客户澄清记录，未发送邮件或报价"}
   ]
 }

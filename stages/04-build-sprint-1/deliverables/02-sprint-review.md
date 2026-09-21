@@ -1,5 +1,7 @@
 # Sprint 1 Review 与退出条件
 
+> 历史快照：本页描述 `regex-baseline-v1` 的 Sprint 1 结果。Stage 9 已修复该合成集的全写单位解析缺口，当前结果以 `stage4.py eval` 动态报告为准。
+
 **目标。** 验证邮件或文本能否成为可追溯、可人工更正的 InquiryRecord。当前已经有本地端到端演示与 100 条合成集评估。Stage 3 的 20 封合成邮件进入本地 SQLite 审核队列；销售的真实现场测试尚未进行。
 
 **已实现。** WorkItem、typed InquiryRecord、可替换 Provider 的通用抽取编排、原始单位规范化、字段证据校验、一次解析重试、失败审核路径、本地 Review UI、不可覆盖的 Feedback Event、Prompt/Provider 版本、JSONL telemetry、合成 Golden Dataset 和回归 CI。运行路径见 [Stage 4 入口](../README.md)。

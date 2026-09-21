@@ -44,32 +44,37 @@ def prepare(store, output):
     seed(store)
     first_seen, duplicate_in_fixture, newly_received = set(), 0, 0
     for event in inbound_events():
-        case = adapt_event(event)
         key = (event['tenant_id'], event['domain'], event['source_type'], event['source_id'])
         if key in first_seen:
             duplicate_in_fixture += 1
         first_seen.add(key)
-        journal = _journal(store, event['tenant_id'])
-        episode, created = journal.receive(event)
-        newly_received += int(created)
-        if episode['state'] == 'received':
-            case_record = create_case_record(event)
-            journal.session.put('case_record', case_record.case_record_id, case_record.to_dict())
-            journal.case_created(episode['episode_id'], case_record.case_record_id)
-            episode = journal.get(episode['episode_id'])
-        if episode['state'] != 'case_open':
-            continue
-        if event['domain'] == 'after_sales':
-            artifact = process_service_case(case, journal.session)
-        else:
-            artifact = bridge_haichuan(case, journal.session, ROOT)
-        journal.proposal_ready(episode['episode_id'], artifact['work_item']['id'],
-                               artifact['trace']['trace_id'], artifact['review_task']['task_id'])
-        folder = output / 'artifacts' / event['tenant_id']
-        folder.mkdir(parents=True, exist_ok=True)
-        (folder / (event['case_id'] + '.json')).write_text(
-            json.dumps(artifact, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        newly_received += int(prepare_event(store, output, event))
     return {'newly_received': newly_received, 'duplicate_events_in_fixture': duplicate_in_fixture}
+
+
+def prepare_event(store, output, event):
+    """Deliver one validated mock event; an interrupted step can be retried safely."""
+    case = adapt_event(event)
+    journal = _journal(store, event['tenant_id'])
+    episode, created = journal.receive(event)
+    if episode['state'] == 'received':
+        case_record = create_case_record(event)
+        journal.session.put('case_record', case_record.case_record_id, case_record.to_dict())
+        journal.case_created(episode['episode_id'], case_record.case_record_id)
+        episode = journal.get(episode['episode_id'])
+    if episode['state'] != 'case_open':
+        return created
+    if event['domain'] == 'after_sales':
+        artifact = process_service_case(case, journal.session)
+    else:
+        artifact = bridge_haichuan(case, journal.session, ROOT)
+    journal.proposal_ready(episode['episode_id'], artifact['work_item']['id'],
+                           artifact['trace']['trace_id'], artifact['review_task']['task_id'])
+    folder = output / 'artifacts' / event['tenant_id']
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / (event['case_id'] + '.json')).write_text(
+        json.dumps(artifact, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    return created
 
 
 def scripted_review_and_outcome(store):

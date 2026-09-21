@@ -15,7 +15,7 @@ python3 stage8.py incident
 python3 stage8.py review
 ```
 
-`review` 在 `http://127.0.0.1:8769/?user=zhou` 启动启航专用本机审核页，可切换 `engineer-chen`。角色选择**不是身份认证**。输出在 `outputs/stage-08/`：`service-artifacts/`、`haichuan-bridge.json`、`stage8-eval.md`、`shadow-incident.md`、`platform-status.json` 和 SQLite 队列。重复 demo 保留审核事件；更改源数据后请用新的 `--output outputs/my-stage8-run`。`python3 stage_pipeline.py all` 串联 Stage 1–8。
+`review` 在 `http://127.0.0.1:8769/?user=zhou` 启动启航专用本机审核页，可切换 `engineer-chen`。角色选择**不是身份认证**。输出在 `outputs/stage-08/`：`service-artifacts/`、`haichuan-bridge.json`、`stage8-eval.md`、`shadow-incident.md`、`platform-status.json` 和 SQLite 队列。重复 demo 保留审核事件；更改源数据后请用新的 `--output outputs/my-stage8-run`。`python3 stage_pipeline.py all` 串联 Stage 1–9。
 
 新增的[双 Domain 纵向演练](vertical/README.md)从 `QH-001` 电话转写和 `P7-003` 邮件开始，走模拟建单、证据化内部建议、人工改写与独立合成结果记录。运行 `python3 stage8_vertical.py demo --check-baseline`；或者按手册使用 `prepare`、`queue`、`review`、`close` 逐步演练。它使用独立的 `outputs/stage-08-vertical/`，也已纳入 `stage_pipeline.py all`。
 

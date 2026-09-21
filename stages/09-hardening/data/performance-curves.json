@@ -1,0 +1,45 @@
+{
+  "mode": "synthetic_training_only",
+  "version": "sim-curves-v1",
+  "curves": [
+    {
+      "sku": "CP90",
+      "curve_id": "SIM-CURVE-CP90-V1",
+      "source_id": "SIM-DATASHEET-CP90",
+      "status": "approved_in_simulation",
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-12-31",
+      "medium": "water",
+      "temperature_range_c": [
+        0,
+        60
+      ],
+      "frequency_hz": 50,
+      "voltage_v": [
+        380,
+        400
+      ],
+      "points": [
+        [
+          80,
+          45
+        ],
+        [
+          85,
+          42
+        ],
+        [
+          90,
+          38
+        ]
+      ]
+    }
+  ],
+  "approval": {
+    "status": "approved_in_simulation",
+    "role": "product_engineer",
+    "actor_id": "sim-product-engineer-li",
+    "approved_at": "2026-09-20T10:00:00+08:00",
+    "content_sha256": "d42181da7e9a0d4ffabfabf104c6bde778ebf6561bb43fa293bfd9b53dcedc2e"
+  }
+}

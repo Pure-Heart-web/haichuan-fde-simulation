@@ -8,10 +8,13 @@ from fde_platform.core.models import utc_now
 from fde_platform.core.platform.contracts import FeedbackEvent
 
 KINDS = frozenset({'case_record', 'work_item', 'context', 'knowledge', 'rule', 'trace',
-                   'eval', 'review_task', 'recommendation'})
+                   'eval', 'review_task', 'recommendation', 'legacy_trace',
+                   'legacy_review_task', 'legacy_review_event'})
 IDENTIFIER_FIELDS = {'work_item': 'id', 'context': 'serial_number', 'knowledge': 'document_id',
                      'rule': 'id', 'trace': 'trace_id', 'review_task': 'task_id',
-                     'recommendation': 'case_id', 'case_record': 'case_record_id'}
+                     'recommendation': 'case_id', 'case_record': 'case_record_id',
+                     'legacy_trace': 'trace_id', 'legacy_review_task': 'task_id',
+                     'legacy_review_event': 'event_id'}
 
 
 class TenantStore:

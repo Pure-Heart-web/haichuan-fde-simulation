@@ -1,4 +1,4 @@
-name: FDE Stage 1–8 offline checks
+name: FDE Stage 1–9 offline checks
 on:
   push:
   pull_request:
@@ -22,5 +22,7 @@ jobs:
         run: python3 stage8.py eval --check-baseline
       - name: Two-domain vertical workflow regression
         run: python3 stage8_vertical.py demo --check-baseline
-      - name: Stage 1–8 offline delivery walkthrough
+      - name: Stage 9 synthetic delivery hardening regression
+        run: python3 stage9.py demo --check-baseline
+      - name: Stage 1–9 offline delivery walkthrough
         run: python3 stage_pipeline.py all
