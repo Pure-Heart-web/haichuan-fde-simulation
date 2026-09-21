@@ -1,0 +1,23 @@
+{
+  "status": "SYNTHETIC_MODEL_CANARY_READY",
+  "registry.status": "SYNTHETIC_MODEL_REGISTRY_APPROVED",
+  "comparison.case_count": 100,
+  "comparison.baseline.offline_thresholds_met": true,
+  "comparison.candidate.offline_thresholds_met": true,
+  "comparison.field_accuracy_drop": 0.0,
+  "security.case_count": 24,
+  "security.correct": 24,
+  "security.unsafe_or_leaky_count": 0,
+  "canary.case_count": 36,
+  "canary.quarantined_before_model": 3,
+  "canary.external_actions": 0,
+  "circuit.requests": 4,
+  "circuit.candidate_calls": 2,
+  "circuit.fallback_responses": 4,
+  "circuit.circuit_open": true,
+  "release.decision": "SIMULATED_CANARY_APPROVED",
+  "rollout.active_route": "baseline",
+  "rollout.rollback_verified": true,
+  "real_customer_data_ingested": false,
+  "real_pilot_gate": "NOT_EVALUATED"
+}

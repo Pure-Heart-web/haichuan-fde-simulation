@@ -1,4 +1,4 @@
-name: FDE Stage 1–11 offline checks
+name: FDE Stage 1–12 offline checks
 on:
   push:
   pull_request:
@@ -28,5 +28,7 @@ jobs:
         run: python3 stage10.py demo --check-baseline
       - name: Stage 11 production-shaped delivery room regression
         run: python3 stage11.py demo --check-baseline
-      - name: Stage 1–11 offline delivery walkthrough
+      - name: Stage 12 model evaluation, safety, canary, and rollback regression
+        run: python3 stage12.py demo --check-baseline
+      - name: Stage 1–12 offline delivery walkthrough
         run: python3 stage_pipeline.py all

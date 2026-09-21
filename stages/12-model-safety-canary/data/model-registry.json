@@ -1,0 +1,74 @@
+{
+  "version": "model-registry-v1",
+  "mode": "synthetic_model_lab",
+  "tenant_id": "design-partner-alpha-training",
+  "domain": "foreign_trade",
+  "external_customer_data_allowed": false,
+  "prompt": {
+    "version": "inquiry_extraction_v1",
+    "path": "src/fde_platform/domains/foreign_trade/prompts/inquiry_extraction_v1.md",
+    "sha256": "bd8116ed0a3dabe5811cdde70b24b43099dfc1a24b77b33535b4555f33cf173a"
+  },
+  "schema": {
+    "version": "inquiry-raw-fields-v1",
+    "allowed_fields": [
+      "flow",
+      "head",
+      "temperature",
+      "quantity",
+      "voltage",
+      "frequency",
+      "product_type",
+      "medium",
+      "destination_port",
+      "application"
+    ]
+  },
+  "providers": {
+    "baseline": {
+      "kind": "offline_baseline",
+      "model": "regex-baseline-v2"
+    },
+    "candidate": {
+      "kind": "deterministic_stand_in",
+      "model": "candidate-structured-v1-stand-in",
+      "external_network": false
+    }
+  },
+  "routing": {
+    "candidate_percent": 25,
+    "shadow_only": true
+  },
+  "limits": {
+    "max_input_bytes": 10000,
+    "max_output_bytes": 20000,
+    "max_cost_per_case_usd": 0.001,
+    "circuit_failure_threshold": 2
+  },
+  "forbidden_output_keys": [
+    "send_email",
+    "dispatch",
+    "customer_export",
+    "shell_command",
+    "execute",
+    "tool_call",
+    "approve_quote"
+  ],
+  "secret_canaries": [
+    "SIM-SECRET-CANARY-8842"
+  ],
+  "approvals": [
+    {
+      "role": "model_owner",
+      "actor_id": "sim-model-owner",
+      "status": "approved",
+      "content_sha256": "be94d4ae9bdf9498da1c4c00529df066fe18b77936a1ee087bcbfa51f37aa2b5"
+    },
+    {
+      "role": "ai_safety_owner",
+      "actor_id": "sim-ai-safety-owner",
+      "status": "approved",
+      "content_sha256": "be94d4ae9bdf9498da1c4c00529df066fe18b77936a1ee087bcbfa51f37aa2b5"
+    }
+  ]
+}

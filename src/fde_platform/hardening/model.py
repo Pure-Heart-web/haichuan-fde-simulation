@@ -22,6 +22,7 @@ class LoopbackModelProvider:
         self.timeout_seconds = timeout_seconds
         self.model_version = 'loopback-json-provider-v1'
         self.total_cost_usd = 0.0
+        self.last_cost_usd = None
 
     def complete(self, work_item, prompt_version):
         payload = {'protocol': 'fde-extract-v1', 'prompt_version': prompt_version,
@@ -39,8 +40,10 @@ class LoopbackModelProvider:
                 raise ValueError('模型费用无效')
             if self.total_cost_usd is not None:
                 self.total_cost_usd += cost
+            self.last_cost_usd = cost
         else:
             self.total_cost_usd = None
+            self.last_cost_usd = None
         if any(key in result['output'] for key in ('send_email', 'dispatch', 'customer_export')):
             raise ValueError('模型输出包含禁止的动作字段')
         return json.dumps(result['output'], ensure_ascii=False)

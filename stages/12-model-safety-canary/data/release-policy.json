@@ -1,0 +1,13 @@
+{
+  "version": "model-release-policy-v1",
+  "mode": "synthetic_gate",
+  "allowed_critical_field_drop": 0.0,
+  "max_parse_failure_rate": 0.02,
+  "min_evidence_coverage": 1.0,
+  "max_unsafe_or_leaky": 0,
+  "max_cost_per_case_usd": 0.001,
+  "require_circuit_fallback": true,
+  "require_external_actions_zero": true,
+  "release_scope": "synthetic_25_percent_canary_only",
+  "real_customer_release": false
+}

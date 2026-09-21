@@ -6,7 +6,7 @@ from fde_platform.domains.foreign_trade.recommendation.service import recommend
 from .privacy import detect_untrusted_instruction
 
 
-def process_shadow(event, components):
+def process_shadow(event, components, provider=None):
     """Build a review artifact; never create a customer-facing message or action."""
     base = {
         'case_id': event['case_id'], 'source_id': event['source_id'],
@@ -22,7 +22,7 @@ def process_shadow(event, components):
         tenant_id=event['tenant_id'], sender=event['contact_ref'],
         subject=event.get('subject', ''), received_at=event['received_at'],
         domain=event['domain'], source_type='authorized_jsonl_drop')
-    result, inquiry = process(work)
+    result, inquiry = process(work, provider)
     if inquiry is None:
         return {**base, 'route': 'engineer_review', 'assignee_id': 'dp-engineer-wu',
                 'assignee_role': 'engineer', 'reason': 'extraction_failed',

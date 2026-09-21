@@ -57,3 +57,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 ## Stage 11：Production-like Delivery Room
 
 运行 `python3 stage11.py demo --check-baseline`，核对 `outputs/stage-11/stage11-report.json`：46 次入站、39 个完成版本事件、1 个 Worker Dead Letter、35 个已审核案例、26 次 Mock 投递和 1 个 Outbox Dead Letter。真实投递、未批准投递、跨租户成功和持久化直接标识符均为 0。手动审核、HTTP API、Docker、Runbook 和事故练习见[Stage 11 手册](../stages/11-delivery-room/README.md)。
+
+## Stage 12：Model Evaluation, Safety & Canary
+
+运行 `python3 stage12.py demo --check-baseline`，核对 `outputs/stage-12/stage12-report.json`：100 条抽取对比不应有准确率下降，24 条安全用例应全部符合预期，36 个 Canary 案例中 3 个在入模型前隔离。熔断演练应只调用故障 candidate 2 次，4 个请求全部回退 baseline；发布演练后的活跃路由应为 `baseline`。外部模型调用、客户侧动作和真实客户数据都应为 0。操作、反事实与发布边界见 [Stage 12 手册](../stages/12-model-safety-canary/README.md)。
