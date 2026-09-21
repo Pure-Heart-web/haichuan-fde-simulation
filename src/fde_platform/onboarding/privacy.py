@@ -7,8 +7,8 @@ EMAIL = re.compile(r'(?<![\w.+-])([\w.+-]+@[\w.-]+\.[A-Za-z]{2,})(?![\w.-])')
 # Phone-like numbers must contain a plausible mobile or grouped subscriber
 # pattern. This avoids treating ISO timestamps and SHA/token fragments as phones.
 PHONE = re.compile(
-    r'(?<![\d-])((?:\+?\d{1,3}[ -]?)?(?:1[3-9]\d[ -]?\d{4}[ -]?\d{4}|'
-    r'\(?\d{2,4}\)?[ -]\d{3,4}[ -]\d{4}))(?![\d-])'
+    r'(?<![\w-])((?:\+?\d{1,3}[ -]?)?(?:1[3-9]\d[ -]?\d{4}[ -]?\d{4}|'
+    r'\(?\d{2,4}\)?[ -]\d{3,4}[ -]\d{4}))(?![\w-])'
 )
 
 

@@ -1,6 +1,6 @@
 # 工业设备 · FDE 交付学习案例
 
-这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9 的交付强化，以及 Stage 10 的客户接入与受控 Shadow Pilot**。后续阶段按新需求继续扩展。
+这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9 的交付强化，Stage 10 的客户接入与受控 Shadow Pilot，以及 Stage 11 的生产形态 Delivery Room**。后续阶段按新需求继续扩展。
 
 企业、联系人、邮件、设备、型号、订单和指标均为教学虚构。样本中的数值用于练习分析，不是客户真实业务事实，也不是泵选型或设备维修依据。
 
@@ -13,7 +13,7 @@ python3 stage_pipeline.py all
 python3 -m unittest discover -s tests -v
 ```
 
-`all` 依次运行十个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–6 运行抽取、产品匹配与证据化草稿的合成评估，Stage 7 重放 12 个询盘流程案例和 180 条合成试点事件，Stage 8 执行双租户与 `QH-001` / `P7-003` 纵向案例，Stage 9 检查交付强化控制，Stage 10 验证新客户授权包、脱敏接入、版本更新、受控审核与到期删除。结果保存在 `outputs/stage-01/` 至 `outputs/stage-10/`，另有 `outputs/stage-08-vertical/`。动态报告会更新。
+`all` 依次运行十一个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–6 运行抽取、产品匹配与证据化草稿的合成评估，Stage 7 重放试点事件，Stage 8 执行双租户与纵向案例，Stage 9 检查交付强化控制，Stage 10 验证客户授权和 Shadow 接入，Stage 11 运行持久化 Inbox、Worker、审核、双人 Outbox、Mock 投递、Trace 和事故演练。结果保存在 `outputs/stage-01/` 至 `outputs/stage-11/`，另有 `outputs/stage-08-vertical/`。
 
 分析自己的演练记录：
 
@@ -23,7 +23,7 @@ python3 run.py analyze --input stages/01-discovery/data/simulation.json --output
 
 Stage 1 输入规范见 [数据说明](stages/01-discovery/data/README.md)。`run.py` 的退出码 `0` 表示检查通过或报告成功生成；`2` 表示数据无效；`3` 表示报告已生成但 Stage 1 退出条件尚未齐全。`stage_pipeline.py` 的 `0` 表示教学流程与回归检查已完成；Stage 4 会如实报告未达门槛字段。设计审计通过不表示已达到产品发布门槛。
 
-Stage 1–3 资料可用任意 Markdown 阅读器浏览；Stage 4–8 的原有人工复核需启动各自本地页面，新增纵向案例和客户 Shadow 案例可通过命令行审核。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)和[客户接入](stage10.py)；默认不调用外部大模型，生成结果可以直接追溯到本地输入。
+Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)和[Delivery Room](stage11.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
 
 ## 建议阅读和练习顺序
 
@@ -46,6 +46,7 @@ Stage 1–3 资料可用任意 Markdown 阅读器浏览；Stage 4–8 的原有�
 17. [双 Domain 纵向交付手册](stages/08-productization/vertical/README.md)：自己扮演工程师与销售，完成模拟接入、审核修改和结果记录。
 18. [Stage 9 交付强化手册](stages/09-hardening/README.md)：复现双角色标注、模拟外部服务、发布门、身份校验、迁移和运营决策。
 19. [Stage 10 客户接入与 Shadow Pilot](stages/10-customer-onboarding/README.md)：验证授权清单、脱敏、幂等更新、角色审核、保留期和真实切换门。
+20. [Stage 11 Production-like Delivery Room](stages/11-delivery-room/README.md)：运行持久化队列、Worker、双人发布、Mock HTTP、Trace、值班和事故复盘。
 
 [模拟场景流程图](stages/01-discovery/guides/observed-workflow.md) 展示正常路径、专家升级和客户澄清回路。
 
@@ -69,6 +70,7 @@ stages/08-productization/  启航合成资料、双客户抽象边界、故障�
   vertical/                  QH-001 / P7-003 模拟外部输入、审核和结果资料
 stages/09-hardening/         挑战集、双角色标注、曲线/安全签核、运营口径及演练手册
 stages/10-customer-onboarding/ 合成设计合作客户包、真实切换手册、检查表及评审记录
+stages/11-delivery-room/      生产形态运行时、36 案例、API、Runbook、UAT 与交付治理
 src/fde_discovery/            校验、指标计算、报告与阶段检查代码
 src/fde_stage3/               Stage 2/3 资料审计代码
 src/fde_platform/             Sprint 1–3 抽取、推荐、知识、草稿、审核与评估代码
@@ -84,7 +86,9 @@ stage8.py                     双租户 demo / eval / trace / incident / review 
 stage8_vertical.py            双 Domain prepare / review / close / report / demo 入口
 stage9.py                     交付强化 demo / prepare / login / label / review / eval 入口
 stage10.py                    客户包校验 / prepare / login / queue / review / purge / readiness 入口
+stage11.py                    Delivery Room demo / worker / review / approve / dispatch / trace / API 入口
+stage11_mock_server.py        本机 OAuth 与 Mock 客户端点
 outputs/                      本地演练结果（不纳入版本管理）
 ```
 
-十个阶段的“交付”是可追溯的问题定义、治理决定与可运行的抽取、推荐、审核、运营、产品化和客户接入演练。Stage 4 修复后，原 100 条合成集字段微平均为 98.9%，流量和温度各 100%；Stage 5–10 的高分仍来自自造样本。Stage 10 证明新客户可以通过薄适配层复用 Core，并主动拒绝把真实模式放进教学数据面；没有人工交付工时证据可证明节省时间，也没有真实模型、授权客户现场测试、邮件自动发送、自动维修指导或实际 Pilot 成效。
+十一个阶段的“交付”是可追溯的问题定义、治理决定与可运行的抽取、推荐、审核、运营、产品化、客户接入和生产形态演练。Stage 11 证明持久化、重试、双人发布和事故路径在合成环境可运行；SQLite、本地身份、Mock 投递和脚本班次仍不能替代生产数据库、企业 SSO、授权客户现场测试或实际 Pilot 成效。所有高分仍来自自造样本，也没有人工交付工时证据证明节省时间。

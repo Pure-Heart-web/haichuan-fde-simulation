@@ -1,0 +1,18 @@
+{
+  "status": "SYNTHETIC_DELIVERY_ROOM_READY",
+  "intake.total_received": 46,
+  "intake.created": 36,
+  "intake.updated": 4,
+  "intake.duplicate": 6,
+  "worker.done": 39,
+  "worker.dead": 1,
+  "worker.retry_events": 3,
+  "workflow.case_count": 35,
+  "workflow.reviewed": 35,
+  "workflow.pending_review": 0,
+  "delivery.real_customer_deliveries": 0,
+  "delivery.unapproved_deliveries": 0,
+  "security.cross_tenant_access_allowed": 0,
+  "runtime.schema_version": 1,
+  "real_pilot_gate": "NOT_EVALUATED"
+}

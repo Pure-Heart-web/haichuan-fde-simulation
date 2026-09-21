@@ -1,0 +1,35 @@
+{
+  "version": "delivery-room-plan-v1",
+  "mode": "synthetic_production_shaped_runtime",
+  "tenant_id": "design-partner-alpha-training",
+  "domain": "foreign_trade",
+  "case_count": 36,
+  "shift_count": 5,
+  "worker": {
+    "max_attempts": 3,
+    "lease_ticks": 3,
+    "backoff": "2^attempt deterministic training ticks",
+    "faults": {
+      "DR-E005-V1": "timeout_once",
+      "DR-E017-V1": "permanent_schema_drift"
+    }
+  },
+  "outbox": {
+    "two_person_release": true,
+    "allowed_sink": "localhost_or_in_process_mock_only",
+    "max_attempts": 3
+  },
+  "slo_training_targets": {
+    "cross_tenant_access_allowed": 0,
+    "duplicate_business_actions": 0,
+    "unreviewed_delivery": 0,
+    "real_customer_deliveries": 0,
+    "dead_letter_has_incident": true
+  },
+  "limitations": [
+    "SQLite reference runtime, not production PostgreSQL",
+    "local signed identity, not enterprise SSO",
+    "synthetic shifts, not observed customer adoption",
+    "mock deliveries only"
+  ]
+}

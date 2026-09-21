@@ -1,0 +1,17 @@
+services:
+  delivery-room:
+    build:
+      context: ../..
+      dockerfile: stages/11-delivery-room/docker/Dockerfile
+    ports:
+      - "127.0.0.1:8781:8781"
+    volumes:
+      - stage11-data:/app/outputs/stage-11
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8781/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  stage11-data:

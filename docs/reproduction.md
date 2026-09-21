@@ -53,3 +53,7 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 ## Stage 10：客户接入与 Shadow Pilot
 
 运行 `python3 stage10.py demo --check-baseline`，核对 `outputs/stage-10/stage10-report.json`：新增 5、更新 1、重复 1、拒绝 2；到期清理后保留 4 个已审核案例；对外副作用、真实客户数据和真实用户均为 0。运行 `python3 stage10.py readiness` 应为 `NOT_READY_FOR_REAL_CUSTOMER_DATA`，并明确列出生产数据面、企业身份、授权证据等缺口。手动审核、反事实练习和真实切换步骤见[Stage 10 手册](../stages/10-customer-onboarding/README.md)。
+
+## Stage 11：Production-like Delivery Room
+
+运行 `python3 stage11.py demo --check-baseline`，核对 `outputs/stage-11/stage11-report.json`：46 次入站、39 个完成版本事件、1 个 Worker Dead Letter、35 个已审核案例、26 次 Mock 投递和 1 个 Outbox Dead Letter。真实投递、未批准投递、跨租户成功和持久化直接标识符均为 0。手动审核、HTTP API、Docker、Runbook 和事故练习见[Stage 11 手册](../stages/11-delivery-room/README.md)。
