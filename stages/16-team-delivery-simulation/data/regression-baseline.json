@@ -1,0 +1,12 @@
+{
+  "status": "TEAM_READY_FOR_SUPERVISED_COMMERCIAL_DELIVERY",
+  "mode": "synthetic_team_submission",
+  "team_id": "SIM-TEAM-ALPHA",
+  "raw_score": 93,
+  "final_score": 93,
+  "failed_critical_controls": [],
+  "member_count": 6,
+  "technically_responsible_count": 6,
+  "real_customer_data_used": false,
+  "external_customer_actions": 0
+}

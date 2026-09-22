@@ -1,0 +1,66 @@
+{
+  "version": "team-submission-v1",
+  "mode": "synthetic_team_submission",
+  "team_id": "SIM-TEAM-ALPHA",
+  "members": [
+    {"member_id": "M01", "display_name": "林澈（教学角色）", "roles": ["engagement_lead"], "technical_accountability": {"judgment": 4, "evidence": 4, "operations": 3, "communication": 4, "learning": 4}, "accountability_assessors": ["facilitator-business", "facilitator-technical"], "accountability_evidence_refs": ["EV-A01", "EV-A13", "EV-C07"]},
+    {"member_id": "M02", "display_name": "陈屿（教学角色）", "roles": ["fde_technical_lead"], "technical_accountability": {"judgment": 4, "evidence": 4, "operations": 4, "communication": 4, "learning": 4}, "accountability_assessors": ["facilitator-technical", "facilitator-customer"], "accountability_evidence_refs": ["EV-A07", "EV-A14", "EV-C03"]},
+    {"member_id": "M03", "display_name": "周岚（教学角色）", "roles": ["ai_evaluation_lead"], "technical_accountability": {"judgment": 4, "evidence": 4, "operations": 4, "communication": 3, "learning": 4}, "accountability_assessors": ["facilitator-eval", "facilitator-security"], "accountability_evidence_refs": ["EV-A06", "EV-A10", "EV-C06"]},
+    {"member_id": "M04", "display_name": "何川（教学角色）", "roles": ["platform_integration_lead"], "technical_accountability": {"judgment": 4, "evidence": 4, "operations": 4, "communication": 3, "learning": 4}, "accountability_assessors": ["facilitator-operations", "facilitator-security"], "accountability_evidence_refs": ["EV-A08", "EV-A12", "EV-C05"]},
+    {"member_id": "M05", "display_name": "钱宁（教学角色）", "roles": ["security_data_lead"], "technical_accountability": {"judgment": 4, "evidence": 4, "operations": 4, "communication": 4, "learning": 3}, "accountability_assessors": ["facilitator-security", "facilitator-customer"], "accountability_evidence_refs": ["EV-A04", "EV-A09", "EV-C01"]},
+    {"member_id": "M06", "display_name": "孙禾（教学角色）", "roles": ["workflow_adoption_lead"], "technical_accountability": {"judgment": 4, "evidence": 4, "operations": 3, "communication": 4, "learning": 4}, "accountability_assessors": ["facilitator-business", "facilitator-operations"], "accountability_evidence_refs": ["EV-A03", "EV-A15", "EV-C04"]}
+  ],
+  "artifacts": [
+    {"artifact_id": "A01", "owner": "M01", "reviewers": ["M02"], "status": "accepted", "evidence_ref": "EV-A01"},
+    {"artifact_id": "A02", "owner": "M02", "reviewers": ["M01", "M05"], "status": "accepted", "evidence_ref": "EV-A02"},
+    {"artifact_id": "A03", "owner": "M06", "reviewers": ["M01"], "status": "accepted", "evidence_ref": "EV-A03"},
+    {"artifact_id": "A04", "owner": "M05", "reviewers": ["M03", "M04"], "status": "accepted", "evidence_ref": "EV-A04"},
+    {"artifact_id": "A05", "owner": "M04", "reviewers": ["M02", "M05"], "status": "accepted", "evidence_ref": "EV-A05"},
+    {"artifact_id": "A06", "owner": "M03", "reviewers": ["M02", "M05"], "status": "accepted", "evidence_ref": "EV-A06"},
+    {"artifact_id": "A07", "owner": "M02", "reviewers": ["M03", "M04"], "status": "accepted", "evidence_ref": "EV-A07"},
+    {"artifact_id": "A08", "owner": "M04", "reviewers": ["M02", "M06"], "status": "accepted", "evidence_ref": "EV-A08"},
+    {"artifact_id": "A09", "owner": "M05", "reviewers": ["M03", "M04"], "status": "accepted", "evidence_ref": "EV-A09"},
+    {"artifact_id": "A10", "owner": "M03", "reviewers": ["M02", "M06"], "status": "accepted", "evidence_ref": "EV-A10"},
+    {"artifact_id": "A11", "owner": "M06", "reviewers": ["M01", "M03"], "status": "accepted", "evidence_ref": "EV-A11"},
+    {"artifact_id": "A12", "owner": "M04", "reviewers": ["M02", "M05"], "status": "accepted", "evidence_ref": "EV-A12"},
+    {"artifact_id": "A13", "owner": "M01", "reviewers": ["M02", "M06"], "status": "accepted", "evidence_ref": "EV-A13"},
+    {"artifact_id": "A14", "owner": "M02", "reviewers": ["M01", "M03", "M05"], "status": "accepted", "evidence_ref": "EV-A14"},
+    {"artifact_id": "A15", "owner": "M06", "reviewers": ["M01", "M04"], "status": "accepted", "evidence_ref": "EV-A15"}
+  ],
+  "decisions": [
+    {"decision_id": "D01", "owner": "M01", "trigger_id": "I02", "decision": "将免费完整 Pilot 改为有固定交付物和验收的付费 Discovery；采购未批准前不投入接入开发", "rationale": "客户尚未提供真实基线、授权和采购路径，完整免费 Pilot 会掩盖双方责任", "evidence_refs": ["EV-A01", "EV-A13"], "risk": "商机可能推迟或停止", "reversibility": "可在 SOW 签署后进入下一 Gate", "customer_impact": "先用较小投入获得可决策结果"},
+    {"decision_id": "D02", "owner": "M02", "trigger_id": "I10", "decision": "售后、中文、ERP 写入和 7x24 SLA 不进入当前基线，提交单独 Change Request", "rationale": "四项变化同时改变 Domain、界面、权限、运营和商业模型", "evidence_refs": ["EV-A07", "EV-A14"], "risk": "客户认为响应不够快", "reversibility": "批准新范围后可以分批加入", "customer_impact": "保护当前 Pilot 的时间和验收口径"},
+    {"decision_id": "D03", "owner": "M03", "trigger_id": "I07", "decision": "阻断候选模型并回退 baseline，将证据幻觉和注入泄露加入冻结挑战集", "rationale": "字段提升不能抵消不存在引用和敏感泄露", "evidence_refs": ["EV-A06", "EV-A10", "EV-C03"], "risk": "短期字段性能低于候选", "reversibility": "候选修复并重新通过独立发布门后再 Canary", "customer_impact": "继续由安全 baseline 和人工审核服务"},
+    {"decision_id": "D04", "owner": "M04", "trigger_id": "I09", "decision": "立即停止 Shadow，隔离查询路径，保存最小化证据并在跨租户回归和双签后恢复", "rationale": "跨租户可见属于关键隔离失败，不能带病运行", "evidence_refs": ["EV-A12", "EV-C02", "EV-C05"], "risk": "Pilot 指标窗口中断", "reversibility": "满足恢复条件后重启只读 Shadow", "customer_impact": "暂停新案例并按事故节奏通知"},
+    {"decision_id": "D05", "owner": "M05", "trigger_id": "I03", "decision": "拒绝导入共享盘邮件，隔离副本并要求字段级授权、入库前脱敏和删除证据", "rationale": "样本含未授权身份、金融和其他业务线数据", "evidence_refs": ["EV-A04", "EV-A09", "EV-C01"], "risk": "数据发现延期", "reversibility": "授权清单和安全批准完成后导入最小字段", "customer_impact": "减少个人信息和越界使用风险"},
+    {"decision_id": "D06", "owner": "M06", "trigger_id": "I08", "decision": "将绕过事件登记为流程事故，停止该用户直接使用草稿，完成培训、权限和审计修复后恢复", "rationale": "系统无自动发送不等于人员不会绕过，必须同时修复流程和控制", "evidence_refs": ["EV-A11", "EV-A15", "EV-C04"], "risk": "资深用户抵触", "reversibility": "培训和复核通过后恢复工作台权限", "customer_impact": "避免未经审核内容继续外发"}
+  ],
+  "control_results": [
+    {"control_id": "C01", "status": "passed", "owner": "M05", "reviewer": "M04", "evidence_ref": "EV-C01"},
+    {"control_id": "C02", "status": "passed", "owner": "M04", "reviewer": "M05", "evidence_ref": "EV-C02"},
+    {"control_id": "C03", "status": "passed", "owner": "M03", "reviewer": "M02", "evidence_ref": "EV-C03"},
+    {"control_id": "C04", "status": "passed", "owner": "M06", "reviewer": "M01", "evidence_ref": "EV-C04"},
+    {"control_id": "C05", "status": "passed", "owner": "M04", "reviewer": "M01", "evidence_ref": "EV-C05"},
+    {"control_id": "C06", "status": "passed", "owner": "M03", "reviewer": "M05", "evidence_ref": "EV-C06"},
+    {"control_id": "C07", "status": "passed", "owner": "M01", "reviewer": "M02", "evidence_ref": "EV-C07"},
+    {"control_id": "C08", "status": "passed", "owner": "M06", "reviewer": "M03", "evidence_ref": "EV-C08"}
+  ],
+  "assessments": [
+    {"criterion_id": "S01", "awarded_points": 9, "assessor": "facilitator-business", "rationale": "范围和商业下一步清楚，采购路径仍依赖模拟前提", "evidence_refs": ["EV-A01", "EV-A02"]},
+    {"criterion_id": "S02", "awarded_points": 14, "assessor": "facilitator-architecture", "rationale": "架构和定制边界完整，生产容量仅为设计", "evidence_refs": ["EV-A04", "EV-A05", "EV-A07"]},
+    {"criterion_id": "S03", "awarded_points": 14, "assessor": "facilitator-eval", "rationale": "候选模型因证据和泄露失败被正确阻断", "evidence_refs": ["EV-A06", "EV-A10", "EV-C03"]},
+    {"criterion_id": "S04", "awarded_points": 13, "assessor": "facilitator-operations", "rationale": "处理流程绕过并保留采用分母，真人容量仍需现场验证", "evidence_refs": ["EV-A03", "EV-A11", "EV-A15"]},
+    {"criterion_id": "S05", "awarded_points": 14, "assessor": "facilitator-operations", "rationale": "接入异常、隔离事故和恢复证据完整", "evidence_refs": ["EV-A08", "EV-A12", "EV-C05"]},
+    {"criterion_id": "S06", "awarded_points": 15, "assessor": "facilitator-security", "rationale": "数据越界和跨租户事件均正确阻断并升级", "evidence_refs": ["EV-A09", "EV-C01", "EV-C02"]},
+    {"criterion_id": "S07", "awarded_points": 9, "assessor": "facilitator-commercial", "rationale": "变更、验收和 Gate 一致，真实合同仍明确为外部证据", "evidence_refs": ["EV-A13", "EV-A15", "EV-C07"]},
+    {"criterion_id": "S08", "awarded_points": 5, "assessor": "facilitator-panel", "rationale": "所有成员均有 Own、Review、Decision、Ops、客户解释和复盘证据", "evidence_refs": ["EV-A14", "EV-C08"]}
+  ],
+  "individual_contributions": [
+    {"member_id": "M01", "type": "owned_artifact", "evidence_ref": "EV-A01"}, {"member_id": "M01", "type": "decision", "evidence_ref": "EV-A13"}, {"member_id": "M01", "type": "peer_review", "evidence_ref": "EV-A02"}, {"member_id": "M01", "type": "operational_action", "evidence_ref": "EV-C07"}, {"member_id": "M01", "type": "customer_explanation", "evidence_ref": "EV-A13"}, {"member_id": "M01", "type": "retrospective", "evidence_ref": "EV-A14"},
+    {"member_id": "M02", "type": "owned_artifact", "evidence_ref": "EV-A02"}, {"member_id": "M02", "type": "decision", "evidence_ref": "EV-A14"}, {"member_id": "M02", "type": "peer_review", "evidence_ref": "EV-A01"}, {"member_id": "M02", "type": "operational_action", "evidence_ref": "EV-C03"}, {"member_id": "M02", "type": "customer_explanation", "evidence_ref": "EV-A14"}, {"member_id": "M02", "type": "retrospective", "evidence_ref": "EV-A12"},
+    {"member_id": "M03", "type": "owned_artifact", "evidence_ref": "EV-A06"}, {"member_id": "M03", "type": "decision", "evidence_ref": "EV-A10"}, {"member_id": "M03", "type": "peer_review", "evidence_ref": "EV-A04"}, {"member_id": "M03", "type": "operational_action", "evidence_ref": "EV-C06"}, {"member_id": "M03", "type": "customer_explanation", "evidence_ref": "EV-C03"}, {"member_id": "M03", "type": "retrospective", "evidence_ref": "EV-A14"},
+    {"member_id": "M04", "type": "owned_artifact", "evidence_ref": "EV-A05"}, {"member_id": "M04", "type": "decision", "evidence_ref": "EV-A12"}, {"member_id": "M04", "type": "peer_review", "evidence_ref": "EV-A04"}, {"member_id": "M04", "type": "operational_action", "evidence_ref": "EV-C05"}, {"member_id": "M04", "type": "customer_explanation", "evidence_ref": "EV-C02"}, {"member_id": "M04", "type": "retrospective", "evidence_ref": "EV-A14"},
+    {"member_id": "M05", "type": "owned_artifact", "evidence_ref": "EV-A04"}, {"member_id": "M05", "type": "decision", "evidence_ref": "EV-A09"}, {"member_id": "M05", "type": "peer_review", "evidence_ref": "EV-A05"}, {"member_id": "M05", "type": "operational_action", "evidence_ref": "EV-C01"}, {"member_id": "M05", "type": "customer_explanation", "evidence_ref": "EV-A09"}, {"member_id": "M05", "type": "retrospective", "evidence_ref": "EV-A14"},
+    {"member_id": "M06", "type": "owned_artifact", "evidence_ref": "EV-A03"}, {"member_id": "M06", "type": "decision", "evidence_ref": "EV-A11"}, {"member_id": "M06", "type": "peer_review", "evidence_ref": "EV-A08"}, {"member_id": "M06", "type": "operational_action", "evidence_ref": "EV-C04"}, {"member_id": "M06", "type": "customer_explanation", "evidence_ref": "EV-A15"}, {"member_id": "M06", "type": "retrospective", "evidence_ref": "EV-C08"}
+  ]
+}

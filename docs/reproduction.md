@@ -77,3 +77,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage15.py demo --check-baseline`，核对 `outputs/stage-15/commercial-readiness.json`：机会只通过 Gate A，下一步为签署付费 Discovery；潜在四阶段教学报价为 CNY 1,480,000，已签约金额、真实合同和真实收入均为 0；Shadow 与生产 Gate 保持未通过。`invoice-plan.csv` 应有 10 个里程碑且合计等于四阶段金额。
 
 复制交易档案到 `outputs/` 后修改：将 Gate B 设为 approved 但保留 draft/requested 证据应被拒绝；令任一阶段付款比例不等于 100% 应被拒绝；把合成指标填入 `customer_baseline` 应被拒绝；跳过 Gate B 直接批准 Gate C 应被拒绝。商务模板和完整演练方法见 [Stage 15 手册](../stages/15-commercial-delivery/README.md)。
+
+## Stage 16：团队真实商业交付模拟
+
+运行 `python3 stage16.py prepare --output outputs/my-team-capstone`，确认参与者包不含 `injects.json` 和参考提交，主持人包包含客户剧本、12 个事件注入和参考证据。运行 `python3 stage16.py demo --check-baseline`，参考团队应得 93/100，8 个关键控制全部通过，6/6 个成员具备模拟的 `TECHNICALLY_RESPONSIBLE` 证据。
+
+反事实：把任一关键控制改为 failed，团队最终分应封顶 59 且个人全部不能 Ready；删除某成员的 `operational_action`，团队原始分仍为 93，但该成员应回到 `SUPERVISED_PRACTICE_REQUIRED`；让交付物 Owner 自己成为唯一 Reviewer，提交应被拒绝。完整组织方法、角色卡、答辩和评分见 [Stage 16 手册](../stages/16-team-delivery-simulation/README.md)。

@@ -66,6 +66,10 @@
 
 把技术阶段放入完整商务路径：机会资格、付费 Discovery、双方行动计划、合同/数据/安全尽调、阶段报价、授权 Shadow、商业验收、生产移交、续约和扩容。机器校验 A–F Gate、证据状态、付款比例和合成边界，防止把技术演示写成签约、把意向金额写成收入或把 Pilot 验收写成生产授权。当前海川案例只达到“可提交付费 Discovery 方案”，已签约金额和真实收入均为 0。见 [Stage 15 手册](../stages/15-commercial-delivery/README.md)。
 
+## Stage 16：Team Commercial Delivery Capstone
+
+6 名参与者分别承担 Engagement、FDE 技术、AI 评估、平台集成、安全数据和工作流采用责任，在六轮中处理资格、签约、数据越界、知识冲突、Connector 异常、模型安全失败、人员绕过、跨租户事故、范围膨胀、验收分母和对外宣传压力。团队评分与个人责任证据分开；关键控制失败封顶，团队高分不能掩盖成员没有 Own、Review、Decision、Ops、客户解释或复盘经历。见 [Stage 16 手册](../stages/16-team-delivery-simulation/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |

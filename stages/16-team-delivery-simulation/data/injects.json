@@ -1,0 +1,17 @@
+{
+  "mode": "facilitator_only_synthetic_injects",
+  "injects": [
+    {"inject_id": "I01", "round_id": "R1", "minute": 30, "channel": "sponsor_meeting", "event": "Sponsor 要求两周内自动回复全部海外询盘，并称可以节省 50% 人力。", "expected": ["区分 Claim/Fact", "拒绝先承诺自动发送", "提出付费 Discovery 和真实前测"]},
+    {"inject_id": "I02", "round_id": "R1", "minute": 150, "channel": "procurement_email", "event": "采购要求先免费做完整 Pilot，成功后再讨论合同。", "expected": ["明确免费售前边界", "缩小为有价 Discovery 或停止", "更新 MAP 和风险"]},
+    {"inject_id": "I03", "round_id": "R2", "minute": 45, "channel": "data_workshop", "event": "销售导出 2000 封历史邮件到共享盘，其中含私人手机号、银行信息和其他业务线客户。", "expected": ["停止导入", "隔离并通知 Data/Security Owner", "改为字段授权和入库前脱敏"]},
+    {"inject_id": "I04", "round_id": "R2", "minute": 130, "channel": "knowledge_review", "event": "最新版目录与旧报价表对 CP90 流量、材质和 CE 适用范围冲突。", "expected": ["保留冲突", "指定权威 Owner", "未裁决前弃答/升级"]},
+    {"inject_id": "I05", "round_id": "R2", "minute": 240, "channel": "security_review", "event": "安全团队禁止原文进入外部模型，并要求企业 SSO、MFA、租户隔离和 30 天删除。", "expected": ["设计最小化/本地预处理", "形成身份与 RLS 契约", "将外部证据列入 Gate C"]},
+    {"inject_id": "I06", "round_id": "R3", "minute": 90, "channel": "connector", "event": "邮箱轮询先返回 429，随后重复事件，再出现同一 source_id 的版本更新。", "expected": ["退避重试", "幂等去重", "版本更新重开审核", "留下 Trace"]},
+    {"inject_id": "I07", "round_id": "R3", "minute": 230, "channel": "evaluation", "event": "候选模型字段准确率更高，但引用不存在的 CE 文档，且响应中出现提示注入要求的客户列表。", "expected": ["阻断候选发布", "分类证据幻觉和泄露", "回退 baseline", "更新挑战集"]},
+    {"inject_id": "I08", "round_id": "R3", "minute": 400, "channel": "user_feedback", "event": "一名资深销售绕过工作台，把 AI 草稿复制到邮件直接发送。", "expected": ["区分系统控制和流程绕过", "停止/培训/审计", "调整采用与权限方案", "不隐瞒事件"]},
+    {"inject_id": "I09", "round_id": "R4", "minute": 20, "channel": "incident", "event": "错误的租户上下文使一条海川 Trace 在启航审计查询中可见。", "expected": ["立即 Stop", "隔离和评估暴露", "按事故流程通知", "修复并做跨租户回归", "由授权人恢复"]},
+    {"inject_id": "I10", "round_id": "R4", "minute": 120, "channel": "change_request", "event": "客户要求本周加入售后 Domain、中文、ERP 写入和 7x24 SLA，价格不变。", "expected": ["提交 Change Request", "量化范围/价格/排期/安全影响", "批准前保持原基线"]},
+    {"inject_id": "I11", "round_id": "R5", "minute": 40, "channel": "acceptance", "event": "Pilot 只完成 43 个合格案例，采购要求把未处理案例从分母删除并宣布达到 70% 采用率。", "expected": ["使用冻结口径", "报告缺失和置信限制", "不为验收改分母", "给出 Iterate/Stop"]},
+    {"inject_id": "I12", "round_id": "R5", "minute": 180, "channel": "executive_readout", "event": "高管要求把合成测试写成真实客户节省 40%，并立即对外发布案例。", "expected": ["拒绝失实表述", "区分合成/现场证据", "取得案例公开授权", "给出诚实可发布版本"]}
+  ]
+}
