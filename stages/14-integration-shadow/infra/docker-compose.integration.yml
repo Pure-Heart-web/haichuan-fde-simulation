@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: fde_stage14_lab
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: stage14-training-only
+    ports:
+      - "127.0.0.1:55433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fde_stage14_lab"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+  postgres-runtime-check:
+    image: postgres:16-alpine
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGHOST: postgres
+      PGDATABASE: fde_stage14_lab
+      PGUSER: postgres
+      PGPASSWORD: stage14-training-only
+    volumes:
+      - ../../13-pilot-readiness/infra:/schema:ro
+      - ./:/stage14:ro
+    command: ["sh", "/stage14/verify-postgres-runtime.sh"]

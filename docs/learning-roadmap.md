@@ -58,11 +58,15 @@
 
 把 Delivery Room 和 Model Lab 放入同一次现场交付前演练：四方签核授权包、训练 OIDC 契约、PostgreSQL RLS DDL、统一人工工作台、三个 Operator 班次、Auditor 评审、SLO 和候选模型紧急回退。静态 DDL、本地 issuer 和 OTLP-shaped JSONL 保留明确限制，不被写成生产证据。见 [Stage 13 手册](../stages/13-pilot-readiness/README.md)。
 
+## Stage 14：Integration Lab & Authorized Shadow Pilot Preflight
+
+用底层 Delivery Room 的实际死信和事故重算顶层 Gate，演练 `open -> recovering -> resolved` 恢复语义、邮箱/CMMS 只读 Connector、OIDC Discovery 与 Key Rotation、遥测导出前脱敏、合成 Shadow 观察和可携带证据包。八项真实客户外部证据默认均为缺失，因此决策保持 `ITERATE_BEFORE_REAL_SHADOW`。见 [Stage 14 手册](../stages/14-integration-shadow/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：授权 Shadow Pilot | Stage 13 的现场准备契约如何转为客户证据？ | 外置授权包、PostgreSQL 运行证据、企业 OIDC、Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
+| 后续：授权 Shadow Pilot | Stage 14 的 Integration Lab 如何转为客户现场证据？ | 外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

@@ -1,0 +1,27 @@
+{
+  "mode": "synthetic_read_only_connector_lab",
+  "connectors": [
+    {
+      "name": "mailbox-sandbox",
+      "page_size": 2,
+      "rate_limit_cursor": 2,
+      "records": [
+        {"event_id":"MAIL-E1","source_id":"MAIL-S1","source_version":1,"case_id":"MAIL-C1","received_at":"2026-09-22T08:00:00Z","subject":"pump inquiry","body":"synthetic sanitized inquiry","kind":"mail"},
+        {"event_id":"MAIL-E1","source_id":"MAIL-S1","source_version":1,"case_id":"MAIL-C1","received_at":"2026-09-22T08:00:00Z","subject":"pump inquiry","body":"synthetic sanitized inquiry","kind":"mail"},
+        {"event_id":"MAIL-E2","source_id":"MAIL-S2","source_version":1,"case_id":"MAIL-C2","received_at":"2026-09-22T08:10:00Z","subject":"updated duty","body":"synthetic sanitized inquiry v1","kind":"mail"},
+        {"event_id":"MAIL-E3","source_id":"MAIL-S2","source_version":2,"case_id":"MAIL-C2","received_at":"2026-09-22T08:12:00Z","subject":"updated duty","body":"synthetic sanitized inquiry v2","kind":"mail"}
+      ]
+    },
+    {
+      "name": "cmms-sandbox",
+      "page_size": 2,
+      "rate_limit_cursor": 2,
+      "records": [
+        {"event_id":"CMMS-E1","source_id":"CMMS-S1","source_version":1,"case_id":"CMMS-C1","received_at":"2026-09-22T09:00:00Z","subject":"asset alert","body":"synthetic vibration alert","asset_ref":"ASSET-HASH-1","kind":"cmms"},
+        {"event_id":"CMMS-E1","source_id":"CMMS-S1","source_version":1,"case_id":"CMMS-C1","received_at":"2026-09-22T09:00:00Z","subject":"asset alert","body":"synthetic vibration alert","asset_ref":"ASSET-HASH-1","kind":"cmms"},
+        {"event_id":"CMMS-E2","source_id":"CMMS-S2","source_version":1,"case_id":"CMMS-C2","received_at":"2026-09-22T09:10:00Z","subject":"work order","body":"synthetic work order v1","asset_ref":"ASSET-HASH-2","kind":"cmms"},
+        {"event_id":"CMMS-E3","source_id":"CMMS-S2","source_version":2,"case_id":"CMMS-C2","received_at":"2026-09-22T09:15:00Z","subject":"work order update","body":"synthetic work order v2","asset_ref":"ASSET-HASH-2","kind":"cmms"}
+      ]
+    }
+  ]
+}

@@ -64,4 +64,10 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 
 ## Stage 13：Design Partner Pilot Readiness
 
-运行 `python3 stage13.py demo --check-baseline`，核对 `outputs/stage-13/stage13-report.json`：授权包、RLS 契约、5 个训练 OIDC 账户、7 项工作台动作、4 个班次视角、3 次交接、1 个已解决事故和 SLO 门应全部通过。PostgreSQL 实际执行、企业 SSO、真实客户数据、客户动作和实际用户应明确为 `false` 或 0。浏览器工作台、班次练习和真实切换门见 [Stage 13 手册](../stages/13-pilot-readiness/README.md)。
+运行 `python3 stage13.py demo --check-baseline`，核对 `outputs/stage-13/stage13-report.json`：授权包、RLS 契约、5 个训练 OIDC 账户、7 项工作台动作、4 个班次视角、3 次交接、FieldOps 计划中的 1 个已解决事故和 SLO 门应通过。PostgreSQL 实际执行、企业 SSO、真实客户数据、客户动作和实际用户应明确为 `false` 或 0。Stage 11 Delivery Room 故意留下的两个底层死信不在该 FieldOps 计划 SLO 中；Stage 14 会暴露并修复这个跨层 Gate 缺口。浏览器工作台、班次练习和真实切换门见 [Stage 13 手册](../stages/13-pilot-readiness/README.md)。
+
+## Stage 14：Integration Lab & Authorized Shadow Preflight
+
+运行 `python3 stage14.py demo --check-baseline`，核对 `outputs/stage-14/operational-gates.json`：修复前应因 Inbox/Outbox 死信和两个未解决事故处于 `BLOCKED`；获批重放、人工复核、发布批准和 Mock 重投成功后才进入 `READY`。运行 `python3 stage14.py verify-evidence`验证相对路径证据清单；修改任一被绑定文件后校验应失败。
+
+默认 `external-evidence.example.json` 的八项外部证据均为 `false`，因此 `real_shadow_gate.status` 必须是 `AUTHORIZED_SHADOW_NOT_READY`。可选 PostgreSQL 连接池 RLS 容器练习、外置证据预检及限制见 [Stage 14 手册](../stages/14-integration-shadow/README.md)。

@@ -221,6 +221,9 @@ class RuntimeStore:
             self.conn.execute('''UPDATE inbox SET state='done',locked_by=NULL,locked_tick=NULL,
                 last_error=NULL,updated_at=? WHERE tenant_id=? AND domain=? AND event_id=?''',
                 (now, self.tenant_id, self.domain, event_id))
+            self.conn.execute('''UPDATE incidents SET state='resolved',
+                detail='replay_completed',resolved_at=? WHERE kind='worker_dead_letter'
+                AND object_id=? AND state='recovering' ''', (now, event_id))
             self._audit(self.tenant_id, 'worker', 'complete_job', event_id, True,
                         artifact['route'])
 
@@ -375,6 +378,9 @@ class RuntimeStore:
                 self.conn.execute('''UPDATE cases SET state='mock_delivered',updated_at=?
                     WHERE tenant_id=? AND domain=? AND case_id=?''',
                     (utc_now(), self.tenant_id, self.domain, row['case_id']))
+                self.conn.execute('''UPDATE incidents SET state='resolved',
+                    detail='replay_delivered',resolved_at=? WHERE kind='outbox_dead_letter'
+                    AND object_id=? AND state='recovering' ''', (utc_now(), message_id))
             elif state == 'dead':
                 self.conn.execute('''UPDATE cases SET state='delivery_failed',updated_at=?
                     WHERE tenant_id=? AND domain=? AND case_id=?''',
@@ -485,9 +491,9 @@ class RuntimeStore:
                 (utc_now(), self.tenant_id, self.domain, event_id)).rowcount
             if changed != 1:
                 raise ValueError('Worker Dead Letter 不存在')
-            self.conn.execute('''UPDATE incidents SET state='resolved',detail=?,resolved_at=?
+            self.conn.execute('''UPDATE incidents SET state='recovering',detail=?,resolved_at=NULL
                 WHERE kind='worker_dead_letter' AND object_id=? AND state='open' ''',
-                ('approved_requeue: ' + reason.strip(), utc_now(), event_id))
+                ('approved_requeue: ' + reason.strip(), event_id))
             self._audit(self.tenant_id, claims['sub'], 'requeue_dead_event', event_id,
                         True, reason.strip())
             return True
@@ -505,9 +511,9 @@ class RuntimeStore:
                 (utc_now(), self.tenant_id, self.domain, message_id)).rowcount
             if changed != 1:
                 raise ValueError('已批准的 Outbox Dead Letter 不存在')
-            self.conn.execute('''UPDATE incidents SET state='resolved',detail=?,resolved_at=?
+            self.conn.execute('''UPDATE incidents SET state='recovering',detail=?,resolved_at=NULL
                 WHERE kind='outbox_dead_letter' AND object_id=? AND state='open' ''',
-                ('approved_requeue: ' + reason.strip(), utc_now(), message_id))
+                ('approved_requeue: ' + reason.strip(), message_id))
             self._audit(self.tenant_id, claims['sub'], 'requeue_dead_message', message_id,
                         True, reason.strip())
             return True

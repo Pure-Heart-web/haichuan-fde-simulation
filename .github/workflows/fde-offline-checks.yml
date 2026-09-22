@@ -1,4 +1,4 @@
-name: FDE Stage 1–13 offline checks
+name: FDE Stage 1–14 offline checks
 on:
   push:
   pull_request:
@@ -32,5 +32,7 @@ jobs:
         run: python3 stage12.py demo --check-baseline
       - name: Stage 13 design-partner pilot readiness and workbench regression
         run: python3 stage13.py demo --check-baseline
-      - name: Stage 1–13 offline delivery walkthrough
+      - name: Stage 14 integration lab and authorized shadow preflight regression
+        run: python3 stage14.py demo --check-baseline
+      - name: Stage 1–14 offline delivery walkthrough
         run: python3 stage_pipeline.py all

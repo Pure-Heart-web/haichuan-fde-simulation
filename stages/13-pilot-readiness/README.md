@@ -77,4 +77,6 @@ deliverables/stage13-review.md        本次合成演练的评审记录
 - 三个 Operator 班次有完整交接；候选模型事故经过宣告、Stop、恢复 baseline 和关闭。
 - SLO 门、安全门和回滚门全部通过；真实客户数据、用户和动作保持为 0。
 
+Stage 13 的 SLO 事故状态来自独立 FieldOps 班次计划，没有聚合 Stage 11 Delivery Room 中的死信事故。这是保留给 [Stage 14](../14-integration-shadow/README.md) 的跨层 Gate 案例：Stage 14 必须先阻断，再在真实重放成功后恢复。
+
 NIST AI RMF 建议明确人机监督责任、在接近部署条件下评估、持续监测和保留停用机制；本阶段将这些要求映射为可运行的教学门。参考 [NIST AI RMF Core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)。

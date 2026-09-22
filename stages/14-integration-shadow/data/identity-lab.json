@@ -1,0 +1,16 @@
+{
+  "issuer": "https://lab.invalid/design-partner",
+  "audience": "fde-stage14-workbench",
+  "tenant_id": "design-partner-alpha-training",
+  "group_roles": {
+    "fde-engineers": "engineer",
+    "fde-operators": "operator",
+    "fde-release-managers": "release_manager",
+    "fde-auditors": "auditor"
+  },
+  "limitations": [
+    "Local HS256 contract rehearsal, not enterprise OIDC",
+    "JWKS metadata contains no production public key",
+    "No customer identity tenant was contacted"
+  ]
+}

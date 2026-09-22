@@ -1,0 +1,14 @@
+{
+  "mode": "authorized_customer_shadow",
+  "authorization_verified": false,
+  "external_mount_verified": false,
+  "postgres_runtime_verified": false,
+  "enterprise_oidc_verified": false,
+  "connector_sandbox_verified": false,
+  "otlp_backend_verified": false,
+  "customer_uat_approved": false,
+  "on_call_drill_passed": false,
+  "customer_writes_enabled": false,
+  "git_contains_customer_records": false,
+  "note": "Template only. False values must not be changed without external evidence."
+}

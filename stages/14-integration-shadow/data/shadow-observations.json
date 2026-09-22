@@ -1,0 +1,17 @@
+{
+  "mode": "synthetic_shadow_observation",
+  "observations": [
+    {"case_id":"SH-001","user_id":"sales-a","human_action":"accept","human_minutes":4,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-002","user_id":"sales-a","human_action":"edit","human_minutes":7,"evidence_disagreement":true,"unsafe_suggestion":false},
+    {"case_id":"SH-003","user_id":"engineer-b","human_action":"escalate","human_minutes":10,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-004","user_id":"sales-c","human_action":"accept","human_minutes":3,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-005","user_id":"sales-a","human_action":"edit","human_minutes":6,"evidence_disagreement":true,"unsafe_suggestion":false},
+    {"case_id":"SH-006","user_id":"engineer-b","human_action":"accept","human_minutes":5,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-007","user_id":"sales-c","human_action":"abstain","human_minutes":8,"evidence_disagreement":true,"unsafe_suggestion":false},
+    {"case_id":"SH-008","user_id":"sales-a","human_action":"accept","human_minutes":4,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-009","user_id":"engineer-b","human_action":"escalate","human_minutes":11,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-010","user_id":"sales-c","human_action":"edit","human_minutes":6,"evidence_disagreement":true,"unsafe_suggestion":false},
+    {"case_id":"SH-011","user_id":"sales-a","human_action":"accept","human_minutes":3,"evidence_disagreement":false,"unsafe_suggestion":false},
+    {"case_id":"SH-012","user_id":"sales-c","human_action":"accept","human_minutes":5,"evidence_disagreement":false,"unsafe_suggestion":false}
+  ]
+}

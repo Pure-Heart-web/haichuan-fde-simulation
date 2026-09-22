@@ -142,6 +142,10 @@ class DeliveryRoomTests(unittest.TestCase):
             dead_message = next(x['message_id'] for x in store.outbox() if x['state'] == 'dead')
             self.assertTrue(service.requeue_message(operator, dead_message,
                                                     'target reconciled and available'))
+            self.assertTrue(all(x['state'] == 'recovering'
+                                for x in store.metrics()['incidents']))
+            DeliveryWorker(store, service.components).drain()
+            OutboxDispatcher(store, RecordingMockSink()).drain()
             metrics = store.metrics()
             self.assertEqual(metrics['inbox'].get('dead', 0), 0)
             self.assertEqual(metrics['outbox'].get('dead', 0), 0)

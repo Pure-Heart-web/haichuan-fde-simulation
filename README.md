@@ -1,6 +1,6 @@
 # 工业设备 · FDE 交付学习案例
 
-这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9 的交付强化，Stage 10 的客户接入与受控 Shadow Pilot，Stage 11 的生产形态 Delivery Room，Stage 12 的模型评估、安全、Canary 与回滚，以及 Stage 13 的设计合作客户现场准备与统一工作台**。后续阶段按新需求继续扩展。
+这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9 的交付强化，Stage 10 的客户接入与受控 Shadow Pilot，Stage 11 的生产形态 Delivery Room，Stage 12 的模型评估、安全、Canary 与回滚，Stage 13 的设计合作客户现场准备与统一工作台，以及 Stage 14 的集成实验室、真实运行 Gate 和授权 Shadow 预检**。后续阶段按新需求继续扩展。
 
 企业、联系人、邮件、设备、型号、订单和指标均为教学虚构。样本中的数值用于练习分析，不是客户真实业务事实，也不是泵选型或设备维修依据。
 
@@ -9,11 +9,13 @@
 需要 Python 3.10 或更新版本，无第三方依赖、API Key 或网络要求。在本文件所在目录打开终端：
 
 ```bash
-python3 stage_pipeline.py all
+python3 stage_pipeline.py all --output-root outputs/my-stage-1-14-run
 python3 -m unittest discover -s tests -v
 ```
 
-`all` 依次运行十三个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–6 运行抽取、产品匹配与证据化草稿的合成评估，Stage 7 重放试点事件，Stage 8 执行双租户与纵向案例，Stage 9 检查交付强化控制，Stage 10 验证客户授权和 Shadow 接入，Stage 11 运行持久化工作流与事故演练，Stage 12 运行模型发布门，Stage 13 运行授权、身份、RLS、班次、SLO 与紧急回退现场演练。结果保存在 `outputs/stage-01/` 至 `outputs/stage-13/`，另有 `outputs/stage-08-vertical/`。
+`--output-root` 建议每次使用新目录；历史审核记录与当前代码版本不同时，流水线会按设计拒绝覆盖。
+
+`all` 依次运行十四个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–6 运行抽取、产品匹配与证据化草稿的合成评估，Stage 7 重放试点事件，Stage 8 执行双租户与纵向案例，Stage 9 检查交付强化控制，Stage 10 验证客户授权和 Shadow 接入，Stage 11 运行持久化工作流与事故演练，Stage 12 运行模型发布门，Stage 13 运行现场准备演练，Stage 14 运行跨层事故 Gate、集成契约和授权 Shadow 预检。结果保存在 `outputs/stage-01/` 至 `outputs/stage-14/`，另有 `outputs/stage-08-vertical/`。
 
 分析自己的演练记录：
 
@@ -23,7 +25,7 @@ python3 run.py analyze --input stages/01-discovery/data/simulation.json --output
 
 Stage 1 输入规范见 [数据说明](stages/01-discovery/data/README.md)。`run.py` 的退出码 `0` 表示检查通过或报告成功生成；`2` 表示数据无效；`3` 表示报告已生成但 Stage 1 退出条件尚未齐全。`stage_pipeline.py` 的 `0` 表示教学流程与回归检查已完成；Stage 4 会如实报告未达门槛字段。设计审计通过不表示已达到产品发布门槛。
 
-Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)、[Delivery Room](stage11.py)、[模型安全 Canary](stage12.py) 和[现场试点准备](stage13.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
+Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)、[Delivery Room](stage11.py)、[模型安全 Canary](stage12.py)、[现场试点准备](stage13.py) 和[集成实验室](stage14.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
 
 ## 建议阅读和练习顺序
 
@@ -49,6 +51,7 @@ Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本�
 20. [Stage 11 Production-like Delivery Room](stages/11-delivery-room/README.md)：运行持久化队列、Worker、双人发布、Mock HTTP、Trace、值班和事故复盘。
 21. [Stage 12 Model Evaluation, Safety & Canary](stages/12-model-safety-canary/README.md)：运行模型注册、离线对比、攻防集、确定性 Canary、熔断和职责分离回滚。
 22. [Stage 13 Design Partner Pilot Readiness](stages/13-pilot-readiness/README.md)：演练外置授权包、训练 OIDC、PostgreSQL RLS 契约、统一工作台、班次交接、SLO 与紧急回退。
+23. [Stage 14 Integration Lab](stages/14-integration-shadow/README.md)：用真实运行状态阻断和恢复 Gate，演练只读 Connector、OIDC 轮换、遥测脱敏、证据包和真实 Shadow 预检。
 
 [模拟场景流程图](stages/01-discovery/guides/observed-workflow.md) 展示正常路径、专家升级和客户澄清回路。
 
@@ -75,6 +78,7 @@ stages/10-customer-onboarding/ 合成设计合作客户包、真实切换手册�
 stages/11-delivery-room/      生产形态运行时、36 案例、API、Runbook、UAT 与交付治理
 stages/12-model-safety-canary/ 模型注册、100 案例对比、攻防集、Canary、熔断与回滚
 stages/13-pilot-readiness/     授权包、OIDC/RLS 契约、人工工作台、班次、SLO 与 UAT
+stages/14-integration-shadow/   跨层 Gate、只读 Connector、OIDC/OTLP Lab、Shadow 证据与外部预检
 src/fde_discovery/            校验、指标计算、报告与阶段检查代码
 src/fde_stage3/               Stage 2/3 资料审计代码
 src/fde_platform/             Sprint 1–3 抽取、推荐、知识、草稿、审核与评估代码
@@ -94,7 +98,8 @@ stage11.py                    Delivery Room demo / worker / review / approve / d
 stage11_mock_server.py        本机 OAuth 与 Mock 客户端点
 stage12.py                    模型注册 / 评估 / 安全 / Canary / 熔断 / 回滚入口
 stage13.py                    现场准备 / 身份 / 班次 / SLO / 工作台入口
+stage14.py                    集成实验室 / 事故 Gate / 证据包 / Shadow 预检入口
 outputs/                      本地演练结果（不纳入版本管理）
 ```
 
-十三个阶段的“交付”是可追溯的问题定义、治理决定与可运行的抽取、推荐、审核、运营、产品化、客户接入、生产形态、模型发布和现场班次演练。Stage 13 的 PostgreSQL、OIDC 和 OTLP 都只验证了教学契约；SQLite、本地训练 issuer、Mock 投递、stand-in 模型和脚本班次仍不能替代生产数据面、企业 SSO、授权客户现场测试或实际 Pilot 成效。所有高分仍来自自造样本，也没有人工交付工时证据证明节省时间。
+十四个阶段的“交付”是可追溯的问题定义、治理决定与可运行的抽取、推荐、审核、运营、产品化、客户接入、生产形态、模型发布、现场班次与集成实验室演练。Stage 14 依然使用本地 OIDC/Connector/Collector Lab；SQLite、Mock 投递、stand-in 模型和合成 Shadow 用户不能替代生产数据面、企业 SSO、授权客户现场测试或实际 Pilot 成效。所有高分仍来自自造样本，也没有人工交付工时证据证明节省时间。
