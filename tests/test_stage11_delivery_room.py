@@ -112,6 +112,22 @@ class DeliveryRoomTests(unittest.TestCase):
         self.assertEqual(captured, {'authorization': 'Bearer local-token',
                                     'idempotency': 'KEY-1'})
 
+    def test_privacy_scan_parses_json_before_scanning_numeric_telemetry(self):
+        store = RuntimeStore(self.output / 'typed-scan.sqlite3', 'tenant-a', 'foreign_trade')
+        event = {'tenant_id': 'tenant-a', 'domain': 'foreign_trade', 'event_id': 'E1',
+            'source_id': 'S1', 'source_version': 1, 'case_id': 'C1',
+            'contact_ref': 'CONTACT-safe', 'customer_ref': 'CUSTOMER-safe',
+            'subject': 'safe', 'body': 'safe', 'received_at': '2026-09-22T00:00:00Z'}
+        try:
+            store.accept(event)
+            store.claim_job('worker', 0)
+            store.complete_job('E1', {'route': 'sales_review', 'assignee_id': 'sales-1',
+                'assignee_role': 'sales', 'latency_ms': 13800001234.125,
+                'external_side_effects': []})
+            self.assertEqual(store.privacy_scan()['rows_with_direct_identifier'], 0)
+        finally:
+            store.close()
+
     def test_full_demo_metrics_privacy_and_restart(self):
         report = run_demo(self.output, check_baseline=True)
         self.assertEqual(report['intake']['total_received'], 46)

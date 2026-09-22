@@ -448,13 +448,13 @@ class RuntimeStore:
     def privacy_scan(self):
         with self.lock:
             values = []
-            values.extend(row['payload_json'] for row in self.conn.execute(
+            values.extend(json.loads(row['payload_json']) for row in self.conn.execute(
                 'SELECT payload_json FROM inbox WHERE tenant_id=? AND domain=?',
                 (self.tenant_id, self.domain)))
-            values.extend(row['artifact_json'] for row in self.conn.execute(
+            values.extend(json.loads(row['artifact_json']) for row in self.conn.execute(
                 'SELECT artifact_json FROM cases WHERE tenant_id=? AND domain=?',
                 (self.tenant_id, self.domain)))
-            values.extend(row['payload_json'] for row in self.conn.execute(
+            values.extend(json.loads(row['payload_json']) for row in self.conn.execute(
                 'SELECT payload_json FROM outbox WHERE tenant_id=? AND domain=?',
                 (self.tenant_id, self.domain)))
             values.extend(row['reason'] for row in self.conn.execute(
