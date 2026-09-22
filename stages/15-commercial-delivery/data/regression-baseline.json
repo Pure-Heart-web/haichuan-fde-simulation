@@ -1,0 +1,18 @@
+{
+  "status": "COMMERCIAL_DEAL_ROOM_VALID",
+  "mode": "synthetic_commercial_rehearsal",
+  "opportunity_stage": "qualified_for_paid_discovery",
+  "current_approved_gate": "A_OPPORTUNITY_QUALIFIED",
+  "next_gate": "B_PAID_DISCOVERY_CONTRACTED",
+  "next_gate_status": "pending",
+  "missing_evidence_for_next_gate": ["EV-DISCOVERY-SOW", "EV-MSA", "EV-PO"],
+  "total_potential_contract_value_cny": "1480000.00",
+  "booked_value_cny": "0.00",
+  "invoice_milestone_count": 10,
+  "open_risk_count": 5,
+  "critical_open_risk_count": 1,
+  "authorized_shadow_ready": false,
+  "production_go_live_ready": false,
+  "actual_customer_contract_signed": false,
+  "real_revenue_claimed": false
+}

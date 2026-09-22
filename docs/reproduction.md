@@ -71,3 +71,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage14.py demo --check-baseline`，核对 `outputs/stage-14/operational-gates.json`：修复前应因 Inbox/Outbox 死信和两个未解决事故处于 `BLOCKED`；获批重放、人工复核、发布批准和 Mock 重投成功后才进入 `READY`。运行 `python3 stage14.py verify-evidence`验证相对路径证据清单；修改任一被绑定文件后校验应失败。
 
 默认 `external-evidence.example.json` 的八项外部证据均为 `false`，因此 `real_shadow_gate.status` 必须是 `AUTHORIZED_SHADOW_NOT_READY`。可选 PostgreSQL 连接池 RLS 容器练习、外置证据预检及限制见 [Stage 14 手册](../stages/14-integration-shadow/README.md)。
+
+## Stage 15：Commercial Delivery Room
+
+运行 `python3 stage15.py demo --check-baseline`，核对 `outputs/stage-15/commercial-readiness.json`：机会只通过 Gate A，下一步为签署付费 Discovery；潜在四阶段教学报价为 CNY 1,480,000，已签约金额、真实合同和真实收入均为 0；Shadow 与生产 Gate 保持未通过。`invoice-plan.csv` 应有 10 个里程碑且合计等于四阶段金额。
+
+复制交易档案到 `outputs/` 后修改：将 Gate B 设为 approved 但保留 draft/requested 证据应被拒绝；令任一阶段付款比例不等于 100% 应被拒绝；把合成指标填入 `customer_baseline` 应被拒绝；跳过 Gate B 直接批准 Gate C 应被拒绝。商务模板和完整演练方法见 [Stage 15 手册](../stages/15-commercial-delivery/README.md)。

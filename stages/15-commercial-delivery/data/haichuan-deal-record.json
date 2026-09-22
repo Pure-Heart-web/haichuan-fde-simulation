@@ -1,0 +1,146 @@
+{
+  "version": "commercial-deal-v1",
+  "mode": "synthetic_commercial_rehearsal",
+  "deal": {
+    "deal_id": "SIM-DEAL-HC-2026-001",
+    "account_name": "海川工业泵（教学虚构）",
+    "currency": "CNY",
+    "commercial_owner": "sim-account-li",
+    "opportunity_stage": "qualified_for_paid_discovery",
+    "probability_percent": 25,
+    "target_close_date": "2026-10-16",
+    "source": "executive_discovery_workshop",
+    "next_step": "由客户 Sponsor、流程 Owner 与采购共同评审付费 Discovery SOW，确认 4 周档期、120000 元预算、数据访谈安排和验收人；未签署前不接入真实数据。",
+    "next_step_owner": "sim-account-li",
+    "next_step_due": "2026-09-30"
+  },
+  "stakeholders": [
+    {"actor_id": "sim-hc-sponsor-wang", "side": "customer", "role": "customer_sponsor", "decision_right": "预算与项目继续/停止", "status": "identified", "real_identity_verified": false},
+    {"actor_id": "sim-hc-process-lin", "side": "customer", "role": "customer_process_owner", "decision_right": "询盘流程与业务验收", "status": "identified", "real_identity_verified": false},
+    {"actor_id": "sim-hc-data-zhou", "side": "customer", "role": "customer_data_owner", "decision_right": "数据用途、字段与保留期", "status": "to_confirm", "real_identity_verified": false},
+    {"actor_id": "sim-hc-security-qian", "side": "customer", "role": "customer_security_owner", "decision_right": "身份、网络、安全评审", "status": "to_confirm", "real_identity_verified": false},
+    {"actor_id": "sim-hc-procurement-sun", "side": "customer", "role": "customer_procurement_owner", "decision_right": "供应商准入、合同与付款", "status": "to_confirm", "real_identity_verified": false},
+    {"actor_id": "sim-account-li", "side": "fde", "role": "fde_commercial_owner", "decision_right": "报价、范围与商务预测", "status": "assigned", "real_identity_verified": false},
+    {"actor_id": "sim-fde-chen", "side": "fde", "role": "fde_delivery_owner", "decision_right": "方案、交付与资源承诺", "status": "assigned", "real_identity_verified": false},
+    {"actor_id": "sim-security-he", "side": "fde", "role": "fde_security_owner", "decision_right": "安全例外和数据控制", "status": "assigned", "real_identity_verified": false}
+  ],
+  "qualification": {
+    "business_pain": "海外询盘需要销售跨产品、订单和资料整理信息，复杂案例需等待工程师；真实频率、成本和转化影响仍待 Discovery 测量。",
+    "compelling_event": "客户拟在下一销售旺季前决定是否扩大试点；日期尚待 Sponsor 确认。",
+    "why_fde": "流程跨邮件、产品知识、工程审核与 CRM 反馈，需要现场共同定义边界并以人工审核闭环。",
+    "why_now": "管理层希望用 4 周付费 Discovery 形成可验证基线与 Shadow 决策包。",
+    "budget_status": "discovery_budget_to_confirm",
+    "authority_status": "sponsor_identified_not_verified",
+    "procurement_path": "unknown",
+    "disqualifiers": ["只接受按最终成交额付费", "要求无人工审核自动报价", "不允许任何流程观察或授权数据取样"]
+  },
+  "scope": {
+    "business_outcome": "减少复杂外贸询盘的信息整理与等待，同时保持产品、价格和对外回复由授权人员批准。",
+    "in_scope": ["英文邮件询盘", "离心泵产品族", "字段抽取与缺口提示", "候选产品与证据", "销售/工程师人工审核", "Shadow 结果反馈"],
+    "out_of_scope": ["自动对外发送", "约束性报价", "无工程审核的最终选型", "客户系统写入", "设备远程控制", "全公司推广"],
+    "assumptions": ["客户可安排流程 Owner 每周 2 小时", "Discovery 可访问经授权脱敏样本", "客户会提供产品与知识资料 Owner"],
+    "customer_dependencies": ["确认 Sponsor 和验收人", "完成供应商准入", "提供授权数据清单", "提供邮箱/CRM sandbox 方案", "安排 3 名销售与 1 名工程师"],
+    "change_control": "任何新增产品族、语言、数据源、写入动作或自动发送均提交 Change Request，列明价格、时间、安全与验收影响，经双方 Owner 书面批准后进入基线。"
+  },
+  "phases": [
+    {
+      "phase_id": "P1-DISCOVERY",
+      "name": "付费 Discovery",
+      "commercial_status": "proposed",
+      "fee": 120000,
+      "duration_weeks": 4,
+      "deliverables": ["Problem Brief 与 As-Is Workflow", "基线与测量计划", "数据/知识清单与授权缺口", "Pilot Charter 与范围报价", "Stop/Proceed 建议"],
+      "acceptance_criteria": ["双方评审交付物", "每项未知有 Owner 和日期", "Pilot 范围、指标、风险与估价可决策", "不以模型准确率替代业务验收"],
+      "payment_milestones": [
+        {"milestone_id": "P1-M1", "trigger": "SOW 生效并收到采购订单", "percent": 50, "invoice_status": "not_billable"},
+        {"milestone_id": "P1-M2", "trigger": "Discovery 交付物由指定验收人接受", "percent": 50, "invoice_status": "not_billable"}
+      ]
+    },
+    {
+      "phase_id": "P2-SHADOW-PILOT",
+      "name": "授权 Shadow Pilot",
+      "commercial_status": "budgetary_only",
+      "fee": 380000,
+      "duration_weeks": 8,
+      "deliverables": ["只读邮箱/CRM 接入", "受控工作台与人工审核", "安全与运营 Runbook", "试点指标与证据包", "Stop/Iterate/Expand 评审"],
+      "acceptance_criteria": ["授权用户与案例量达到约定分母", "危险建议为零", "跨租户测试通过", "人工修改、专家负担、延迟和单位成本按冻结口径报告"],
+      "payment_milestones": [
+        {"milestone_id": "P2-M1", "trigger": "Pilot SOW 生效与环境启动", "percent": 40, "invoice_status": "not_billable"},
+        {"milestone_id": "P2-M2", "trigger": "授权 Shadow 开始", "percent": 30, "invoice_status": "not_billable"},
+        {"milestone_id": "P2-M3", "trigger": "Pilot 验收或按约定视为验收", "percent": 30, "invoice_status": "not_billable"}
+      ]
+    },
+    {
+      "phase_id": "P3-PRODUCTION",
+      "name": "生产上线与移交",
+      "commercial_status": "budgetary_only",
+      "fee": 800000,
+      "duration_weeks": 12,
+      "deliverables": ["生产数据面与企业身份", "正式 Connector 与监控", "UAT/回滚/事故演练", "上线支持", "运维和知识移交"],
+      "acceptance_criteria": ["生产 UAT 通过", "安全问题关闭或获批例外", "值班与回滚演练通过", "验收证书签署"],
+      "payment_milestones": [
+        {"milestone_id": "P3-M1", "trigger": "生产 SOW 生效", "percent": 30, "invoice_status": "not_billable"},
+        {"milestone_id": "P3-M2", "trigger": "生产 UAT 开始", "percent": 40, "invoice_status": "not_billable"},
+        {"milestone_id": "P3-M3", "trigger": "生产验收与移交", "percent": 30, "invoice_status": "not_billable"}
+      ]
+    },
+    {
+      "phase_id": "P4-SUPPORT",
+      "name": "首年支持与优化",
+      "commercial_status": "budgetary_only",
+      "fee": 180000,
+      "duration_weeks": 52,
+      "deliverables": ["工作日支持", "月度服务复盘", "季度价值复盘", "约定额度内的小改进"],
+      "acceptance_criteria": ["服务目录和 SLA 单独约定", "季度报告可追溯", "超范围需求走 Change Request"],
+      "payment_milestones": [
+        {"milestone_id": "P4-M1", "trigger": "支持期开始", "percent": 50, "invoice_status": "not_billable"},
+        {"milestone_id": "P4-M2", "trigger": "支持期过半", "percent": 50, "invoice_status": "not_billable"}
+      ]
+    }
+  ],
+  "success_metrics": [
+    {"metric_id": "M-01", "name": "复杂询盘人工主动处理分钟", "definition": "从收件到待发送，销售和工程师实际主动操作分钟之和；排除系统和客户等待", "baseline_status": "synthetic_only", "customer_baseline": null, "target": "相对冻结前测中位数下降至少 25%，且人工修改率不恶化", "measurement_window": "2 周前测 + 4 周 Shadow", "owner": "customer_process_owner", "acceptance_use": "pilot_decision"},
+    {"metric_id": "M-02", "name": "证据完整率", "definition": "包含每个可核验 Claim 的来源、版本和适用条件的案例数/应有证据案例数", "baseline_status": "not_measured", "customer_baseline": null, "target": ">=95%", "measurement_window": "全部合格 Shadow 案例", "owner": "fde_delivery_owner", "acceptance_use": "pilot_gate"},
+    {"metric_id": "M-03", "name": "危险建议数", "definition": "违反已批准产品/售后安全规则且未弃答或升级的建议数", "baseline_status": "not_measured", "customer_baseline": null, "target": "0", "measurement_window": "全部评估和 Shadow 案例", "owner": "fde_security_owner", "acceptance_use": "stop_condition"},
+    {"metric_id": "M-04", "name": "采用率", "definition": "实际进入审核的合格案例数/已授权且适用的到达案例数", "baseline_status": "not_measured", "customer_baseline": null, "target": ">=70%，按用户分群报告", "measurement_window": "Shadow 第 2-4 周", "owner": "customer_process_owner", "acceptance_use": "pilot_decision"},
+    {"metric_id": "M-05", "name": "单位合格案例成本", "definition": "模型、基础设施、人工运营和支持可归属成本/合格完成案例数", "baseline_status": "not_measured", "customer_baseline": null, "target": "由 Discovery 冻结上限", "measurement_window": "Shadow 全周期", "owner": "fde_commercial_owner", "acceptance_use": "production_business_case"}
+  ],
+  "evidence": [
+    {"evidence_id": "EV-QUAL", "title": "机会资格评审记录", "status": "accepted", "owner": "sim-account-li", "required_for_gate": "A_OPPORTUNITY_QUALIFIED", "path": "examples/haichuan-opportunity-note.md"},
+    {"evidence_id": "EV-DISCOVERY-SOW", "title": "付费 Discovery SOW", "status": "draft", "owner": "sim-account-li", "required_for_gate": "B_PAID_DISCOVERY_CONTRACTED", "path": "examples/haichuan-discovery-proposal.md"},
+    {"evidence_id": "EV-MSA", "title": "主服务协议/采购条款", "status": "requested", "owner": "sim-hc-procurement-sun", "required_for_gate": "B_PAID_DISCOVERY_CONTRACTED", "path": "external/customer-procurement-system"},
+    {"evidence_id": "EV-PO", "title": "采购订单或等效开工授权", "status": "requested", "owner": "sim-hc-procurement-sun", "required_for_gate": "B_PAID_DISCOVERY_CONTRACTED", "path": "external/customer-procurement-system"},
+    {"evidence_id": "EV-DATA-AUTH", "title": "真实数据用途与字段授权", "status": "requested", "owner": "sim-hc-data-zhou", "required_for_gate": "C_AUTHORIZED_SHADOW_START", "path": "external/customer-data-owner"},
+    {"evidence_id": "EV-SECURITY-APPROVAL", "title": "安全与隐私评审批准", "status": "requested", "owner": "sim-hc-security-qian", "required_for_gate": "C_AUTHORIZED_SHADOW_START", "path": "external/customer-security-system"},
+    {"evidence_id": "EV-SHADOW-SOW", "title": "Shadow Pilot SOW/订单", "status": "draft", "owner": "sim-account-li", "required_for_gate": "C_AUTHORIZED_SHADOW_START", "path": "templates/pilot-sow.md"},
+    {"evidence_id": "EV-UAT-PLAN", "title": "客户 UAT 和成功计分卡", "status": "draft", "owner": "sim-fde-chen", "required_for_gate": "C_AUTHORIZED_SHADOW_START", "path": "templates/pilot-success-scorecard.md"},
+    {"evidence_id": "EV-INCIDENT-PLAN", "title": "值班、停止和事故沟通计划", "status": "draft", "owner": "sim-fde-chen", "required_for_gate": "C_AUTHORIZED_SHADOW_START", "path": "../13-pilot-readiness/guides/operator-runbook.md"},
+    {"evidence_id": "EV-PILOT-ACCEPT", "title": "付费 Pilot 验收证书", "status": "draft", "owner": "sim-hc-process-lin", "required_for_gate": "D_PAID_PILOT_ACCEPTED", "path": "templates/acceptance-certificate.md"},
+    {"evidence_id": "EV-PROD-UAT", "title": "生产 UAT 签核", "status": "draft", "owner": "sim-hc-process-lin", "required_for_gate": "E_PRODUCTION_GO_LIVE", "path": "../13-pilot-readiness/templates/customer-uat.md"},
+    {"evidence_id": "EV-GO-LIVE", "title": "生产上线批准", "status": "draft", "owner": "sim-hc-sponsor-wang", "required_for_gate": "E_PRODUCTION_GO_LIVE", "path": "templates/go-live-handover.md"},
+    {"evidence_id": "EV-HANDOVER", "title": "最终移交与责任接受", "status": "draft", "owner": "sim-hc-process-lin", "required_for_gate": "F_FINAL_HANDOVER", "path": "templates/go-live-handover.md"}
+  ],
+  "gates": [
+    {"gate_id": "A_OPPORTUNITY_QUALIFIED", "name": "机会资格通过", "status": "approved", "owner": "sim-account-li", "required_evidence": ["EV-QUAL"], "approvals": [{"role": "fde_commercial_owner", "actor_id": "sim-account-li", "date": "2026-09-22", "scope": "允许提交付费 Discovery 方案"}], "missing_decisions": []},
+    {"gate_id": "B_PAID_DISCOVERY_CONTRACTED", "name": "付费 Discovery 签约", "status": "pending", "owner": "sim-hc-procurement-sun", "required_evidence": ["EV-DISCOVERY-SOW", "EV-MSA", "EV-PO"], "approvals": [], "missing_decisions": ["客户确认 120000 元预算与 4 周档期", "客户指定 Discovery 验收人", "双方确认付款与采购路径"]},
+    {"gate_id": "C_AUTHORIZED_SHADOW_START", "name": "授权 Shadow 开始", "status": "blocked", "owner": "sim-hc-sponsor-wang", "required_evidence": ["EV-DATA-AUTH", "EV-SECURITY-APPROVAL", "EV-SHADOW-SOW", "EV-UAT-PLAN", "EV-INCIDENT-PLAN"], "approvals": [], "missing_decisions": ["真实数据范围与保留期", "企业身份和只读 Connector", "用户/案例量/周期/成功门", "值班、停止和事故责任"]},
+    {"gate_id": "D_PAID_PILOT_ACCEPTED", "name": "付费 Pilot 验收", "status": "not_started", "owner": "sim-hc-process-lin", "required_evidence": ["EV-PILOT-ACCEPT"], "approvals": [], "missing_decisions": ["需先完成授权 Shadow 并按冻结口径评审"]},
+    {"gate_id": "E_PRODUCTION_GO_LIVE", "name": "生产上线", "status": "not_started", "owner": "sim-hc-sponsor-wang", "required_evidence": ["EV-PROD-UAT", "EV-GO-LIVE"], "approvals": [], "missing_decisions": ["需另签生产范围、SLA、DPA 与订单", "需完成生产 UAT、安全关闭与回退演练"]},
+    {"gate_id": "F_FINAL_HANDOVER", "name": "最终移交", "status": "not_started", "owner": "sim-hc-process-lin", "required_evidence": ["EV-HANDOVER"], "approvals": [], "missing_decisions": ["资产、Runbook、培训、访问撤销与遗留项尚未验收"]}
+  ],
+  "risks": [
+    {"risk_id": "R-01", "severity": "critical", "category": "safety", "description": "客户可能把候选型号理解为最终选型", "owner": "sim-fde-chen", "mitigation": "强制工程审核、证据与适用条件；Pilot 禁止自动报价", "status": "open"},
+    {"risk_id": "R-02", "severity": "high", "category": "commercial", "description": "客户未确认付费 Discovery 预算和采购路径", "owner": "sim-account-li", "mitigation": "MAP 中加入采购评审与 PO 截止日", "status": "open"},
+    {"risk_id": "R-03", "severity": "high", "category": "data", "description": "历史资料权威性和使用授权不清", "owner": "sim-hc-data-zhou", "mitigation": "Discovery 形成 Source of Truth 和字段授权", "status": "open"},
+    {"risk_id": "R-04", "severity": "medium", "category": "adoption", "description": "销售绕过审核页面继续在线下处理", "owner": "sim-hc-process-lin", "mitigation": "按用户统计采用率，安排每周反馈和冠军用户", "status": "open"},
+    {"risk_id": "R-05", "severity": "medium", "category": "delivery", "description": "客户新增产品族导致固定价范围膨胀", "owner": "sim-account-li", "mitigation": "基线化范围并使用 Change Request", "status": "open"},
+    {"risk_id": "R-06", "severity": "low", "category": "schedule", "description": "节假日影响专家可用性", "owner": "sim-hc-process-lin", "mitigation": "Discovery 启动时冻结访谈日历", "status": "closed"}
+  ],
+  "economics": {
+    "pricing_basis": "教学示例，未经过市场验证或双方谈判",
+    "estimated_delivery_cost_cny": {"P1-DISCOVERY": 72000, "P2-SHADOW-PILOT": 247000, "P3-PRODUCTION": 600000, "P4-SUPPORT": 117000},
+    "contingency_included": true,
+    "discount_authority": "任何折扣必须同时记录交换条件、毛利影响和批准人",
+    "revenue_recognition": "由正式合同、履约与财务政策决定；本演练不确认收入"
+  }
+}
