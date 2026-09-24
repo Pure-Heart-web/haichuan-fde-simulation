@@ -1,6 +1,6 @@
 # 工业设备 · FDE 交付学习案例
 
-这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9–14 的交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 的商务交付 Gate，Stage 16 的团队商业交付毕业模拟，Stage 17 的付费 Discovery 合同到验收，以及 Stage 18 的 Design Partner 获取与签约预检**。后续阶段按新需求继续扩展。
+这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9–14 的交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 的商务交付 Gate，Stage 16 的团队商业交付毕业模拟，Stage 17 的付费 Discovery 合同到验收，Stage 18 的 Design Partner 获取与签约预检，以及 Stage 19 的付费 Discovery 现场执行与验收准备**。后续阶段按新需求继续扩展。
 
 企业、联系人、邮件、设备、型号、订单和指标均为教学虚构。样本中的数值用于练习分析，不是客户真实业务事实，也不是泵选型或设备维修依据。
 
@@ -9,13 +9,13 @@
 需要 Python 3.10 或更新版本，无第三方依赖、API Key 或网络要求。在本文件所在目录打开终端：
 
 ```bash
-python3 stage_pipeline.py all --output-root outputs/my-stage-1-18-run
+python3 stage_pipeline.py all --output-root outputs/my-stage-1-19-run
 python3 -m unittest discover -s tests -v
 ```
 
 `--output-root` 建议每次使用新目录；历史审核记录与当前代码版本不同时，流水线会按设计拒绝覆盖。
 
-`all` 依次运行十八个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–8 完成抽取、推荐、知识、Pilot 和双客户产品化，Stage 9–14 检查交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 校验商务交易档案与 A–F Gate，Stage 16 评分团队和个人技术责任证据，Stage 17 校验付费 Discovery 的合同到验收，Stage 18 校验候选 Design Partner 资格与真实签约所需的外部证据边界。结果保存在 `outputs/stage-01/` 至 `outputs/stage-18/`，另有 `outputs/stage-08-vertical/`。
+`all` 依次运行十九个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–8 完成抽取、推荐、知识、Pilot 和双客户产品化，Stage 9–14 检查交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 校验商务交易档案与 A–F Gate，Stage 16 评分团队和个人技术责任证据，Stage 17 校验付费 Discovery 的合同到验收，Stage 18 校验 Design Partner 资格与签约边界，Stage 19 校验现场活动、证据、基线、依赖、变更、成本和六项交付物。结果保存在 `outputs/stage-01/` 至 `outputs/stage-19/`，另有 `outputs/stage-08-vertical/`。
 
 分析自己的演练记录：
 
@@ -25,7 +25,7 @@ python3 run.py analyze --input stages/01-discovery/data/simulation.json --output
 
 Stage 1 输入规范见 [数据说明](stages/01-discovery/data/README.md)。`run.py` 的退出码 `0` 表示检查通过或报告成功生成；`2` 表示数据无效；`3` 表示报告已生成但 Stage 1 退出条件尚未齐全。`stage_pipeline.py` 的 `0` 表示教学流程与回归检查已完成；Stage 4 会如实报告未达门槛字段。设计审计通过不表示已达到产品发布门槛。
 
-Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)、[Delivery Room](stage11.py)、[模型安全 Canary](stage12.py)、[现场试点准备](stage13.py)、[集成实验室](stage14.py)、[商务交付室](stage15.py)、[团队毕业模拟](stage16.py)、[付费 Discovery 交付控制](stage17.py) 和 [Design Partner 签约预检](stage18.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
+Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)、[Delivery Room](stage11.py)、[模型安全 Canary](stage12.py)、[现场试点准备](stage13.py)、[集成实验室](stage14.py)、[商务交付室](stage15.py)、[团队毕业模拟](stage16.py)、[付费 Discovery 交付控制](stage17.py)、[Design Partner 签约预检](stage18.py) 和 [Live Discovery 执行](stage19.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
 
 ## 建议阅读和练习顺序
 
@@ -56,6 +56,7 @@ Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本�
 25. [Stage 16 团队真实商业交付模拟](stages/16-team-delivery-simulation/README.md)：6 人角色分工完成六轮交付与十二个事件注入，用团队和个人证据评价是否能在监督下承担客户技术责任。
 26. [Stage 17 Paid Discovery Delivery & Acceptance](stages/17-paid-discovery-delivery/README.md)：演练合同生效、客户依赖、六项交付物、变更、验收、成本、开票条件和 Shadow 前置依赖。
 27. [Stage 18 Design Partner Acquisition & Contracting](stages/18-design-partner-contracting/README.md)：运行候选资格、固定范围报价、双方行动计划、外部交易证据预检和 Contract-to-Delivery Handoff。
+28. [Stage 19 Live Paid Discovery Execution](stages/19-live-discovery-execution/README.md)：执行八类现场活动、事实/推断/假设治理、基线冻结、依赖、变更、实际成本和六项交付物验收准备。
 
 [模拟场景流程图](stages/01-discovery/guides/observed-workflow.md) 展示正常路径、专家升级和客户澄清回路。
 
@@ -87,13 +88,14 @@ stages/15-commercial-delivery/  资格、提案、MAP、合同尽调、报价、
 stages/16-team-delivery-simulation/ 团队角色、客户剧本、事件注入、评分与个人培养资料
 stages/17-paid-discovery-delivery/ 合成付费 Discovery 合同、交付物、依赖、验收和开票控制
 stages/18-design-partner-contracting/ 候选资格、报价、签约清单、外部证据预检和交付移交
+stages/19-live-discovery-execution/ 现场活动、证据、冻结基线、依赖、变更、成本与验收准备
 src/fde_discovery/            校验、指标计算、报告与阶段检查代码
 src/fde_stage3/               Stage 2/3 资料审计代码
 src/fde_platform/             Sprint 1–3 抽取、推荐、知识、草稿、审核与评估代码
 scripts/                      合成资料与评估集重建脚本
 tests/                        指标计算、无效输入与阶段边界测试
 run.py                        命令行入口
-stage_pipeline.py             十八阶段离线检查入口
+stage_pipeline.py             十九阶段离线检查入口
 stage4.py                     Sprint 1 demo / eval / review / process 命令入口
 stage5.py                     Sprint 2 demo / eval / recommend / from-stage4 / review 入口
 stage6.py                     Sprint 3 demo / eval / draft / review 入口
@@ -111,7 +113,8 @@ stage15.py                    商务交易档案 / 付款计划 / A–F Gate 校
 stage16.py                    团队模拟包生成 / 交付评分 / 个人技术责任评估入口
 stage17.py                    付费 Discovery 合同 / 验收 / 成本 / 开票条件校验入口
 stage18.py                    Design Partner 候选 / 外部签约证据 / Kickoff 预检入口
+stage19.py                    Live Discovery 现场执行 / 外部证据 / 验收前预检入口
 outputs/                      本地演练结果（不纳入版本管理）
 ```
 
-十八个阶段的“交付”是可追溯的问题定义、治理决定与可运行的技术、运营、商务和团队责任演练。Stage 14 依然使用本地集成 Lab；Stage 15–17 的交易、合同、客户事件、金额、人员、评分、验收和签核均为教学虚构。Stage 18 增加真实交易清单的仓库外预检，但公开基线仍没有真实客户或合同。代码不能代替授权客户现场测试、真实 Pilot 成效、有效合同、真实发票/回款或客户验收。
+十九个阶段的“交付”是可追溯的问题定义、治理决定与可运行的技术、运营、商务和团队责任演练。Stage 14 依然使用本地集成 Lab；Stage 15–17 的交易、合同、客户事件、金额、人员、评分、验收和签核均为教学虚构。Stage 18–19 增加真实交易与现场执行清单的仓库外预检，但公开基线仍没有真实客户、合同或会议。代码不能代替授权客户现场测试、真实 Pilot 成效、有效合同、真实发票/回款或客户验收。

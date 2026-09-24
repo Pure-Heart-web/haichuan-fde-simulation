@@ -95,3 +95,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage18.py demo --check-baseline`，核对 `outputs/stage-18/stage18-report.json`：三个虚构候选中只有一个达到资格线；真实具名客户、外部签约证据、有效合同和回款均为 0，状态保持 `REAL_PAID_DISCOVERY_NOT_READY`。
 
 运行 `python3 stage18.py prepare --output outputs/partner-private` 生成外部 manifest 和 Mutual Action Plan。将 manifest 移到仓库外受控目录并用权威系统引用填写后，运行 `python3 stage18.py preflight --manifest /secure/path/design-partner-manifest.json --as-of 2026-09-24`。仓库内路径、缺失/拒绝/过期证据、错误签约声明角色或缺少三方 Release 都应阻断；结构完整也只表示可进入人工合同真实性复核。完整练习见 [Stage 18 手册](../stages/18-design-partner-contracting/README.md)。
+
+## Stage 19：Live Paid Discovery Execution
+
+运行 `python3 stage19.py demo --check-baseline`，核对 `outputs/stage-19/stage19-report.json`：八类现场活动、五项基线和六项交付物完整；合成工时 112 小时、成本 CNY 95,800；开放假设未进入交付结论；真实客户会议、数据、批准和回款均为 0。
+
+运行 `python3 stage19.py prepare --output /secure/path/discovery-execution` 生成仓库外执行资料包。填入权威系统引用后运行 `python3 stage19.py preflight --manifest /secure/path/discovery-execution/external-discovery-execution.json`。删除任一必需现场活动、允许事后修改基线、用 FDE 推断支撑基线、让开放假设进入交付物、保留 open 依赖、批准变更但不留证据、复制客户数值或人员姓名都应失败。完整练习见 [Stage 19 手册](../stages/19-live-discovery-execution/README.md)。

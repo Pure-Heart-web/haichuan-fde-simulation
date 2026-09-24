@@ -6,3 +6,6 @@ outputs/
 *.sqlite3
 .env
 .env.*
+# Real Design Partner and Discovery manifests are external records.
+external-partner-manifest.json
+external-discovery-execution.json

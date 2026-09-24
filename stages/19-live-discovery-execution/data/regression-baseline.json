@@ -1,0 +1,19 @@
+{
+  "status": "SYNTHETIC_DISCOVERY_READY_FOR_ACCEPTANCE_REHEARSAL",
+  "session_count": 8,
+  "required_session_type_count": 8,
+  "confirmed_fact_count": 7,
+  "supported_inference_count": 2,
+  "open_hypothesis_count": 1,
+  "baseline_metric_count": 5,
+  "closed_dependency_count": 5,
+  "change_request_count": 2,
+  "ready_deliverable_count": 6,
+  "logged_hours": "112.00",
+  "delivery_cost_cny": "95800.00",
+  "real_customer_sessions": 0,
+  "real_customer_data_records": 0,
+  "real_customer_approvals": 0,
+  "actual_cash_received_cny": "0.00",
+  "next_gate": "CUSTOMER_DISCOVERY_ACCEPTANCE_AND_PILOT_DECISION"
+}

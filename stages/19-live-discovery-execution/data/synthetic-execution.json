@@ -1,0 +1,90 @@
+{
+  "mode": "synthetic_live_discovery_rehearsal",
+  "engagement": {
+    "engagement_id": "DISC-TRAINING-001",
+    "stage18_release_ref": "SYNTHETIC-STAGE18-RELEASE",
+    "scope_ref": "STAGE17-SIX-DELIVERABLES-V1",
+    "start_date": "2026-10-05",
+    "target_end_date": "2026-10-30"
+  },
+  "fieldwork_role_confirmations": [
+    {"role": "customer_sponsor", "status": "simulated_confirmed", "evidence_ref": "ROLE-SIM-01"},
+    {"role": "customer_process_owner", "status": "simulated_confirmed", "evidence_ref": "ROLE-SIM-02"},
+    {"role": "customer_data_or_security_owner", "status": "simulated_confirmed", "evidence_ref": "ROLE-SIM-03"},
+    {"role": "fde_delivery_owner", "status": "simulated_confirmed", "evidence_ref": "ROLE-SIM-04"}
+  ],
+  "fieldwork_sessions": [
+    {"session_id": "SES-01", "session_type": "kickoff", "held_on": "2026-10-05", "status": "simulated_completed", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_sponsor", "customer_process_owner"], "evidence_ref": "MEETING-SIM-01"},
+    {"session_id": "SES-02", "session_type": "sponsor_interview", "held_on": "2026-10-06", "status": "simulated_completed", "facilitator_role": "engagement_lead", "participant_roles": ["customer_sponsor"], "evidence_ref": "MEETING-SIM-02"},
+    {"session_id": "SES-03", "session_type": "process_owner_interview", "held_on": "2026-10-07", "status": "simulated_completed", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_process_owner"], "evidence_ref": "MEETING-SIM-03"},
+    {"session_id": "SES-04", "session_type": "process_observation", "held_on": "2026-10-09", "status": "simulated_completed", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_process_owner", "customer_operator"], "evidence_ref": "OBS-SIM-01"},
+    {"session_id": "SES-05", "session_type": "sample_audit", "held_on": "2026-10-12", "status": "simulated_completed", "facilitator_role": "data_lead", "participant_roles": ["customer_process_owner", "customer_data_or_security_owner"], "evidence_ref": "AUDIT-SIM-01"},
+    {"session_id": "SES-06", "session_type": "data_security_workshop", "held_on": "2026-10-14", "status": "simulated_completed", "facilitator_role": "security_lead", "participant_roles": ["customer_data_or_security_owner"], "evidence_ref": "WORKSHOP-SIM-01"},
+    {"session_id": "SES-07", "session_type": "solution_workshop", "held_on": "2026-10-20", "status": "simulated_completed", "facilitator_role": "solution_engineer", "participant_roles": ["customer_process_owner", "customer_it_owner"], "evidence_ref": "WORKSHOP-SIM-02"},
+    {"session_id": "SES-08", "session_type": "steering_readout", "held_on": "2026-10-29", "status": "simulated_completed", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_sponsor", "customer_process_owner"], "evidence_ref": "STEERING-SIM-01"}
+  ],
+  "evidence_register": [
+    {"evidence_id": "E-F001", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "SAMPLE-SIM:INQUIRY-VOLUME", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "CONFIRM-SIM-01", "used_by": ["D1_PROBLEM_SCOPE_RACI", "D2_BASELINE_SUCCESS_PLAN", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-F002", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "SAMPLE-SIM:CYCLE-TIME", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "CONFIRM-SIM-02", "used_by": ["D2_BASELINE_SUCCESS_PLAN", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-F003", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "SAMPLE-SIM:REWORK", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "CONFIRM-SIM-03", "used_by": ["D2_BASELINE_SUCCESS_PLAN"]},
+    {"evidence_id": "E-F004", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "SAMPLE-SIM:MISSED-DELAYED", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "CONFIRM-SIM-04", "used_by": ["D2_BASELINE_SUCCESS_PLAN", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-F005", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "SAMPLE-SIM:EXPERT-ESCALATION", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "CONFIRM-SIM-05", "used_by": ["D2_BASELINE_SUCCESS_PLAN", "D4_SOLUTION_INTEGRATION_PLAN"]},
+    {"evidence_id": "E-F006", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "OBS-SIM:CURRENT-WORKFLOW", "owner_role": "customer_process_owner", "captured_on": "2026-10-09", "confirmation_ref": "CONFIRM-SIM-06", "used_by": ["D1_PROBLEM_SCOPE_RACI", "D4_SOLUTION_INTEGRATION_PLAN"]},
+    {"evidence_id": "E-F007", "statement_type": "customer_fact", "status": "simulated_confirmed", "source_ref": "WORKSHOP-SIM:DATA-SECURITY", "owner_role": "customer_data_or_security_owner", "captured_on": "2026-10-14", "confirmation_ref": "CONFIRM-SIM-07", "used_by": ["D3_DATA_SECURITY_IP_BOUNDARY", "D4_SOLUTION_INTEGRATION_PLAN"]},
+    {"evidence_id": "E-I001", "statement_type": "fde_inference", "status": "supported", "source_ref": "ANALYSIS-SIM:BOTTLENECK", "owner_role": "fde_delivery_owner", "captured_on": "2026-10-16", "used_by": ["D1_PROBLEM_SCOPE_RACI", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-I002", "statement_type": "fde_inference", "status": "supported", "source_ref": "ANALYSIS-SIM:INTEGRATION-PATH", "owner_role": "solution_engineer", "captured_on": "2026-10-21", "used_by": ["D4_SOLUTION_INTEGRATION_PLAN", "D6_PILOT_RECOMMENDATION"]},
+    {"evidence_id": "E-H001", "statement_type": "hypothesis", "status": "validated", "source_ref": "HYP-SIM:RETRIEVAL", "owner_role": "ai_engineer", "captured_on": "2026-10-22", "used_by": ["D4_SOLUTION_INTEGRATION_PLAN", "D6_PILOT_RECOMMENDATION"]},
+    {"evidence_id": "E-H002", "statement_type": "hypothesis", "status": "open", "source_ref": "HYP-SIM:ADOPTION", "owner_role": "engagement_lead", "captured_on": "2026-10-27", "used_by": []}
+  ],
+  "baseline": {
+    "version": "BASELINE-SIM-v1",
+    "frozen_before_solution_decision": true,
+    "period": {"from": "2026-09-07", "to": "2026-10-02"},
+    "metrics": [
+      {"metric_id": "inquiry_volume", "denominator_policy": "all eligible inquiries in four-week period", "measurement_ref": "MEASURE-SIM-01", "source_evidence_id": "E-F001", "value_mode": "synthetic_training_value", "value": 420},
+      {"metric_id": "end_to_end_cycle_time", "denominator_policy": "eligible inquiry received to first review-complete response", "measurement_ref": "MEASURE-SIM-02", "source_evidence_id": "E-F002", "value_mode": "synthetic_training_value", "value": 9.4},
+      {"metric_id": "rework_rate", "denominator_policy": "eligible inquiries requiring material correction divided by reviewed inquiries", "measurement_ref": "MEASURE-SIM-03", "source_evidence_id": "E-F003", "value_mode": "synthetic_training_value", "value": 0.21},
+      {"metric_id": "missed_or_delayed_rate", "denominator_policy": "eligible inquiries missed or beyond internal SLA divided by eligible inquiries", "measurement_ref": "MEASURE-SIM-04", "source_evidence_id": "E-F004", "value_mode": "synthetic_training_value", "value": 0.08},
+      {"metric_id": "expert_escalation_rate", "denominator_policy": "eligible inquiries requiring engineering review divided by eligible inquiries", "measurement_ref": "MEASURE-SIM-05", "source_evidence_id": "E-F005", "value_mode": "synthetic_training_value", "value": 0.34}
+    ],
+    "approvals": [
+      {"role": "customer_process_owner", "status": "simulated_approved", "approved_at": "2026-10-16", "evidence_ref": "BASELINE-APPROVAL-SIM-01"},
+      {"role": "fde_delivery_owner", "status": "simulated_approved", "approved_at": "2026-10-16", "evidence_ref": "BASELINE-APPROVAL-SIM-02"}
+    ],
+    "post_hoc_changes_allowed": false
+  },
+  "dependencies": [
+    {"dependency_id": "DEP-01", "owner_role": "customer_process_owner", "due_date": "2026-10-08", "status": "closed", "evidence_ref": "DEP-SIM-01"},
+    {"dependency_id": "DEP-02", "owner_role": "customer_data_or_security_owner", "due_date": "2026-10-13", "status": "closed", "evidence_ref": "DEP-SIM-02"},
+    {"dependency_id": "DEP-03", "owner_role": "customer_it_owner", "due_date": "2026-10-19", "status": "closed", "evidence_ref": "DEP-SIM-03"},
+    {"dependency_id": "DEP-04", "owner_role": "fde_delivery_owner", "due_date": "2026-10-23", "status": "closed", "evidence_ref": "DEP-SIM-04"},
+    {"dependency_id": "DEP-05", "owner_role": "customer_sponsor", "due_date": "2026-10-28", "status": "closed", "evidence_ref": "DEP-SIM-05"}
+  ],
+  "change_requests": [
+    {"change_id": "CR-01", "requested_scope": "Add ERP write-back", "decision": "deferred", "decision_owner_role": "customer_sponsor", "schedule_impact": "not estimated", "fee_impact": "not estimated"},
+    {"change_id": "CR-02", "requested_scope": "Add service domain", "decision": "rejected", "decision_owner_role": "fde_delivery_owner", "schedule_impact": "none", "fee_impact": "none"}
+  ],
+  "time_ledger": [
+    {"entry_id": "TIME-01", "role": "engagement_lead", "work_date": "2026-10-30", "hours": 20, "loaded_rate_cny": 800, "workstream": "commercial_governance", "evidence_ref": "TIME-SIM-01"},
+    {"entry_id": "TIME-02", "role": "fde_delivery_owner", "work_date": "2026-10-30", "hours": 36, "loaded_rate_cny": 900, "workstream": "fieldwork_and_delivery", "evidence_ref": "TIME-SIM-02"},
+    {"entry_id": "TIME-03", "role": "data_security_lead", "work_date": "2026-10-30", "hours": 16, "loaded_rate_cny": 900, "workstream": "data_security", "evidence_ref": "TIME-SIM-03"},
+    {"entry_id": "TIME-04", "role": "ai_engineer", "work_date": "2026-10-30", "hours": 20, "loaded_rate_cny": 850, "workstream": "technical_feasibility", "evidence_ref": "TIME-SIM-04"},
+    {"entry_id": "TIME-05", "role": "solution_engineer", "work_date": "2026-10-30", "hours": 20, "loaded_rate_cny": 800, "workstream": "integration_design", "evidence_ref": "TIME-SIM-05"}
+  ],
+  "deliverables": [
+    {"deliverable_id": "D1_PROBLEM_SCOPE_RACI", "title": "Problem, Scope and RACI", "owner_role": "fde_delivery_owner", "status": "simulated_ready_for_acceptance", "evidence_ids": ["E-F001", "E-F006", "E-I001"], "artifact_ref": "ARTIFACT-SIM-D1", "acceptance_criteria_ref": "SOW-SIM:D1"},
+    {"deliverable_id": "D2_BASELINE_SUCCESS_PLAN", "title": "Baseline and Success Plan", "owner_role": "fde_delivery_owner", "status": "simulated_ready_for_acceptance", "evidence_ids": ["E-F001", "E-F002", "E-F003", "E-F004", "E-F005"], "artifact_ref": "ARTIFACT-SIM-D2", "acceptance_criteria_ref": "SOW-SIM:D2"},
+    {"deliverable_id": "D3_DATA_SECURITY_IP_BOUNDARY", "title": "Data, Security and IP Boundary", "owner_role": "data_security_lead", "status": "simulated_ready_for_acceptance", "evidence_ids": ["E-F007"], "artifact_ref": "ARTIFACT-SIM-D3", "acceptance_criteria_ref": "SOW-SIM:D3"},
+    {"deliverable_id": "D4_SOLUTION_INTEGRATION_PLAN", "title": "Solution and Integration Plan", "owner_role": "solution_engineer", "status": "simulated_ready_for_acceptance", "evidence_ids": ["E-F005", "E-F006", "E-F007", "E-I002", "E-H001"], "artifact_ref": "ARTIFACT-SIM-D4", "acceptance_criteria_ref": "SOW-SIM:D4"},
+    {"deliverable_id": "D5_BUSINESS_CASE", "title": "Business Case", "owner_role": "engagement_lead", "status": "simulated_ready_for_acceptance", "evidence_ids": ["E-F001", "E-F002", "E-F004", "E-I001"], "artifact_ref": "ARTIFACT-SIM-D5", "acceptance_criteria_ref": "SOW-SIM:D5"},
+    {"deliverable_id": "D6_PILOT_RECOMMENDATION", "title": "Pilot Recommendation", "owner_role": "fde_delivery_owner", "status": "simulated_ready_for_acceptance", "evidence_ids": ["E-I002", "E-H001"], "artifact_ref": "ARTIFACT-SIM-D6", "acceptance_criteria_ref": "SOW-SIM:D6"}
+  ],
+  "real_world_assertions": {
+    "real_customer_sessions": 0,
+    "real_customer_data_records": 0,
+    "real_customer_approvals": 0,
+    "real_contracts_executed": 0,
+    "real_invoices_created": 0,
+    "actual_cash_received_cny": 0
+  }
+}

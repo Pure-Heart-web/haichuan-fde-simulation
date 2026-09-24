@@ -78,11 +78,15 @@
 
 把 Stage 17 的报价和交付物用于真实商机之前，先用合成候选训练 ICP、Sponsor 资格、付费意愿、预算、采购、数据安全 Owner 和客户投入判断。真实客户的合同、联系人、PO 和签字文件保存在仓库外权威系统；代码只校验十项证据和三方 Release 的引用、状态、角色和日期，并明确不能验证法律效力。见 [Stage 18 手册](../stages/18-design-partner-contracting/README.md)。
 
+## Stage 19：Live Paid Discovery Execution
+
+在 Stage 18 的人工合同释放之后运行四周现场工作：八类会议/观察、客户事实与 FDE 推断/假设分离、五项基线冻结、依赖和变更、真实工时成本，以及六项交付物的验收准备。真实 manifest 仍在仓库外，客户数值和个人信息只保存在权威系统；机器预检不会代替客户验收或授权 Pilot。见 [Stage 19 手册](../stages/19-live-discovery-execution/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：真实 Discovery 与授权 Shadow | Stage 18 的有效合同如何变成现场交付和客户证据？ | 人工确认签约、Kickoff、外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
+| 后续：客户验收与授权 Shadow | Stage 19 的六项交付物如何形成客户决定并安全进入现场 Pilot？ | 客户验收、Pilot SOW、外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

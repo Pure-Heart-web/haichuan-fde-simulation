@@ -1,0 +1,87 @@
+{
+  "mode": "external_live_paid_discovery_record",
+  "partner_public_label": "REPLACE_WITH_APPROVED_PUBLIC_LABEL",
+  "stage18_contract_release": {
+    "preflight_status": "EXTERNAL_CONTRACT_RECORD_INCOMPLETE",
+    "contract_record_ref": "REPLACE_WITH_CONTRACT_SYSTEM_REFERENCE",
+    "human_legal_validity_verified": false,
+    "verified_by_role": "fde_legal_owner",
+    "verified_at": "2026-10-01"
+  },
+  "engagement": {
+    "engagement_id": "REPLACE_WITH_ENGAGEMENT_ID",
+    "stage18_release_ref": "REPLACE_WITH_STAGE18_RELEASE_RECORD",
+    "scope_ref": "REPLACE_WITH_EXECUTED_SOW_SCOPE_REFERENCE",
+    "start_date": "2026-10-05",
+    "target_end_date": "2026-10-30"
+  },
+  "fieldwork_role_confirmations": [
+    {"role": "customer_sponsor", "status": "pending", "evidence_ref": "REPLACE"},
+    {"role": "customer_process_owner", "status": "pending", "evidence_ref": "REPLACE"},
+    {"role": "customer_data_or_security_owner", "status": "pending", "evidence_ref": "REPLACE"},
+    {"role": "fde_delivery_owner", "status": "pending", "evidence_ref": "REPLACE"}
+  ],
+  "fieldwork_sessions": [
+    {"session_id": "SES-01", "session_type": "kickoff", "held_on": "2026-10-05", "status": "planned", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_sponsor", "customer_process_owner"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-02", "session_type": "sponsor_interview", "held_on": "2026-10-06", "status": "planned", "facilitator_role": "engagement_lead", "participant_roles": ["customer_sponsor"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-03", "session_type": "process_owner_interview", "held_on": "2026-10-07", "status": "planned", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_process_owner"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-04", "session_type": "process_observation", "held_on": "2026-10-09", "status": "planned", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_process_owner"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-05", "session_type": "sample_audit", "held_on": "2026-10-12", "status": "planned", "facilitator_role": "data_lead", "participant_roles": ["customer_process_owner", "customer_data_or_security_owner"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-06", "session_type": "data_security_workshop", "held_on": "2026-10-14", "status": "planned", "facilitator_role": "security_lead", "participant_roles": ["customer_data_or_security_owner"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-07", "session_type": "solution_workshop", "held_on": "2026-10-20", "status": "planned", "facilitator_role": "solution_engineer", "participant_roles": ["customer_process_owner"], "evidence_ref": "REPLACE"},
+    {"session_id": "SES-08", "session_type": "steering_readout", "held_on": "2026-10-29", "status": "planned", "facilitator_role": "fde_delivery_owner", "participant_roles": ["customer_sponsor", "customer_process_owner"], "evidence_ref": "REPLACE"}
+  ],
+  "evidence_register": [
+    {"evidence_id": "E-F001", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_VOLUME_MEASUREMENT", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "REPLACE", "used_by": ["D1_PROBLEM_SCOPE_RACI", "D2_BASELINE_SUCCESS_PLAN", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-F002", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_CYCLE_MEASUREMENT", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "REPLACE", "used_by": ["D2_BASELINE_SUCCESS_PLAN", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-F003", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_REWORK_MEASUREMENT", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "REPLACE", "used_by": ["D2_BASELINE_SUCCESS_PLAN"]},
+    {"evidence_id": "E-F004", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_DELAY_MEASUREMENT", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "REPLACE", "used_by": ["D2_BASELINE_SUCCESS_PLAN", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-F005", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_ESCALATION_MEASUREMENT", "owner_role": "customer_process_owner", "captured_on": "2026-10-12", "confirmation_ref": "REPLACE", "used_by": ["D2_BASELINE_SUCCESS_PLAN", "D4_SOLUTION_INTEGRATION_PLAN"]},
+    {"evidence_id": "E-F006", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_PROCESS_OBSERVATION", "owner_role": "customer_process_owner", "captured_on": "2026-10-09", "confirmation_ref": "REPLACE", "used_by": ["D1_PROBLEM_SCOPE_RACI", "D4_SOLUTION_INTEGRATION_PLAN"]},
+    {"evidence_id": "E-F007", "statement_type": "customer_fact", "status": "pending", "source_ref": "REPLACE_WITH_DATA_SECURITY_DECISION", "owner_role": "customer_data_or_security_owner", "captured_on": "2026-10-14", "confirmation_ref": "REPLACE", "used_by": ["D3_DATA_SECURITY_IP_BOUNDARY", "D4_SOLUTION_INTEGRATION_PLAN"]},
+    {"evidence_id": "E-I001", "statement_type": "fde_inference", "status": "pending", "source_ref": "REPLACE_WITH_ANALYSIS", "owner_role": "fde_delivery_owner", "captured_on": "2026-10-16", "used_by": ["D1_PROBLEM_SCOPE_RACI", "D5_BUSINESS_CASE"]},
+    {"evidence_id": "E-H001", "statement_type": "hypothesis", "status": "open", "source_ref": "REPLACE_WITH_HYPOTHESIS_RECORD", "owner_role": "solution_engineer", "captured_on": "2026-10-20", "used_by": []}
+  ],
+  "baseline": {
+    "version": "BASELINE-v1",
+    "frozen_before_solution_decision": true,
+    "period": {"from": "2026-09-07", "to": "2026-10-02"},
+    "metrics": [
+      {"metric_id": "inquiry_volume", "denominator_policy": "REPLACE", "measurement_ref": "REPLACE", "source_evidence_id": "E-F001", "value_mode": "external_value_reference"},
+      {"metric_id": "end_to_end_cycle_time", "denominator_policy": "REPLACE", "measurement_ref": "REPLACE", "source_evidence_id": "E-F002", "value_mode": "external_value_reference"},
+      {"metric_id": "rework_rate", "denominator_policy": "REPLACE", "measurement_ref": "REPLACE", "source_evidence_id": "E-F003", "value_mode": "external_value_reference"},
+      {"metric_id": "missed_or_delayed_rate", "denominator_policy": "REPLACE", "measurement_ref": "REPLACE", "source_evidence_id": "E-F004", "value_mode": "external_value_reference"},
+      {"metric_id": "expert_escalation_rate", "denominator_policy": "REPLACE", "measurement_ref": "REPLACE", "source_evidence_id": "E-F005", "value_mode": "external_value_reference"}
+    ],
+    "approvals": [
+      {"role": "customer_process_owner", "status": "pending", "approved_at": "2026-10-16", "evidence_ref": "REPLACE"},
+      {"role": "fde_delivery_owner", "status": "pending", "approved_at": "2026-10-16", "evidence_ref": "REPLACE"}
+    ],
+    "post_hoc_changes_allowed": false
+  },
+  "dependencies": [
+    {"dependency_id": "DEP-01", "owner_role": "customer_process_owner", "due_date": "2026-10-08", "status": "open", "evidence_ref": "REPLACE"},
+    {"dependency_id": "DEP-02", "owner_role": "customer_data_or_security_owner", "due_date": "2026-10-13", "status": "open", "evidence_ref": "REPLACE"},
+    {"dependency_id": "DEP-03", "owner_role": "customer_sponsor", "due_date": "2026-10-28", "status": "open", "evidence_ref": "REPLACE"}
+  ],
+  "change_requests": [
+    {"change_id": "CR-01", "requested_scope": "REPLACE_WITH_REQUEST_OR_NONE", "decision": "deferred", "decision_owner_role": "customer_sponsor", "schedule_impact": "REPLACE", "fee_impact": "REPLACE"}
+  ],
+  "time_ledger": [
+    {"entry_id": "TIME-01", "role": "fde_delivery_owner", "work_date": "2026-10-30", "hours": 1, "loaded_rate_cny": 1, "workstream": "REPLACE", "evidence_ref": "REPLACE_WITH_TIMESHEET_REFERENCE"}
+  ],
+  "deliverables": [
+    {"deliverable_id": "D1_PROBLEM_SCOPE_RACI", "title": "Problem, Scope and RACI", "owner_role": "fde_delivery_owner", "status": "draft", "evidence_ids": ["E-F001", "E-F006", "E-I001"], "artifact_ref": "REPLACE", "acceptance_criteria_ref": "REPLACE"},
+    {"deliverable_id": "D2_BASELINE_SUCCESS_PLAN", "title": "Baseline and Success Plan", "owner_role": "fde_delivery_owner", "status": "draft", "evidence_ids": ["E-F001", "E-F002", "E-F003", "E-F004", "E-F005"], "artifact_ref": "REPLACE", "acceptance_criteria_ref": "REPLACE"},
+    {"deliverable_id": "D3_DATA_SECURITY_IP_BOUNDARY", "title": "Data, Security and IP Boundary", "owner_role": "data_security_lead", "status": "draft", "evidence_ids": ["E-F007"], "artifact_ref": "REPLACE", "acceptance_criteria_ref": "REPLACE"},
+    {"deliverable_id": "D4_SOLUTION_INTEGRATION_PLAN", "title": "Solution and Integration Plan", "owner_role": "solution_engineer", "status": "draft", "evidence_ids": ["E-F005", "E-F006", "E-F007"], "artifact_ref": "REPLACE", "acceptance_criteria_ref": "REPLACE"},
+    {"deliverable_id": "D5_BUSINESS_CASE", "title": "Business Case", "owner_role": "engagement_lead", "status": "draft", "evidence_ids": ["E-F001", "E-F002", "E-F004", "E-I001"], "artifact_ref": "REPLACE", "acceptance_criteria_ref": "REPLACE"},
+    {"deliverable_id": "D6_PILOT_RECOMMENDATION", "title": "Pilot Recommendation", "owner_role": "fde_delivery_owner", "status": "draft", "evidence_ids": ["E-I001"], "artifact_ref": "REPLACE", "acceptance_criteria_ref": "REPLACE"}
+  ],
+  "privacy_assertions": {
+    "contains_raw_personal_data": false,
+    "contains_credentials": false,
+    "contains_contract_body_or_signature": false,
+    "copied_into_source_repository": false
+  }
+}
