@@ -89,3 +89,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage17.py demo --check-baseline`，核对 `outputs/stage-17/stage17-report.json`：六项合成交付物全部接受；教学费用 CNY 120,000、成本 CNY 72,800、毛利率 39.33%；模拟开票条件满足 CNY 120,000，但真实合同、发票、回款、客户批准、数据、用户和外部动作均为 0；八项 Shadow 外部依赖保持 open。
 
 复制 Stage 17 资料后修改任一交付物应使验收摘要失败；修改合同价格但不重新绑定签核应失败；将 Discovery 依赖改为 open 应阻断验收；把未批准 ERP/售后范围加入 delivered scope 应失败；允许事后修改指标分母或声明真实回款应失败。完整练习见 [Stage 17 手册](../stages/17-paid-discovery-delivery/README.md)。
+
+## Stage 18：Design Partner Acquisition & Contracting
+
+运行 `python3 stage18.py demo --check-baseline`，核对 `outputs/stage-18/stage18-report.json`：三个虚构候选中只有一个达到资格线；真实具名客户、外部签约证据、有效合同和回款均为 0，状态保持 `REAL_PAID_DISCOVERY_NOT_READY`。
+
+运行 `python3 stage18.py prepare --output outputs/partner-private` 生成外部 manifest 和 Mutual Action Plan。将 manifest 移到仓库外受控目录并用权威系统引用填写后，运行 `python3 stage18.py preflight --manifest /secure/path/design-partner-manifest.json --as-of 2026-09-24`。仓库内路径、缺失/拒绝/过期证据、错误签约声明角色或缺少三方 Release 都应阻断；结构完整也只表示可进入人工合同真实性复核。完整练习见 [Stage 18 手册](../stages/18-design-partner-contracting/README.md)。

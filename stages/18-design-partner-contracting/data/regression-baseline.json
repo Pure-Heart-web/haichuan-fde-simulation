@@ -1,0 +1,14 @@
+{
+  "status": "REAL_PAID_DISCOVERY_NOT_READY",
+  "candidate_count": 3,
+  "qualified_candidate_count": 1,
+  "training_selected_candidate_id": "DP-CAND-001",
+  "training_selected_score": 85,
+  "named_real_design_partner_count": 0,
+  "external_evidence_received_count": 0,
+  "external_evidence_required_count": 10,
+  "external_contract_record_complete": false,
+  "legally_verified_by_code": false,
+  "actual_cash_received_cny": "0.00",
+  "decision": "ACQUIRE_NAMED_DESIGN_PARTNER"
+}

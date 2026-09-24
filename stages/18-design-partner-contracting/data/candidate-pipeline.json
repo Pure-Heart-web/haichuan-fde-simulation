@@ -1,0 +1,74 @@
+{
+  "mode": "synthetic_design_partner_pipeline",
+  "portfolio_id": "DP-PIPELINE-TRAINING-001",
+  "as_of": "2026-09-24",
+  "candidates": [
+    {
+      "candidate_id": "DP-CAND-001",
+      "display_name": "北辰流体系统（教学虚构）",
+      "fictional": true,
+      "criteria": {
+        "named_executive_sponsor": "confirmed",
+        "named_process_owner": "confirmed",
+        "quantified_problem": "unknown",
+        "stage17_offer_fit": "confirmed",
+        "accepts_paid_discovery": "confirmed",
+        "budget_owner_and_range": "confirmed",
+        "procurement_path": "confirmed",
+        "data_and_security_owners": "confirmed",
+        "compelling_event": "unknown",
+        "customer_working_time": "confirmed"
+      },
+      "disqualifiers": [],
+      "decision": "selected_for_training"
+    },
+    {
+      "candidate_id": "DP-CAND-002",
+      "display_name": "远洋设备服务（教学虚构）",
+      "fictional": true,
+      "criteria": {
+        "named_executive_sponsor": "confirmed",
+        "named_process_owner": "confirmed",
+        "quantified_problem": "confirmed",
+        "stage17_offer_fit": "confirmed",
+        "accepts_paid_discovery": "unknown",
+        "budget_owner_and_range": "unknown",
+        "procurement_path": "unknown",
+        "data_and_security_owners": "unknown",
+        "compelling_event": "confirmed",
+        "customer_working_time": "confirmed"
+      },
+      "disqualifiers": [],
+      "decision": "nurture"
+    },
+    {
+      "candidate_id": "DP-CAND-003",
+      "display_name": "华岭工业贸易（教学虚构）",
+      "fictional": true,
+      "criteria": {
+        "named_executive_sponsor": "unknown",
+        "named_process_owner": "confirmed",
+        "quantified_problem": "unknown",
+        "stage17_offer_fit": "confirmed",
+        "accepts_paid_discovery": "rejected",
+        "budget_owner_and_range": "unknown",
+        "procurement_path": "unknown",
+        "data_and_security_owners": "unknown",
+        "compelling_event": "confirmed",
+        "customer_working_time": "unknown"
+      },
+      "disqualifiers": [
+        "refuses_paid_discovery",
+        "requires_unreviewed_auto_send"
+      ],
+      "decision": "disqualified"
+    }
+  ],
+  "real_world_assertions": {
+    "named_real_design_partners": 0,
+    "real_contracts_executed": 0,
+    "real_purchase_orders": 0,
+    "real_invoices_created": 0,
+    "actual_cash_received_cny": 0
+  }
+}

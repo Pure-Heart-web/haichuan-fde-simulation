@@ -13,7 +13,7 @@ from fde_stage3.audit import AuditError, report_stage2, report_stage3, save_repo
 
 def main():
     parser = argparse.ArgumentParser(description='海川 FDE 阶段演练与审计')
-    parser.add_argument('stage', choices=['stage1', 'stage2', 'stage3', 'stage4', 'stage5', 'stage6', 'stage7', 'stage8', 'stage9', 'stage10', 'stage11', 'stage12', 'stage13', 'stage14', 'stage15', 'stage16', 'stage17', 'all'])
+    parser.add_argument('stage', choices=['stage1', 'stage2', 'stage3', 'stage4', 'stage5', 'stage6', 'stage7', 'stage8', 'stage9', 'stage10', 'stage11', 'stage12', 'stage13', 'stage14', 'stage15', 'stage16', 'stage17', 'stage18', 'all'])
     parser.add_argument('--output-root', type=Path, default=ROOT / 'outputs')
     parser.add_argument('--stage3-data', type=Path, help='另一个 Stage 3 数据目录，用于审计修改后的副本')
     args = parser.parse_args()
@@ -99,6 +99,9 @@ def main():
         if args.stage in ('stage17', 'all'):
             from stage17 import run_demo
             run_demo((args.output_root / 'stage-17').resolve(), check=True)
+        if args.stage in ('stage18', 'all'):
+            from stage18 import run_demo
+            run_demo((args.output_root / 'stage-18').resolve(), check=True)
         return 0
     except (AuditError, DataError, OSError, KeyError, TypeError, ValueError) as exc:
         print(f'检查失败：{exc}', file=sys.stderr)

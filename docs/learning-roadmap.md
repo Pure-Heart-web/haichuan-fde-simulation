@@ -74,11 +74,15 @@
 
 在不篡改真实商机状态的前提下，创建明确标记为反事实教学分支的合成 Discovery 合同，演练合同内容摘要、RACI、客户/FDE 依赖、六项可验收交付物、Change Control、冻结指标、三方验收、角色成本、模拟开票条件和下一 Gate。任何交付物或合同变更都会使已有签核失效；合成分支强制真实合同、发票、回款、客户批准、数据和用户为 0。见 [Stage 17 手册](../stages/17-paid-discovery-delivery/README.md)。
 
+## Stage 18：Design Partner Acquisition & Contracting
+
+把 Stage 17 的报价和交付物用于真实商机之前，先用合成候选训练 ICP、Sponsor 资格、付费意愿、预算、采购、数据安全 Owner 和客户投入判断。真实客户的合同、联系人、PO 和签字文件保存在仓库外权威系统；代码只校验十项证据和三方 Release 的引用、状态、角色和日期，并明确不能验证法律效力。见 [Stage 18 手册](../stages/18-design-partner-contracting/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：授权 Shadow Pilot | Stage 14 的 Integration Lab 与 Stage 17 的已验收 Discovery 如何转为客户现场证据？ | 具名客户和 Pilot SOW、外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
+| 后续：真实 Discovery 与授权 Shadow | Stage 18 的有效合同如何变成现场交付和客户证据？ | 人工确认签约、Kickoff、外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

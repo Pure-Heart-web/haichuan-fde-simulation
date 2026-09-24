@@ -1,0 +1,42 @@
+{
+  "manifest_version": "1.0",
+  "mode": "external_design_partner_contract_record",
+  "partner": {
+    "legal_entity_ref": "REPLACE_WITH_EXTERNAL_LEGAL_ENTITY_ID",
+    "public_label": "REPLACE_WITH_APPROVED_PUBLIC_LABEL",
+    "jurisdiction": "CN",
+    "crm_account_ref": "REPLACE_WITH_CRM_ACCOUNT_ID",
+    "fictional": false
+  },
+  "offer": {
+    "offer_id": "REPLACE_WITH_OFFER_ID",
+    "stage17_offer_version": "stage17-v1",
+    "currency": "CNY",
+    "fee": 120000,
+    "scope_ref": "REPLACE_WITH_EXECUTED_SOW_SCOPE_REF",
+    "target_kickoff_date": "YYYY-MM-DD"
+  },
+  "evidence": [
+    {"evidence_type": "legal_entity_verification", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "contract_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_legal_or_procurement_owner"},
+    {"evidence_type": "sponsor_authority", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "crm", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_commercial_owner"},
+    {"evidence_type": "discovery_scope_approval", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "contract_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_delivery_owner"},
+    {"evidence_type": "sow_execution", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "contract_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_legal_or_procurement_owner"},
+    {"evidence_type": "msa_or_terms_execution", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "contract_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_legal_or_procurement_owner"},
+    {"evidence_type": "privacy_dpa_resolution", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "privacy_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_security_owner"},
+    {"evidence_type": "security_path_agreement", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "security_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_security_owner"},
+    {"evidence_type": "procurement_authority", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "procurement_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_commercial_owner"},
+    {"evidence_type": "billing_profile_verification", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "finance_system", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_finance_owner"},
+    {"evidence_type": "kickoff_commitment", "status": "pending", "evidence_ref": "REPLACE", "system_of_record": "crm", "verified_at": "YYYY-MM-DD", "verifier_role": "fde_delivery_owner"}
+  ],
+  "contract_execution_assertion": {
+    "status": "pending",
+    "asserted_at": "YYYY-MM-DD",
+    "asserted_by_role": "fde_legal_owner",
+    "evidence_ref": "REPLACE_WITH_EXECUTED_CONTRACT_RECORD"
+  },
+  "release_approvals": [
+    {"role": "fde_commercial_owner", "status": "pending", "approved_at": "YYYY-MM-DD", "evidence_ref": "REPLACE"},
+    {"role": "fde_legal_or_procurement_owner", "status": "pending", "approved_at": "YYYY-MM-DD", "evidence_ref": "REPLACE"},
+    {"role": "fde_delivery_owner", "status": "pending", "approved_at": "YYYY-MM-DD", "evidence_ref": "REPLACE"}
+  ]
+}
