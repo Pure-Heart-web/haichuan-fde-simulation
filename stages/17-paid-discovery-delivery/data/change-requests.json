@@ -1,0 +1,7 @@
+{
+  "version": "stage17-change-v1",
+  "change_requests": [
+    {"change_id":"CR-001","requested_scope":["after_sales_domain","chinese_language","erp_write","seven_by_twenty_four_sla"],"status":"deferred","decision_owner":"sim-customer-sponsor","commercial_impact":"需要单独 Discovery、数据/安全评估、价格和排期；当前合同不变","reason":"同时改变 Domain、语言、权限和运营模型"},
+    {"change_id":"CR-002","requested_scope":["automatic_customer_send"],"status":"rejected","decision_owner":"sim-stop-owner","commercial_impact":"不报价","reason":"初始 Shadow 必须无外部副作用且保留人工确认"}
+  ]
+}

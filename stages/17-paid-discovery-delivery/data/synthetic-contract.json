@@ -1,0 +1,219 @@
+{
+  "version": "synthetic-paid-discovery-v1",
+  "mode": "synthetic_paid_discovery_branch",
+  "progression_mode": "counterfactual_training_branch",
+  "contract_id": "SIM-SOW-HC-DISC-001",
+  "deal_id": "SIM-DEAL-HC-2026-001",
+  "source_deal_sha256": "3a61e16d2fe3529868bd409608968b50022a732d0400fc562a6cf65ffab8dc71",
+  "effective_date": "2026-10-05",
+  "period": {
+    "start": "2026-10-05",
+    "end": "2026-10-30",
+    "timezone": "Asia/Shanghai"
+  },
+  "scope": {
+    "in_scope": [
+      "english_centrifugal_pump_inquiry",
+      "workflow_observation",
+      "authorized_deidentified_sample_review",
+      "data_knowledge_inventory",
+      "human_review_design",
+      "shadow_pilot_design"
+    ],
+    "out_of_scope": [
+      "automatic_customer_send",
+      "binding_quote",
+      "final_pump_selection",
+      "after_sales_domain",
+      "chinese_language",
+      "erp_write",
+      "production_sla"
+    ],
+    "change_control": "任何新增产品族、语言、Domain、数据源、写入、自动动作或 SLA 必须有获批 Change Request"
+  },
+  "roles": [
+    {
+      "role": "customer_sponsor",
+      "actor_id": "sim-hc-sponsor-wang",
+      "decision_right": "Discovery 接受与下一阶段预算"
+    },
+    {
+      "role": "customer_process_owner",
+      "actor_id": "sim-hc-process-lin",
+      "decision_right": "流程、基线和业务验收"
+    },
+    {
+      "role": "customer_data_owner",
+      "actor_id": "sim-hc-data-zhou",
+      "decision_right": "数据用途、字段和保留"
+    },
+    {
+      "role": "customer_security_owner",
+      "actor_id": "sim-hc-security-qian",
+      "decision_right": "安全与身份边界"
+    },
+    {
+      "role": "customer_procurement_owner",
+      "actor_id": "sim-hc-procurement-sun",
+      "decision_right": "采购和付款节点"
+    },
+    {
+      "role": "fde_commercial_owner",
+      "actor_id": "sim-account-li",
+      "decision_right": "范围、报价和变更"
+    },
+    {
+      "role": "fde_delivery_owner",
+      "actor_id": "sim-fde-chen",
+      "decision_right": "交付质量和里程碑"
+    },
+    {
+      "role": "technical_lead",
+      "actor_id": "sim-tech-he",
+      "decision_right": "技术方案和 Stop 建议"
+    },
+    {
+      "role": "acceptance_owner",
+      "actor_id": "sim-hc-process-lin",
+      "decision_right": "提交业务验收决定"
+    },
+    {
+      "role": "stop_owner",
+      "actor_id": "sim-operator-zhou",
+      "decision_right": "风险事件停止与恢复升级"
+    }
+  ],
+  "deliverables": [
+    {
+      "deliverable_id": "PD-01",
+      "title": "Problem、Scope 与 RACI",
+      "owner": "sim-account-li",
+      "acceptance_criteria": "问题、范围、Non-goals、责任和 Gate 可由 Sponsor 决策",
+      "path": "deliverables/01-problem-scope-and-raci.md"
+    },
+    {
+      "deliverable_id": "PD-02",
+      "title": "Baseline 与成功测量计划",
+      "owner": "sim-hc-process-lin",
+      "acceptance_criteria": "分母、窗口、缺失、Owner、目标和 Stop 条件可冻结",
+      "path": "deliverables/02-baseline-and-success-plan.md"
+    },
+    {
+      "deliverable_id": "PD-03",
+      "title": "数据、安全与 IP 决策包",
+      "owner": "sim-hc-data-zhou",
+      "acceptance_criteria": "用途、字段、权威源、最小化、安全 Gate 和归属问题完整",
+      "path": "deliverables/03-data-security-and-ip-boundary.md"
+    },
+    {
+      "deliverable_id": "PD-04",
+      "title": "Pilot 方案与集成计划",
+      "owner": "sim-tech-he",
+      "acceptance_criteria": "单一工作流、架构、集成顺序、运行和回退可执行",
+      "path": "deliverables/04-solution-and-integration-plan.md"
+    },
+    {
+      "deliverable_id": "PD-05",
+      "title": "Business Case 与单位经济",
+      "owner": "sim-account-li",
+      "acceptance_criteria": "价值假设、成本、毛利、未知和扩展风险透明",
+      "path": "deliverables/05-business-case-and-unit-economics.md"
+    },
+    {
+      "deliverable_id": "PD-06",
+      "title": "Pilot 建议与下一 Gate",
+      "owner": "sim-fde-chen",
+      "acceptance_criteria": "Stop/Iterate/Expand 建议、范围、Stop 条件和外部依赖明确",
+      "path": "deliverables/06-pilot-recommendation-and-next-gate.md"
+    }
+  ],
+  "commercial": {
+    "currency": "CNY",
+    "fee_cny": 120000,
+    "payment_milestones": [
+      {
+        "milestone_id": "PD-M1",
+        "trigger": "合成 SOW 生效和模拟 PO 验证",
+        "percent": 50,
+        "simulated_trigger_satisfied": true,
+        "actual_invoice_id": null,
+        "actual_payment_status": "not_created"
+      },
+      {
+        "milestone_id": "PD-M2",
+        "trigger": "六项交付物完成合成验收",
+        "percent": 50,
+        "simulated_trigger_satisfied": true,
+        "actual_invoice_id": null,
+        "actual_payment_status": "not_created"
+      }
+    ],
+    "actual_invoice_created": false,
+    "actual_cash_received_cny": 0,
+    "payment_terms_note": "教学条件；不构成真实发票、应收或收入确认"
+  },
+  "delivery_costs": [
+    {
+      "role": "engagement_lead",
+      "hours": 32,
+      "internal_rate_cny": 350
+    },
+    {
+      "role": "fde_technical_lead",
+      "hours": 64,
+      "internal_rate_cny": 450
+    },
+    {
+      "role": "security_data_lead",
+      "hours": 24,
+      "internal_rate_cny": 400
+    },
+    {
+      "role": "ai_evaluation_lead",
+      "hours": 32,
+      "internal_rate_cny": 350
+    },
+    {
+      "role": "workflow_adoption_lead",
+      "hours": 24,
+      "internal_rate_cny": 300
+    },
+    {
+      "role": "project_operations",
+      "hours": 16,
+      "internal_rate_cny": 300
+    }
+  ],
+  "real_contract_signed": false,
+  "contract_sha256": "28f594f707dface49cee4bf264bacd51daf37110f52850c9feab53b363c354d4",
+  "approvals": [
+    {
+      "role": "customer_sponsor",
+      "actor_id": "sim-hc-sponsor-wang",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-05T09:00:00+08:00",
+      "content_sha256": "28f594f707dface49cee4bf264bacd51daf37110f52850c9feab53b363c354d4"
+    },
+    {
+      "role": "customer_procurement_owner",
+      "actor_id": "sim-hc-procurement-sun",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-05T09:05:00+08:00",
+      "content_sha256": "28f594f707dface49cee4bf264bacd51daf37110f52850c9feab53b363c354d4"
+    },
+    {
+      "role": "fde_commercial_owner",
+      "actor_id": "sim-account-li",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-05T09:10:00+08:00",
+      "content_sha256": "28f594f707dface49cee4bf264bacd51daf37110f52850c9feab53b363c354d4"
+    },
+    {
+      "role": "fde_delivery_owner",
+      "actor_id": "sim-fde-chen",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-05T09:15:00+08:00",
+      "content_sha256": "28f594f707dface49cee4bf264bacd51daf37110f52850c9feab53b363c354d4"
+    }
+  ]
+}

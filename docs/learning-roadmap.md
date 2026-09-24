@@ -70,11 +70,15 @@
 
 6 名参与者分别承担 Engagement、FDE 技术、AI 评估、平台集成、安全数据和工作流采用责任，在六轮中处理资格、签约、数据越界、知识冲突、Connector 异常、模型安全失败、人员绕过、跨租户事故、范围膨胀、验收分母和对外宣传压力。团队评分与个人责任证据分开；关键控制失败封顶，团队高分不能掩盖成员没有 Own、Review、Decision、Ops、客户解释或复盘经历。见 [Stage 16 手册](../stages/16-team-delivery-simulation/README.md)。
 
+## Stage 17：Paid Discovery Delivery & Acceptance
+
+在不篡改真实商机状态的前提下，创建明确标记为反事实教学分支的合成 Discovery 合同，演练合同内容摘要、RACI、客户/FDE 依赖、六项可验收交付物、Change Control、冻结指标、三方验收、角色成本、模拟开票条件和下一 Gate。任何交付物或合同变更都会使已有签核失效；合成分支强制真实合同、发票、回款、客户批准、数据和用户为 0。见 [Stage 17 手册](../stages/17-paid-discovery-delivery/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：授权 Shadow Pilot | Stage 14 的 Integration Lab 与 Stage 15 的商务 Gate 如何转为客户现场证据？ | 有效 SOW/PO、外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
+| 后续：授权 Shadow Pilot | Stage 14 的 Integration Lab 与 Stage 17 的已验收 Discovery 如何转为客户现场证据？ | 具名客户和 Pilot SOW、外置授权包、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow 与退出判断 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

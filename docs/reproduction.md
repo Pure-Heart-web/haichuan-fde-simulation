@@ -83,3 +83,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage16.py prepare --output outputs/my-team-capstone`，确认参与者包不含 `injects.json` 和参考提交，主持人包包含客户剧本、12 个事件注入和参考证据。运行 `python3 stage16.py demo --check-baseline`，参考团队应得 93/100，8 个关键控制全部通过，6/6 个成员具备模拟的 `TECHNICALLY_RESPONSIBLE` 证据。
 
 反事实：把任一关键控制改为 failed，团队最终分应封顶 59 且个人全部不能 Ready；删除某成员的 `operational_action`，团队原始分仍为 93，但该成员应回到 `SUPERVISED_PRACTICE_REQUIRED`；让交付物 Owner 自己成为唯一 Reviewer，提交应被拒绝。完整组织方法、角色卡、答辩和评分见 [Stage 16 手册](../stages/16-team-delivery-simulation/README.md)。
+
+## Stage 17：Paid Discovery Delivery & Acceptance
+
+运行 `python3 stage17.py demo --check-baseline`，核对 `outputs/stage-17/stage17-report.json`：六项合成交付物全部接受；教学费用 CNY 120,000、成本 CNY 72,800、毛利率 39.33%；模拟开票条件满足 CNY 120,000，但真实合同、发票、回款、客户批准、数据、用户和外部动作均为 0；八项 Shadow 外部依赖保持 open。
+
+复制 Stage 17 资料后修改任一交付物应使验收摘要失败；修改合同价格但不重新绑定签核应失败；将 Discovery 依赖改为 open 应阻断验收；把未批准 ERP/售后范围加入 delivered scope 应失败；允许事后修改指标分母或声明真实回款应失败。完整练习见 [Stage 17 手册](../stages/17-paid-discovery-delivery/README.md)。

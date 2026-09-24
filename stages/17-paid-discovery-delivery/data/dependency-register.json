@@ -1,0 +1,19 @@
+{
+  "version": "stage17-dependencies-v1",
+  "dependencies": [
+    {"dependency_id":"D-01","gate":"PAID_DISCOVERY_ACCEPTANCE","owner":"sim-customer-sponsor","due_date":"2026-10-05","status":"closed","evidence_ref":"SIM-KICKOFF-MINUTES"},
+    {"dependency_id":"D-02","gate":"PAID_DISCOVERY_ACCEPTANCE","owner":"sim-customer-process-owner","due_date":"2026-10-07","status":"closed","evidence_ref":"SIM-INTERVIEW-CALENDAR"},
+    {"dependency_id":"D-03","gate":"PAID_DISCOVERY_ACCEPTANCE","owner":"sim-customer-data-owner","due_date":"2026-10-09","status":"closed","evidence_ref":"SIM-AUTHORIZED-FIELD-SAMPLE"},
+    {"dependency_id":"D-04","gate":"PAID_DISCOVERY_ACCEPTANCE","owner":"sim-customer-security-owner","due_date":"2026-10-14","status":"closed","evidence_ref":"SIM-SECURITY-WORKSHOP"},
+    {"dependency_id":"D-05","gate":"PAID_DISCOVERY_ACCEPTANCE","owner":"sim-fde-delivery-owner","due_date":"2026-10-28","status":"closed","evidence_ref":"SIM-DELIVERABLE-SUBMISSION"},
+    {"dependency_id":"D-06","gate":"PAID_DISCOVERY_ACCEPTANCE","owner":"sim-customer-process-owner","due_date":"2026-10-30","status":"closed","evidence_ref":"SIM-ACCEPTANCE-REVIEW"},
+    {"dependency_id":"SH-01","gate":"AUTHORIZED_SHADOW_START","owner":"external-customer-sponsor","due_date":"TBD","status":"open","evidence_ref":"REAL-PILOT-SOW-REQUIRED"},
+    {"dependency_id":"SH-02","gate":"AUTHORIZED_SHADOW_START","owner":"external-customer-data-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-DATA-AUTH-REQUIRED"},
+    {"dependency_id":"SH-03","gate":"AUTHORIZED_SHADOW_START","owner":"external-platform-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-POSTGRES-RUNTIME-REQUIRED"},
+    {"dependency_id":"SH-04","gate":"AUTHORIZED_SHADOW_START","owner":"external-identity-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-OIDC-REQUIRED"},
+    {"dependency_id":"SH-05","gate":"AUTHORIZED_SHADOW_START","owner":"external-system-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-CONNECTOR-SANDBOX-REQUIRED"},
+    {"dependency_id":"SH-06","gate":"AUTHORIZED_SHADOW_START","owner":"external-observability-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-OTLP-BACKEND-REQUIRED"},
+    {"dependency_id":"SH-07","gate":"AUTHORIZED_SHADOW_START","owner":"external-uat-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-UAT-APPROVAL-REQUIRED"},
+    {"dependency_id":"SH-08","gate":"AUTHORIZED_SHADOW_START","owner":"external-incident-owner","due_date":"TBD","status":"open","evidence_ref":"REAL-ONCALL-DRILL-REQUIRED"}
+  ]
+}

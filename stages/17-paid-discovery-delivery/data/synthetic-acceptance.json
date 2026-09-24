@@ -1,0 +1,93 @@
+{
+  "version": "synthetic-discovery-acceptance-v1",
+  "mode": "counterfactual_training_acceptance",
+  "acceptance_id": "SIM-ACCEPT-HC-DISC-001",
+  "contract_id": "SIM-SOW-HC-DISC-001",
+  "contract_sha256": "28f594f707dface49cee4bf264bacd51daf37110f52850c9feab53b363c354d4",
+  "submitted_at": "2026-10-28T17:00:00+08:00",
+  "decision": "simulated_accepted",
+  "delivered_scope": [
+    "english_centrifugal_pump_inquiry",
+    "workflow_observation",
+    "authorized_deidentified_sample_review",
+    "data_knowledge_inventory",
+    "human_review_design",
+    "shadow_pilot_design"
+  ],
+  "deliverable_evidence": [
+    {
+      "deliverable_id": "PD-01",
+      "status": "accepted",
+      "sha256": "d2e0e656fdd069814aa37db5cdf1a9f7702ac0869e967bc267d868680b5ad1f7",
+      "review_note": "问题、范围与 RACI 足以支持阶段决定"
+    },
+    {
+      "deliverable_id": "PD-02",
+      "status": "accepted",
+      "sha256": "30f96ee3d4502b29d15828213fd56d02c79e5cd30a18dfa46514f9b22fce93b8",
+      "review_note": "口径可在真实 Pilot 前冻结"
+    },
+    {
+      "deliverable_id": "PD-03",
+      "status": "accepted",
+      "sha256": "299a6e6270c4d5effda2d1118c5278d605c8cd35607d678b53464bb33e78275e",
+      "review_note": "真实外部授权仍列为下一 Gate 依赖"
+    },
+    {
+      "deliverable_id": "PD-04",
+      "status": "accepted",
+      "sha256": "eef660e2b4423eddca0fac50758b4c100c6bc01821f2eca9427e323c9c1fb019",
+      "review_note": "方案可进入客户 Sandbox 评审"
+    },
+    {
+      "deliverable_id": "PD-05",
+      "status": "accepted",
+      "sha256": "e8793169f21b3dfe671ad89c44e5b2197685e5e6e9f8de6f3425931d1cdc5e72",
+      "review_note": "合成经济模型与真实收入边界清楚"
+    },
+    {
+      "deliverable_id": "PD-06",
+      "status": "accepted",
+      "sha256": "db99ef8c781802b12631d857260dd40003de5e8980dbe3f238a438187969f4ae",
+      "review_note": "建议为准备 Shadow 而非直接上线"
+    }
+  ],
+  "metric_freeze": {
+    "frozen_before_delivery": true,
+    "version": "discovery-measurement-plan-v1",
+    "denominator_policy": "授权适用到达全部进入分母；重复、更新、排除和缺失分别报告",
+    "post_hoc_changes_allowed": false,
+    "customer_baseline_status": "not_measured"
+  },
+  "limitations": [
+    "没有真实合同",
+    "没有真实客户数据和用户",
+    "没有客户环境集成",
+    "没有真实价值或 Pilot 结果",
+    "不授权 Shadow 或生产动作"
+  ],
+  "bundle_sha256": "3d24010dc5bd7028edf33197a129390829e306d3eaae8e7ecd487062b17f5bf4",
+  "approvals": [
+    {
+      "role": "customer_process_owner",
+      "actor_id": "sim-hc-process-lin",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-30T15:00:00+08:00",
+      "content_sha256": "3d24010dc5bd7028edf33197a129390829e306d3eaae8e7ecd487062b17f5bf4"
+    },
+    {
+      "role": "customer_sponsor",
+      "actor_id": "sim-hc-sponsor-wang",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-30T15:10:00+08:00",
+      "content_sha256": "3d24010dc5bd7028edf33197a129390829e306d3eaae8e7ecd487062b17f5bf4"
+    },
+    {
+      "role": "fde_delivery_owner",
+      "actor_id": "sim-fde-chen",
+      "status": "simulated_approved",
+      "approved_at": "2026-10-30T15:20:00+08:00",
+      "content_sha256": "3d24010dc5bd7028edf33197a129390829e306d3eaae8e7ecd487062b17f5bf4"
+    }
+  ]
+}
