@@ -1,0 +1,22 @@
+{
+  "status": "SYNTHETIC_DISCOVERY_ACCEPTED_PILOT_NOT_AUTHORIZED",
+  "accepted_deliverable_count": 6,
+  "closed_acceptance_condition_count": 2,
+  "steering_decision": "simulated_pilot",
+  "dissent_count": 1,
+  "discovery_actual_cost_cny": "95800.00",
+  "base_case_annual_benefit_cny": "620000.00",
+  "base_case_pilot_cost_cny": "480000.00",
+  "base_case_net_benefit_cny": "140000.00",
+  "simulated_discovery_invoice_eligible": true,
+  "actual_invoice_created": false,
+  "actual_cash_received_cny": "0.00",
+  "pilot_sow_executed": false,
+  "mobilization_ready_count": 0,
+  "mobilization_required_count": 10,
+  "pilot_authorized": false,
+  "real_customer_acceptance": false,
+  "real_pilot_users": 0,
+  "real_pilot_cases": 0,
+  "next_gate": "EXECUTED_PILOT_SOW_AND_MOBILIZATION"
+}

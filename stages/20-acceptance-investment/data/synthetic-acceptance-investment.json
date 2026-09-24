@@ -1,0 +1,385 @@
+{
+  "mode": "synthetic_acceptance_investment_rehearsal",
+  "source_stage19_path": "19-live-discovery-execution/data/synthetic-execution.json",
+  "source_stage19_sha256": "0e032b463ed7f41c4d8e9ca9e15f7a3b09dc1dd64159ac9402c0af81977704b7",
+  "acceptance": {
+    "acceptance_id": "ACC-SIM-001",
+    "bundle_version": "v3-final",
+    "submitted_at": "2026-11-04",
+    "deliverable_decisions": [
+      {
+        "deliverable_id": "D1_PROBLEM_SCOPE_RACI",
+        "status": "simulated_accepted",
+        "artifact_ref": "ARTIFACT-SIM-D1:v1",
+        "artifact_sha256": "393fdb599990a44f796bc4c72ed5c0c070c0e7a04451508e4b394fe54a8787fb",
+        "criteria_ref": "SOW-SIM:D1",
+        "decision_evidence_ref": "ACC-EVID-SIM-D1"
+      },
+      {
+        "deliverable_id": "D2_BASELINE_SUCCESS_PLAN",
+        "status": "simulated_accepted",
+        "artifact_ref": "ARTIFACT-SIM-D2:v1",
+        "artifact_sha256": "f046a6a87f7f035824ec561be9bc98ec3e3fe2847eccc0eaab5e25bd5889ce57",
+        "criteria_ref": "SOW-SIM:D2",
+        "decision_evidence_ref": "ACC-EVID-SIM-D2"
+      },
+      {
+        "deliverable_id": "D3_DATA_SECURITY_IP_BOUNDARY",
+        "status": "simulated_accepted",
+        "artifact_ref": "ARTIFACT-SIM-D3:v1",
+        "artifact_sha256": "31d0dc67184f0fe62ddf7006ed4c0abfd11541b8c8b5eed0ba1ab667a506332f",
+        "criteria_ref": "SOW-SIM:D3",
+        "decision_evidence_ref": "ACC-EVID-SIM-D3"
+      },
+      {
+        "deliverable_id": "D4_SOLUTION_INTEGRATION_PLAN",
+        "status": "simulated_accepted",
+        "artifact_ref": "ARTIFACT-SIM-D4:v2",
+        "artifact_sha256": "24c0228d0708ff5c3b361817385e390b43747166db6a55a0cd2a821437f1b146",
+        "criteria_ref": "SOW-SIM:D4",
+        "decision_evidence_ref": "ACC-EVID-SIM-D4"
+      },
+      {
+        "deliverable_id": "D5_BUSINESS_CASE",
+        "status": "simulated_accepted",
+        "artifact_ref": "ARTIFACT-SIM-D5:v1",
+        "artifact_sha256": "7880d68bb5bb61f30c6e9a0ed856f4835288b15867d86b6503c9e5101db53928",
+        "criteria_ref": "SOW-SIM:D5",
+        "decision_evidence_ref": "ACC-EVID-SIM-D5"
+      },
+      {
+        "deliverable_id": "D6_PILOT_RECOMMENDATION",
+        "status": "simulated_accepted",
+        "artifact_ref": "ARTIFACT-SIM-D6:v2",
+        "artifact_sha256": "6593e9425c33eea906ac0ca45252aa5b175c613bf8875b31d5a1a78dbfa7f302",
+        "criteria_ref": "SOW-SIM:D6",
+        "decision_evidence_ref": "ACC-EVID-SIM-D6"
+      }
+    ],
+    "conditions": [
+      {
+        "condition_id": "COND-01",
+        "deliverable_id": "D4_SOLUTION_INTEGRATION_PLAN",
+        "description": "Clarify identity rotation and read-only connector failure path",
+        "owner_role": "solution_engineer",
+        "due_date": "2026-11-06",
+        "status": "simulated_closed",
+        "closure_evidence_ref": "REMEDIATION-SIM-01",
+        "closed_at": "2026-11-06"
+      },
+      {
+        "condition_id": "COND-02",
+        "deliverable_id": "D6_PILOT_RECOMMENDATION",
+        "description": "Add expert-capacity stop threshold",
+        "owner_role": "fde_delivery_owner",
+        "due_date": "2026-11-06",
+        "status": "simulated_closed",
+        "closure_evidence_ref": "REMEDIATION-SIM-02",
+        "closed_at": "2026-11-06"
+      }
+    ],
+    "decision_history": [
+      {
+        "event": "conditionally_accepted",
+        "recorded_at": "2026-11-04",
+        "actor_role": "customer_acceptance_owner",
+        "evidence_ref": "ACC-HISTORY-SIM-01"
+      },
+      {
+        "event": "remediation_completed",
+        "recorded_at": "2026-11-06",
+        "actor_role": "fde_delivery_owner",
+        "evidence_ref": "ACC-HISTORY-SIM-02"
+      },
+      {
+        "event": "final_accepted",
+        "recorded_at": "2026-11-07",
+        "actor_role": "customer_acceptance_owner",
+        "evidence_ref": "ACC-HISTORY-SIM-03"
+      }
+    ],
+    "approvals": [
+      {
+        "role": "customer_acceptance_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-07",
+        "content_sha256": "e8c4a194542bc2a5b339ecf00bb7d0f2b5b0e146c800eddf04452db79da3e052",
+        "evidence_ref": "ACC-APPROVAL-SIM-01"
+      },
+      {
+        "role": "customer_sponsor",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-07",
+        "content_sha256": "e8c4a194542bc2a5b339ecf00bb7d0f2b5b0e146c800eddf04452db79da3e052",
+        "evidence_ref": "ACC-APPROVAL-SIM-02"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-07",
+        "content_sha256": "e8c4a194542bc2a5b339ecf00bb7d0f2b5b0e146c800eddf04452db79da3e052",
+        "evidence_ref": "ACC-APPROVAL-SIM-03"
+      }
+    ],
+    "bundle_sha256": "e8c4a194542bc2a5b339ecf00bb7d0f2b5b0e146c800eddf04452db79da3e052"
+  },
+  "business_case": {
+    "currency": "CNY",
+    "discovery_actual_cost": 95800,
+    "measurement_version": "BASELINE-SIM-v1",
+    "scenarios": [
+      {
+        "scenario": "conservative",
+        "annual_benefit_cny": 260000,
+        "pilot_cost_cny": 480000,
+        "fact_refs": [
+          "E-F001",
+          "E-F002",
+          "E-F004"
+        ],
+        "assumption_refs": [
+          "ASSUMP-SIM-CONSERVATIVE"
+        ],
+        "confidence": "low"
+      },
+      {
+        "scenario": "base",
+        "annual_benefit_cny": 620000,
+        "pilot_cost_cny": 480000,
+        "fact_refs": [
+          "E-F001",
+          "E-F002",
+          "E-F003",
+          "E-F004",
+          "E-F005"
+        ],
+        "assumption_refs": [
+          "ASSUMP-SIM-BASE-ADOPTION",
+          "ASSUMP-SIM-BASE-QUALITY"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "scenario": "upside",
+        "annual_benefit_cny": 980000,
+        "pilot_cost_cny": 480000,
+        "fact_refs": [
+          "E-F001",
+          "E-F002",
+          "E-F003",
+          "E-F004",
+          "E-F005"
+        ],
+        "assumption_refs": [
+          "ASSUMP-SIM-UPSIDE-ADOPTION",
+          "ASSUMP-SIM-UPSIDE-VOLUME"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "steering": {
+    "decision_id": "STEER-SIM-001",
+    "decision": "simulated_pilot",
+    "decided_at": "2026-11-10",
+    "acceptance_bundle_sha256": "e8c4a194542bc2a5b339ecf00bb7d0f2b5b0e146c800eddf04452db79da3e052",
+    "rationale_evidence_refs": [
+      "BASELINE-SIM-v1",
+      "ACC-SIM-001",
+      "BUSINESS-CASE-SIM-v1"
+    ],
+    "dissent": [
+      {
+        "role": "fde_security_owner",
+        "position": "Pilot should not start until enterprise identity and connector rollback are evidenced",
+        "resolution": "Recorded as blocking Mobilization requirements",
+        "evidence_ref": "DISSENT-SIM-01"
+      }
+    ],
+    "approvals": [
+      {
+        "role": "customer_sponsor",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-10",
+        "content_sha256": "3b256d0ca470ee0e8e7247114115b2d3a8232fb4b6ff76ca9f803261f68121af",
+        "evidence_ref": "STEER-APPROVAL-SIM-01"
+      },
+      {
+        "role": "customer_process_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-10",
+        "content_sha256": "3b256d0ca470ee0e8e7247114115b2d3a8232fb4b6ff76ca9f803261f68121af",
+        "evidence_ref": "STEER-APPROVAL-SIM-02"
+      },
+      {
+        "role": "fde_commercial_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-10",
+        "content_sha256": "3b256d0ca470ee0e8e7247114115b2d3a8232fb4b6ff76ca9f803261f68121af",
+        "evidence_ref": "STEER-APPROVAL-SIM-03"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-10",
+        "content_sha256": "3b256d0ca470ee0e8e7247114115b2d3a8232fb4b6ff76ca9f803261f68121af",
+        "evidence_ref": "STEER-APPROVAL-SIM-04"
+      },
+      {
+        "role": "fde_security_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-10",
+        "content_sha256": "3b256d0ca470ee0e8e7247114115b2d3a8232fb4b6ff76ca9f803261f68121af",
+        "evidence_ref": "STEER-APPROVAL-SIM-05"
+      }
+    ],
+    "decision_sha256": "3b256d0ca470ee0e8e7247114115b2d3a8232fb4b6ff76ca9f803261f68121af"
+  },
+  "pilot_plan": {
+    "pilot_plan_id": "PILOT-PLAN-SIM-001",
+    "sow_status": "synthetic_draft",
+    "currency": "CNY",
+    "fee_cny": 480000,
+    "duration_weeks": 8,
+    "user_cap": 12,
+    "case_cap": 800,
+    "payment_milestones": [
+      {
+        "milestone_id": "PILOT-M1",
+        "trigger": "Pilot kickoff",
+        "percent": 40
+      },
+      {
+        "milestone_id": "PILOT-M2",
+        "trigger": "Midpoint evidence review",
+        "percent": 30
+      },
+      {
+        "milestone_id": "PILOT-M3",
+        "trigger": "Pilot acceptance decision",
+        "percent": 30
+      }
+    ],
+    "success_metrics": [
+      {
+        "metric_id": "field_quality",
+        "threshold": ">=0.95",
+        "denominator_policy": "all eligible reviewed fields",
+        "baseline_ref": "BASELINE-SIM-v1",
+        "stop_threshold": "<0.85 for two days"
+      },
+      {
+        "metric_id": "evidence_coverage",
+        "threshold": ">=0.98",
+        "denominator_policy": "all material generated claims",
+        "baseline_ref": "BASELINE-SIM-v1",
+        "stop_threshold": "<0.90"
+      },
+      {
+        "metric_id": "unsafe_action_rate",
+        "threshold": "0",
+        "denominator_policy": "all generated recommendations",
+        "baseline_ref": "SAFETY-POLICY-SIM-v1",
+        "stop_threshold": ">0"
+      },
+      {
+        "metric_id": "operator_adoption",
+        "threshold": ">=0.60",
+        "denominator_policy": "eligible shifts and assigned operators",
+        "baseline_ref": "BASELINE-SIM-v1",
+        "stop_threshold": "<0.30 after week 3"
+      },
+      {
+        "metric_id": "review_cycle_time",
+        "threshold": "<=20 minutes median",
+        "denominator_policy": "eligible completed review tasks",
+        "baseline_ref": "BASELINE-SIM-v1",
+        "stop_threshold": ">45 minutes median"
+      },
+      {
+        "metric_id": "cost_per_case",
+        "threshold": "<=CNY 35",
+        "denominator_policy": "all eligible processed cases",
+        "baseline_ref": "COST-MODEL-SIM-v1",
+        "stop_threshold": ">CNY 70"
+      }
+    ],
+    "mobilization_requirements": [
+      {
+        "requirement_id": "executed_pilot_sow",
+        "owner_role": "fde_commercial_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "purchase_order_or_equivalent",
+        "owner_role": "customer_procurement_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "data_security_authorization",
+        "owner_role": "customer_data_or_security_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "customer_sandbox",
+        "owner_role": "customer_it_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "enterprise_identity_and_roles",
+        "owner_role": "customer_it_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "readonly_connectors",
+        "owner_role": "integration_lead",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "approved_model_and_rules",
+        "owner_role": "ai_evaluation_lead",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "operator_training_and_roster",
+        "owner_role": "customer_process_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "telemetry_and_incident_route",
+        "owner_role": "fde_delivery_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      },
+      {
+        "requirement_id": "rollback_and_stop_drill",
+        "owner_role": "fde_security_owner",
+        "status": "open",
+        "evidence_ref": "NONE"
+      }
+    ]
+  },
+  "billing_release": {
+    "simulated_invoice_eligible": true,
+    "finance_approval_ref": "FINANCE-SIM-APPROVAL-01",
+    "actual_invoice_created": false,
+    "actual_invoice_ref": null,
+    "actual_cash_received_cny": 0
+  },
+  "real_world_assertions": {
+    "real_customer_acceptance": false,
+    "real_steering_decision": false,
+    "real_pilot_sow_executed": false,
+    "real_pilot_users": 0,
+    "real_pilot_cases": 0,
+    "external_customer_actions": 0
+  }
+}

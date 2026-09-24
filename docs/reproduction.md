@@ -101,3 +101,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage19.py demo --check-baseline`，核对 `outputs/stage-19/stage19-report.json`：八类现场活动、五项基线和六项交付物完整；合成工时 112 小时、成本 CNY 95,800；开放假设未进入交付结论；真实客户会议、数据、批准和回款均为 0。
 
 运行 `python3 stage19.py prepare --output /secure/path/discovery-execution` 生成仓库外执行资料包。填入权威系统引用后运行 `python3 stage19.py preflight --manifest /secure/path/discovery-execution/external-discovery-execution.json`。删除任一必需现场活动、允许事后修改基线、用 FDE 推断支撑基线、让开放假设进入交付物、保留 open 依赖、批准变更但不留证据、复制客户数值或人员姓名都应失败。完整练习见 [Stage 19 手册](../stages/19-live-discovery-execution/README.md)。
+
+## Stage 20：Customer Acceptance & Pilot Investment
+
+运行 `python3 stage20.py demo --check-baseline`，核对 `outputs/stage-20/stage20-report.json`：六项交付物最终接受、两项条件已关闭、Steering 教学决定为 Pilot；Discovery 实际教学成本 CNY 95,800，base 情景净收益 CNY 140,000；Pilot SOW 未执行、Mobilization 0/10、Pilot 未授权，真实验收、发票和回款均为 0。
+
+运行 `python3 stage20.py prepare --output /secure/path/acceptance-investment` 生成外部资料包。修改 Stage 19 来源、交付物摘要、验收条件、Acceptance/Steering 内容、成本或假设，校验必须失败。外部 `PILOT` 决定在 SOW 或 Mobilization 未完成时保持 `PILOT_NOT_READY`；条件齐全也只到人工启动评审。完整练习见 [Stage 20 手册](../stages/20-acceptance-investment/README.md)。

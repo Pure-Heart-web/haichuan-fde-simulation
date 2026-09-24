@@ -1,4 +1,4 @@
-name: FDE Stage 1–19 offline checks
+name: FDE Stage 1–20 offline checks
 on:
   push:
   pull_request:
@@ -44,5 +44,7 @@ jobs:
         run: python3 stage18.py demo --check-baseline
       - name: Stage 19 live paid Discovery execution regression
         run: python3 stage19.py demo --check-baseline
-      - name: Stage 1–19 offline delivery walkthrough
+      - name: Stage 20 customer acceptance and Pilot investment regression
+        run: python3 stage20.py demo --check-baseline
+      - name: Stage 1–20 offline delivery walkthrough
         run: python3 stage_pipeline.py all

@@ -1,0 +1,376 @@
+{
+  "mode": "external_customer_acceptance_investment_record",
+  "partner_public_label": "REPLACE_WITH_APPROVED_PUBLIC_LABEL",
+  "engagement_id": "REPLACE_WITH_ENGAGEMENT_ID",
+  "stage19_release": {
+    "status": "PENDING_STAGE19_RELEASE",
+    "execution_record_ref": "REPLACE_WITH_STAGE19_EXECUTION_RECORD",
+    "human_verified": false,
+    "verified_by_role": "fde_delivery_owner",
+    "verified_at": "2026-11-03"
+  },
+  "acceptance": {
+    "acceptance_id": "ACC-SIM-001",
+    "bundle_version": "v3-final",
+    "submitted_at": "2026-11-04",
+    "deliverable_decisions": [
+      {
+        "deliverable_id": "D1_PROBLEM_SCOPE_RACI",
+        "status": "pending",
+        "artifact_ref": "REPLACE_WITH_DOCUMENT_SYSTEM_REFERENCE",
+        "artifact_sha256": "PENDING_SHA256",
+        "criteria_ref": "REPLACE_WITH_EXECUTED_SOW_CRITERIA",
+        "decision_evidence_ref": "REPLACE_WITH_CUSTOMER_DECISION_RECORD"
+      },
+      {
+        "deliverable_id": "D2_BASELINE_SUCCESS_PLAN",
+        "status": "pending",
+        "artifact_ref": "REPLACE_WITH_DOCUMENT_SYSTEM_REFERENCE",
+        "artifact_sha256": "PENDING_SHA256",
+        "criteria_ref": "REPLACE_WITH_EXECUTED_SOW_CRITERIA",
+        "decision_evidence_ref": "REPLACE_WITH_CUSTOMER_DECISION_RECORD"
+      },
+      {
+        "deliverable_id": "D3_DATA_SECURITY_IP_BOUNDARY",
+        "status": "pending",
+        "artifact_ref": "REPLACE_WITH_DOCUMENT_SYSTEM_REFERENCE",
+        "artifact_sha256": "PENDING_SHA256",
+        "criteria_ref": "REPLACE_WITH_EXECUTED_SOW_CRITERIA",
+        "decision_evidence_ref": "REPLACE_WITH_CUSTOMER_DECISION_RECORD"
+      },
+      {
+        "deliverable_id": "D4_SOLUTION_INTEGRATION_PLAN",
+        "status": "pending",
+        "artifact_ref": "REPLACE_WITH_DOCUMENT_SYSTEM_REFERENCE",
+        "artifact_sha256": "PENDING_SHA256",
+        "criteria_ref": "REPLACE_WITH_EXECUTED_SOW_CRITERIA",
+        "decision_evidence_ref": "REPLACE_WITH_CUSTOMER_DECISION_RECORD"
+      },
+      {
+        "deliverable_id": "D5_BUSINESS_CASE",
+        "status": "pending",
+        "artifact_ref": "REPLACE_WITH_DOCUMENT_SYSTEM_REFERENCE",
+        "artifact_sha256": "PENDING_SHA256",
+        "criteria_ref": "REPLACE_WITH_EXECUTED_SOW_CRITERIA",
+        "decision_evidence_ref": "REPLACE_WITH_CUSTOMER_DECISION_RECORD"
+      },
+      {
+        "deliverable_id": "D6_PILOT_RECOMMENDATION",
+        "status": "pending",
+        "artifact_ref": "REPLACE_WITH_DOCUMENT_SYSTEM_REFERENCE",
+        "artifact_sha256": "PENDING_SHA256",
+        "criteria_ref": "REPLACE_WITH_EXECUTED_SOW_CRITERIA",
+        "decision_evidence_ref": "REPLACE_WITH_CUSTOMER_DECISION_RECORD"
+      }
+    ],
+    "conditions": [
+      {
+        "condition_id": "COND-01",
+        "deliverable_id": "D4_SOLUTION_INTEGRATION_PLAN",
+        "description": "Clarify identity rotation and read-only connector failure path",
+        "owner_role": "solution_engineer",
+        "due_date": "2026-11-06",
+        "status": "open",
+        "closure_evidence_ref": "PENDING_CLOSURE_EVIDENCE",
+        "closed_at": "2026-11-06"
+      },
+      {
+        "condition_id": "COND-02",
+        "deliverable_id": "D6_PILOT_RECOMMENDATION",
+        "description": "Add expert-capacity stop threshold",
+        "owner_role": "fde_delivery_owner",
+        "due_date": "2026-11-06",
+        "status": "open",
+        "closure_evidence_ref": "PENDING_CLOSURE_EVIDENCE",
+        "closed_at": "2026-11-06"
+      }
+    ],
+    "decision_history": [
+      {
+        "event": "conditionally_accepted",
+        "recorded_at": "2026-11-04",
+        "actor_role": "customer_acceptance_owner",
+        "evidence_ref": "REPLACE_WITH_ACCEPTANCE_HISTORY_RECORD"
+      },
+      {
+        "event": "remediation_completed",
+        "recorded_at": "2026-11-06",
+        "actor_role": "fde_delivery_owner",
+        "evidence_ref": "REPLACE_WITH_ACCEPTANCE_HISTORY_RECORD"
+      },
+      {
+        "event": "final_accepted",
+        "recorded_at": "2026-11-07",
+        "actor_role": "customer_acceptance_owner",
+        "evidence_ref": "REPLACE_WITH_ACCEPTANCE_HISTORY_RECORD"
+      }
+    ],
+    "approvals": [
+      {
+        "role": "customer_acceptance_owner",
+        "status": "pending",
+        "approved_at": "2026-11-07",
+        "content_sha256": "PENDING_BUNDLE_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      },
+      {
+        "role": "customer_sponsor",
+        "status": "pending",
+        "approved_at": "2026-11-07",
+        "content_sha256": "PENDING_BUNDLE_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "pending",
+        "approved_at": "2026-11-07",
+        "content_sha256": "PENDING_BUNDLE_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      }
+    ],
+    "bundle_sha256": "PENDING_BUNDLE_SHA256"
+  },
+  "business_case": {
+    "currency": "CNY",
+    "discovery_actual_cost": 95800,
+    "measurement_version": "BASELINE-SIM-v1",
+    "scenarios": [
+      {
+        "scenario": "conservative",
+        "annual_benefit_cny": 260000,
+        "pilot_cost_cny": 480000,
+        "fact_refs": [
+          "REPLACE_WITH_MEASURED_FACT_REFERENCE"
+        ],
+        "assumption_refs": [
+          "REPLACE_WITH_ASSUMPTION_REFERENCE"
+        ],
+        "confidence": "low"
+      },
+      {
+        "scenario": "base",
+        "annual_benefit_cny": 620000,
+        "pilot_cost_cny": 480000,
+        "fact_refs": [
+          "REPLACE_WITH_MEASURED_FACT_REFERENCE"
+        ],
+        "assumption_refs": [
+          "REPLACE_WITH_ASSUMPTION_REFERENCE"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "scenario": "upside",
+        "annual_benefit_cny": 980000,
+        "pilot_cost_cny": 480000,
+        "fact_refs": [
+          "REPLACE_WITH_MEASURED_FACT_REFERENCE"
+        ],
+        "assumption_refs": [
+          "REPLACE_WITH_ASSUMPTION_REFERENCE"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "steering": {
+    "decision_id": "STEER-SIM-001",
+    "decision": "PILOT",
+    "decided_at": "2026-11-10",
+    "acceptance_bundle_sha256": "PENDING_BUNDLE_SHA256",
+    "rationale_evidence_refs": [
+      "REPLACE_WITH_STEERING_EVIDENCE"
+    ],
+    "dissent": [
+      {
+        "role": "fde_security_owner",
+        "position": "Pilot should not start until enterprise identity and connector rollback are evidenced",
+        "resolution": "Recorded as blocking Mobilization requirements",
+        "evidence_ref": "REPLACE_WITH_DISSENT_RECORD"
+      }
+    ],
+    "approvals": [
+      {
+        "role": "customer_sponsor",
+        "status": "pending",
+        "approved_at": "2026-11-10",
+        "content_sha256": "PENDING_DECISION_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      },
+      {
+        "role": "customer_process_owner",
+        "status": "pending",
+        "approved_at": "2026-11-10",
+        "content_sha256": "PENDING_DECISION_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      },
+      {
+        "role": "fde_commercial_owner",
+        "status": "pending",
+        "approved_at": "2026-11-10",
+        "content_sha256": "PENDING_DECISION_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "pending",
+        "approved_at": "2026-11-10",
+        "content_sha256": "PENDING_DECISION_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      },
+      {
+        "role": "fde_security_owner",
+        "status": "pending",
+        "approved_at": "2026-11-10",
+        "content_sha256": "PENDING_DECISION_SHA256",
+        "evidence_ref": "REPLACE_WITH_APPROVAL_RECORD"
+      }
+    ],
+    "decision_sha256": "PENDING_DECISION_SHA256"
+  },
+  "pilot_plan": {
+    "pilot_plan_id": "PILOT-PLAN-SIM-001",
+    "sow_status": "draft",
+    "currency": "CNY",
+    "fee_cny": 480000,
+    "duration_weeks": 8,
+    "user_cap": 12,
+    "case_cap": 800,
+    "payment_milestones": [
+      {
+        "milestone_id": "PILOT-M1",
+        "trigger": "Pilot kickoff",
+        "percent": 40
+      },
+      {
+        "milestone_id": "PILOT-M2",
+        "trigger": "Midpoint evidence review",
+        "percent": 30
+      },
+      {
+        "milestone_id": "PILOT-M3",
+        "trigger": "Pilot acceptance decision",
+        "percent": 30
+      }
+    ],
+    "success_metrics": [
+      {
+        "metric_id": "field_quality",
+        "threshold": ">=0.95",
+        "denominator_policy": "all eligible reviewed fields",
+        "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE_REFERENCE",
+        "stop_threshold": "<0.85 for two days"
+      },
+      {
+        "metric_id": "evidence_coverage",
+        "threshold": ">=0.98",
+        "denominator_policy": "all material generated claims",
+        "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE_REFERENCE",
+        "stop_threshold": "<0.90"
+      },
+      {
+        "metric_id": "unsafe_action_rate",
+        "threshold": "0",
+        "denominator_policy": "all generated recommendations",
+        "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE_REFERENCE",
+        "stop_threshold": ">0"
+      },
+      {
+        "metric_id": "operator_adoption",
+        "threshold": ">=0.60",
+        "denominator_policy": "eligible shifts and assigned operators",
+        "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE_REFERENCE",
+        "stop_threshold": "<0.30 after week 3"
+      },
+      {
+        "metric_id": "review_cycle_time",
+        "threshold": "<=20 minutes median",
+        "denominator_policy": "eligible completed review tasks",
+        "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE_REFERENCE",
+        "stop_threshold": ">45 minutes median"
+      },
+      {
+        "metric_id": "cost_per_case",
+        "threshold": "<=CNY 35",
+        "denominator_policy": "all eligible processed cases",
+        "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE_REFERENCE",
+        "stop_threshold": ">CNY 70"
+      }
+    ],
+    "mobilization_requirements": [
+      {
+        "requirement_id": "executed_pilot_sow",
+        "owner_role": "fde_commercial_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "purchase_order_or_equivalent",
+        "owner_role": "customer_procurement_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "data_security_authorization",
+        "owner_role": "customer_data_or_security_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "customer_sandbox",
+        "owner_role": "customer_it_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "enterprise_identity_and_roles",
+        "owner_role": "customer_it_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "readonly_connectors",
+        "owner_role": "integration_lead",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "approved_model_and_rules",
+        "owner_role": "ai_evaluation_lead",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "operator_training_and_roster",
+        "owner_role": "customer_process_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "telemetry_and_incident_route",
+        "owner_role": "fde_delivery_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      },
+      {
+        "requirement_id": "rollback_and_stop_drill",
+        "owner_role": "fde_security_owner",
+        "status": "open",
+        "evidence_ref": "PENDING_MOBILIZATION_EVIDENCE"
+      }
+    ]
+  },
+  "billing_release": {
+    "discovery_invoice_eligible": true,
+    "finance_approval_ref": "REPLACE_WITH_FINANCE_APPROVAL",
+    "invoice_status": "not_created",
+    "invoice_record_ref": null,
+    "payment_record_ref": null
+  },
+  "privacy_assertions": {
+    "contains_raw_personal_data": false,
+    "contains_contract_or_invoice_body": false,
+    "contains_credentials": false,
+    "copied_into_source_repository": false
+  }
+}
