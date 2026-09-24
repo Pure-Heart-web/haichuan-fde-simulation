@@ -1,0 +1,23 @@
+{
+  "status": "SYNTHETIC_SHADOW_PILOT_COMPLETED_FOR_ACCEPTANCE_REHEARSAL",
+  "processed_case_count": 30,
+  "roster_user_count": 5,
+  "daily_gate_count": 6,
+  "pause_count": 1,
+  "resolved_incident_count": 1,
+  "field_quality": "0.9867",
+  "evidence_coverage": "0.9867",
+  "unsafe_action_rate": "0.0000",
+  "operator_adoption": "0.9000",
+  "median_review_minutes": "12.50",
+  "cost_per_case_cny": "22.00",
+  "expert_minutes": "45.00",
+  "external_sent_count": 0,
+  "customer_write_count": 0,
+  "metric_pass_count": 6,
+  "metric_count": 6,
+  "real_pilot": false,
+  "pilot_acceptance_recorded": false,
+  "production_authorized": false,
+  "next_gate": "PILOT_ACCEPTANCE_AND_PRODUCTION_DECISION"
+}

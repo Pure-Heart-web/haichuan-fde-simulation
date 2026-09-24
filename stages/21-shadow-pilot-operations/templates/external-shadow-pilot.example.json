@@ -1,0 +1,1295 @@
+{
+  "pilot": {
+    "pilot_id": "REPLACE_WITH_PILOT_ID",
+    "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+    "period": {
+      "from": "2026-11-17",
+      "to": "2026-11-24"
+    },
+    "case_cap": 800,
+    "user_cap": 12,
+    "outbox_enabled": false,
+    "customer_write_enabled": false
+  },
+  "mobilization_requirements": [
+    {
+      "requirement_id": "executed_pilot_sow",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "purchase_order_or_equivalent",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "data_security_authorization",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "customer_sandbox",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "enterprise_identity_and_roles",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "readonly_connectors",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "approved_model_and_rules",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "operator_training_and_roster",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "telemetry_and_incident_route",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    },
+    {
+      "requirement_id": "rollback_and_stop_drill",
+      "owner_role": "training_owner",
+      "status": "ready",
+      "evidence_ref": "REPLACE_WITH_MOBILIZATION_EVIDENCE"
+    }
+  ],
+  "roster": [
+    {
+      "user_ref": "operator-ref-1",
+      "role": "operator",
+      "shift": "shift-1",
+      "training_status": "trained",
+      "training_evidence_ref": "REPLACE_WITH_TRAINING_EVIDENCE",
+      "active_from": "2026-11-17",
+      "active_to": "2026-11-24"
+    },
+    {
+      "user_ref": "operator-ref-2",
+      "role": "operator",
+      "shift": "shift-2",
+      "training_status": "trained",
+      "training_evidence_ref": "REPLACE_WITH_TRAINING_EVIDENCE",
+      "active_from": "2026-11-17",
+      "active_to": "2026-11-24"
+    },
+    {
+      "user_ref": "operator-ref-3",
+      "role": "operator",
+      "shift": "shift-3",
+      "training_status": "trained",
+      "training_evidence_ref": "REPLACE_WITH_TRAINING_EVIDENCE",
+      "active_from": "2026-11-17",
+      "active_to": "2026-11-24"
+    },
+    {
+      "user_ref": "engineer-ref-1",
+      "role": "engineer",
+      "shift": "on-call",
+      "training_status": "trained",
+      "training_evidence_ref": "REPLACE_WITH_TRAINING_EVIDENCE",
+      "active_from": "2026-11-17",
+      "active_to": "2026-11-24"
+    },
+    {
+      "user_ref": "duty-ref-1",
+      "role": "duty_manager",
+      "shift": "business-hours",
+      "training_status": "trained",
+      "training_evidence_ref": "REPLACE_WITH_TRAINING_EVIDENCE",
+      "active_from": "2026-11-17",
+      "active_to": "2026-11-24"
+    }
+  ],
+  "versions": [
+    {
+      "component_type": "model",
+      "version": "candidate-2.1",
+      "status": "approved",
+      "approval_ref": "REPLACE_WITH_VERSION_APPROVAL"
+    },
+    {
+      "component_type": "prompt",
+      "version": "prompt-21.1",
+      "status": "approved",
+      "approval_ref": "REPLACE_WITH_VERSION_APPROVAL"
+    },
+    {
+      "component_type": "rules",
+      "version": "rules-21.1",
+      "status": "approved",
+      "approval_ref": "REPLACE_WITH_VERSION_APPROVAL"
+    },
+    {
+      "component_type": "knowledge",
+      "version": "knowledge-21.1",
+      "status": "approved",
+      "approval_ref": "REPLACE_WITH_VERSION_APPROVAL"
+    },
+    {
+      "component_type": "connector",
+      "version": "readonly-connector-21.1",
+      "status": "approved",
+      "approval_ref": "REPLACE_WITH_VERSION_APPROVAL"
+    }
+  ],
+  "start_authorization": {
+    "authorization_id": "START-AUTH-SIM-021",
+    "status": "approved",
+    "authorized_at": "2026-11-17T08:30:00+08:00",
+    "scope_sha256": "PENDING_SCOPE_SHA256",
+    "approvals": [
+      {
+        "role": "customer_sponsor",
+        "status": "approved",
+        "approved_at": "2026-11-17",
+        "content_sha256": "PENDING_SCOPE_SHA256",
+        "evidence_ref": "REPLACE_WITH_START_APPROVAL"
+      },
+      {
+        "role": "customer_process_owner",
+        "status": "approved",
+        "approved_at": "2026-11-17",
+        "content_sha256": "PENDING_SCOPE_SHA256",
+        "evidence_ref": "REPLACE_WITH_START_APPROVAL"
+      },
+      {
+        "role": "customer_security_owner",
+        "status": "approved",
+        "approved_at": "2026-11-17",
+        "content_sha256": "PENDING_SCOPE_SHA256",
+        "evidence_ref": "REPLACE_WITH_START_APPROVAL"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "approved",
+        "approved_at": "2026-11-17",
+        "content_sha256": "PENDING_SCOPE_SHA256",
+        "evidence_ref": "REPLACE_WITH_START_APPROVAL"
+      },
+      {
+        "role": "fde_commercial_owner",
+        "status": "approved",
+        "approved_at": "2026-11-17",
+        "content_sha256": "PENDING_SCOPE_SHA256",
+        "evidence_ref": "REPLACE_WITH_START_APPROVAL"
+      }
+    ]
+  },
+  "state_transitions": [
+    {
+      "transition_id": "STATE-01",
+      "from_state": null,
+      "to_state": "planned",
+      "recorded_at": "2026-11-16T16:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "pilot scheduled",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "not_required"
+    },
+    {
+      "transition_id": "STATE-02",
+      "from_state": "planned",
+      "to_state": "start_review",
+      "recorded_at": "2026-11-17T08:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "runtime evidence review",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "not_required"
+    },
+    {
+      "transition_id": "STATE-03",
+      "from_state": "start_review",
+      "to_state": "running",
+      "recorded_at": "2026-11-17T09:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "start approved",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "approved"
+    },
+    {
+      "transition_id": "STATE-04",
+      "from_state": "running",
+      "to_state": "paused",
+      "recorded_at": "2026-11-19T10:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "connector requested write scope",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "not_required"
+    },
+    {
+      "transition_id": "STATE-05",
+      "from_state": "paused",
+      "to_state": "remediation",
+      "recorded_at": "2026-11-19T11:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "credential revoked and scope corrected",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "not_required"
+    },
+    {
+      "transition_id": "STATE-06",
+      "from_state": "remediation",
+      "to_state": "resume_review",
+      "recorded_at": "2026-11-19T15:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "retest completed",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "not_required"
+    },
+    {
+      "transition_id": "STATE-07",
+      "from_state": "resume_review",
+      "to_state": "running",
+      "recorded_at": "2026-11-20T08:30:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "resume approved",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "approved"
+    },
+    {
+      "transition_id": "STATE-08",
+      "from_state": "running",
+      "to_state": "completed",
+      "recorded_at": "2026-11-24T18:00:00+08:00",
+      "actor_role": "fde_delivery_owner",
+      "reason": "planned evidence window completed",
+      "evidence_ref": "REPLACE_WITH_STATE_EVIDENCE",
+      "approval_status": "approved"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "INC-PILOT-SIM-001",
+      "severity": "high",
+      "detected_at": "2026-11-19T09:55:00+08:00",
+      "type": "connector_scope_drift_blocked_before_action",
+      "status": "resolved",
+      "pause_ref": "STATE-04",
+      "remediation_ref": "REPLACE_WITH_REMEDIATION_EVIDENCE",
+      "resume_approval_ref": "STATE-07"
+    }
+  ],
+  "daily_gates": [
+    {
+      "pilot_date": "2026-11-17",
+      "status": "ready",
+      "checks": {
+        "contract_valid": true,
+        "roster_covered": true,
+        "connector_readonly": true,
+        "no_open_sev1": true,
+        "versions_approved": true,
+        "budget_available": true,
+        "kill_switch_tested": true
+      },
+      "decision_owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_DAILY_GATE_EVIDENCE"
+    },
+    {
+      "pilot_date": "2026-11-18",
+      "status": "ready",
+      "checks": {
+        "contract_valid": true,
+        "roster_covered": true,
+        "connector_readonly": true,
+        "no_open_sev1": true,
+        "versions_approved": true,
+        "budget_available": true,
+        "kill_switch_tested": true
+      },
+      "decision_owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_DAILY_GATE_EVIDENCE"
+    },
+    {
+      "pilot_date": "2026-11-19",
+      "status": "paused",
+      "checks": {
+        "contract_valid": true,
+        "roster_covered": true,
+        "connector_readonly": false,
+        "no_open_sev1": true,
+        "versions_approved": true,
+        "budget_available": true,
+        "kill_switch_tested": true
+      },
+      "decision_owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_DAILY_GATE_EVIDENCE",
+      "incident_ref": "INC-PILOT-SIM-001"
+    },
+    {
+      "pilot_date": "2026-11-20",
+      "status": "ready",
+      "checks": {
+        "contract_valid": true,
+        "roster_covered": true,
+        "connector_readonly": true,
+        "no_open_sev1": true,
+        "versions_approved": true,
+        "budget_available": true,
+        "kill_switch_tested": true
+      },
+      "decision_owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_DAILY_GATE_EVIDENCE"
+    },
+    {
+      "pilot_date": "2026-11-21",
+      "status": "ready",
+      "checks": {
+        "contract_valid": true,
+        "roster_covered": true,
+        "connector_readonly": true,
+        "no_open_sev1": true,
+        "versions_approved": true,
+        "budget_available": true,
+        "kill_switch_tested": true
+      },
+      "decision_owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_DAILY_GATE_EVIDENCE"
+    },
+    {
+      "pilot_date": "2026-11-24",
+      "status": "ready",
+      "checks": {
+        "contract_valid": true,
+        "roster_covered": true,
+        "connector_readonly": true,
+        "no_open_sev1": true,
+        "versions_approved": true,
+        "budget_available": true,
+        "kill_switch_tested": true
+      },
+      "decision_owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_DAILY_GATE_EVIDENCE"
+    }
+  ],
+  "case_events": [
+    {
+      "case_id": "CASE-SIM-001",
+      "pilot_date": "2026-11-17",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "bypassed",
+      "review_minutes": 8,
+      "expert_minutes": 0,
+      "cost_cny": 20,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-002",
+      "pilot_date": "2026-11-17",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "escalated",
+      "review_minutes": 9,
+      "expert_minutes": 10,
+      "cost_cny": 21,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-003",
+      "pilot_date": "2026-11-17",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "material_edit",
+      "review_minutes": 10,
+      "expert_minutes": 5,
+      "cost_cny": 22,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-004",
+      "pilot_date": "2026-11-17",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "rejected",
+      "review_minutes": 11,
+      "expert_minutes": 0,
+      "cost_cny": 23,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-005",
+      "pilot_date": "2026-11-17",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 9,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "alternate_selected",
+      "review_minutes": 12,
+      "expert_minutes": 0,
+      "cost_cny": 24,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-006",
+      "pilot_date": "2026-11-17",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "minor_edit",
+      "review_minutes": 13,
+      "expert_minutes": 0,
+      "cost_cny": 20,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-007",
+      "pilot_date": "2026-11-18",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "minor_edit",
+      "review_minutes": 14,
+      "expert_minutes": 0,
+      "cost_cny": 21,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-008",
+      "pilot_date": "2026-11-18",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 4,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 15,
+      "expert_minutes": 0,
+      "cost_cny": 22,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-009",
+      "pilot_date": "2026-11-18",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 16,
+      "expert_minutes": 0,
+      "cost_cny": 23,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-010",
+      "pilot_date": "2026-11-18",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 17,
+      "expert_minutes": 0,
+      "cost_cny": 24,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-011",
+      "pilot_date": "2026-11-18",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "bypassed",
+      "review_minutes": 18,
+      "expert_minutes": 0,
+      "cost_cny": 20,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-012",
+      "pilot_date": "2026-11-18",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 9,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "escalated",
+      "review_minutes": 19,
+      "expert_minutes": 10,
+      "cost_cny": 21,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-013",
+      "pilot_date": "2026-11-20",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "material_edit",
+      "review_minutes": 8,
+      "expert_minutes": 5,
+      "cost_cny": 22,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-014",
+      "pilot_date": "2026-11-20",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "rejected",
+      "review_minutes": 9,
+      "expert_minutes": 0,
+      "cost_cny": 23,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-015",
+      "pilot_date": "2026-11-20",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "alternate_selected",
+      "review_minutes": 10,
+      "expert_minutes": 0,
+      "cost_cny": 24,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-016",
+      "pilot_date": "2026-11-20",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "minor_edit",
+      "review_minutes": 11,
+      "expert_minutes": 0,
+      "cost_cny": 20,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-017",
+      "pilot_date": "2026-11-20",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "minor_edit",
+      "review_minutes": 12,
+      "expert_minutes": 0,
+      "cost_cny": 21,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-018",
+      "pilot_date": "2026-11-20",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 13,
+      "expert_minutes": 0,
+      "cost_cny": 22,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-019",
+      "pilot_date": "2026-11-21",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 9,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 14,
+      "expert_minutes": 0,
+      "cost_cny": 23,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-020",
+      "pilot_date": "2026-11-21",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 15,
+      "expert_minutes": 0,
+      "cost_cny": 24,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-021",
+      "pilot_date": "2026-11-21",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "bypassed",
+      "review_minutes": 16,
+      "expert_minutes": 0,
+      "cost_cny": 20,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-022",
+      "pilot_date": "2026-11-21",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "escalated",
+      "review_minutes": 17,
+      "expert_minutes": 10,
+      "cost_cny": 21,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-023",
+      "pilot_date": "2026-11-21",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "material_edit",
+      "review_minutes": 18,
+      "expert_minutes": 5,
+      "cost_cny": 22,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-024",
+      "pilot_date": "2026-11-21",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 4,
+      "unsafe_actions": 0,
+      "decision": "rejected",
+      "review_minutes": 19,
+      "expert_minutes": 0,
+      "cost_cny": 23,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-025",
+      "pilot_date": "2026-11-24",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "alternate_selected",
+      "review_minutes": 8,
+      "expert_minutes": 0,
+      "cost_cny": 24,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-026",
+      "pilot_date": "2026-11-24",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 9,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "minor_edit",
+      "review_minutes": 9,
+      "expert_minutes": 0,
+      "cost_cny": 20,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-027",
+      "pilot_date": "2026-11-24",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "minor_edit",
+      "review_minutes": 10,
+      "expert_minutes": 0,
+      "cost_cny": 21,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-028",
+      "pilot_date": "2026-11-24",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-1",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 11,
+      "expert_minutes": 0,
+      "cost_cny": 22,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-029",
+      "pilot_date": "2026-11-24",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-2",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 12,
+      "expert_minutes": 0,
+      "cost_cny": 23,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    },
+    {
+      "case_id": "CASE-SIM-030",
+      "pilot_date": "2026-11-24",
+      "tenant_ref": "REPLACE_WITH_TENANT_REFERENCE",
+      "operator_ref": "operator-ref-3",
+      "source_event_ref": "REPLACE_WITH_SOURCE_EVENT",
+      "trace_ref": "REPLACE_WITH_TRACE",
+      "versions": {
+        "model": "candidate-2.1",
+        "prompt": "prompt-21.1",
+        "rules": "rules-21.1",
+        "knowledge": "knowledge-21.1",
+        "connector": "readonly-connector-21.1"
+      },
+      "fields_total": 10,
+      "fields_correct": 10,
+      "material_claims": 5,
+      "evidenced_claims": 5,
+      "unsafe_actions": 0,
+      "decision": "accepted",
+      "review_minutes": 13,
+      "expert_minutes": 0,
+      "cost_cny": 24,
+      "external_sent": false,
+      "customer_write": false,
+      "outcome_ref": "REPLACE_WITH_OUTCOME"
+    }
+  ],
+  "metric_targets": [
+    {
+      "metric_id": "field_quality",
+      "direction": "min",
+      "target": 0.95,
+      "stop_threshold": 0.85,
+      "denominator_policy": "all eligible reviewed fields",
+      "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE",
+      "calculated_passed": true
+    },
+    {
+      "metric_id": "evidence_coverage",
+      "direction": "min",
+      "target": 0.98,
+      "stop_threshold": 0.9,
+      "denominator_policy": "all material claims",
+      "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE",
+      "calculated_passed": true
+    },
+    {
+      "metric_id": "unsafe_action_rate",
+      "direction": "max",
+      "target": 0,
+      "stop_threshold": 0,
+      "denominator_policy": "all processed cases",
+      "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE",
+      "calculated_passed": true
+    },
+    {
+      "metric_id": "operator_adoption",
+      "direction": "min",
+      "target": 0.6,
+      "stop_threshold": 0.3,
+      "denominator_policy": "all assigned eligible cases",
+      "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE",
+      "calculated_passed": true
+    },
+    {
+      "metric_id": "review_cycle_time",
+      "direction": "max",
+      "target": 20,
+      "stop_threshold": 45,
+      "denominator_policy": "completed human review tasks",
+      "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE",
+      "calculated_passed": true
+    },
+    {
+      "metric_id": "cost_per_case",
+      "direction": "max",
+      "target": 35,
+      "stop_threshold": 70,
+      "denominator_policy": "all eligible processed cases",
+      "baseline_ref": "REPLACE_WITH_FROZEN_BASELINE",
+      "calculated_passed": true
+    }
+  ],
+  "evidence_bundle": {
+    "bundle_id": "PILOT-EVIDENCE-SIM-021",
+    "bundle_sha256": "PENDING_BUNDLE_SHA256",
+    "approvals": [
+      {
+        "role": "customer_process_owner",
+        "status": "approved",
+        "approved_at": "2026-11-25",
+        "content_sha256": "PENDING_BUNDLE_SHA256",
+        "evidence_ref": "REPLACE_WITH_BUNDLE_APPROVAL"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "approved",
+        "approved_at": "2026-11-25",
+        "content_sha256": "PENDING_BUNDLE_SHA256",
+        "evidence_ref": "REPLACE_WITH_BUNDLE_APPROVAL"
+      },
+      {
+        "role": "fde_security_owner",
+        "status": "approved",
+        "approved_at": "2026-11-25",
+        "content_sha256": "PENDING_BUNDLE_SHA256",
+        "evidence_ref": "REPLACE_WITH_BUNDLE_APPROVAL"
+      }
+    ]
+  },
+  "mode": "external_controlled_shadow_pilot_record",
+  "partner_public_label": "REPLACE_WITH_APPROVED_PUBLIC_LABEL",
+  "stage20_release": {
+    "status": "PENDING_STAGE20_RELEASE",
+    "decision_record_ref": "REPLACE_WITH_STAGE20_DECISION_RECORD",
+    "human_start_authorized": false,
+    "authorized_by_role": "customer_sponsor",
+    "authorized_at": "2026-11-17T08:15:00+08:00"
+  },
+  "privacy_assertions": {
+    "contains_raw_customer_content": false,
+    "contains_person_names_or_emails": false,
+    "contains_credentials": false,
+    "copied_into_source_repository": false
+  }
+}

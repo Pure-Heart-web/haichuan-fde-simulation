@@ -86,11 +86,15 @@
 
 把六项交付物逐项绑定内容摘要和合同标准，演练附条件接受、整改、最终接受、Discovery 开票释放与五方 Steering。Business Case 必须分开事实和假设；选择 Pilot 后还需独立 SOW、六类成功指标和十项 Mobilization 条件。参考分支选择 Pilot 但保持未授权，真实记录只在仓库外预检。见 [Stage 20 手册](../stages/20-acceptance-investment/README.md)。
 
+## Stage 21：Controlled Shadow Pilot Operations
+
+把 Stage 20 的启动条件落实到有限用户、有限案例和无外部副作用的 Shadow Pilot：五方人工授权绑定范围，Roster 与五类运行版本逐案校验，Daily Gate 控制开班，真实演练一次 Pause、Remediation 和 Resume。三十个合成案例记录七类人工决定、审核时间、专家负担和成本，六项指标与 Evidence Bundle 内容绑定。仓库外真实记录通过预检后仍只能进入人工 Pilot 验收和生产决策。见 [Stage 21 手册](../stages/21-shadow-pilot-operations/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：受控 Shadow Pilot | Stage 20 的 Pilot 投资和 Mobilization 如何转成有限用户现场证据？ | 人工启动授权、PostgreSQL 运行证据、企业 OIDC、真实 Connector Sandbox、OTLP 后端、真实前测、有限用户 Shadow、每日风险门与退出判断 |
+| 后续：Pilot 验收与生产决策 | Stage 21 的有限 Shadow 证据是否足以停止、迭代、扩围或进入生产评估？ | 客户验收、缺陷与风险关闭、生产 SLO、安全评审、容量与成本、上线和回退计划、人工生产授权 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

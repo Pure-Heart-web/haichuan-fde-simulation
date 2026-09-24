@@ -107,3 +107,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage20.py demo --check-baseline`，核对 `outputs/stage-20/stage20-report.json`：六项交付物最终接受、两项条件已关闭、Steering 教学决定为 Pilot；Discovery 实际教学成本 CNY 95,800，base 情景净收益 CNY 140,000；Pilot SOW 未执行、Mobilization 0/10、Pilot 未授权，真实验收、发票和回款均为 0。
 
 运行 `python3 stage20.py prepare --output /secure/path/acceptance-investment` 生成外部资料包。修改 Stage 19 来源、交付物摘要、验收条件、Acceptance/Steering 内容、成本或假设，校验必须失败。外部 `PILOT` 决定在 SOW 或 Mobilization 未完成时保持 `PILOT_NOT_READY`；条件齐全也只到人工启动评审。完整练习见 [Stage 20 手册](../stages/20-acceptance-investment/README.md)。
+
+## Stage 21：Controlled Shadow Pilot Operations
+
+运行 `python3 stage21.py demo --check-baseline`，核对 `outputs/stage-21/stage21-report.json`：30 个合成案例、5 个受控用户、6 个 Daily Gate、1 次 Pause/Remediation/Resume；字段质量和证据覆盖均为 0.9867，采用率 0.9000，审核中位数 12.50 分钟，单案成本 CNY 22.00，危险动作、外部发送和客户写入均为 0。
+
+运行 `python3 stage21.py prepare --output /secure/path/shadow-pilot` 生成仓库外运行资料包。填入权威系统引用并重新绑定启动授权和 Evidence Bundle 后，执行 `python3 stage21.py preflight --manifest /secure/path/shadow-pilot/external-shadow-pilot.json`。删除 Mobilization 或签核、让暂停日处理案例、改变逐案版本或租户、记录外发/写入、保留未解决事故、使用姓名邮箱或修改内容但不重签都应失败。完整记录通过也只进入人工 Pilot 验收评审，不自动授权生产。完整练习见 [Stage 21 手册](../stages/21-shadow-pilot-operations/README.md)。
