@@ -1,6 +1,6 @@
 # 工业设备 · FDE 交付学习案例
 
-这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9–14 的交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 的商务交付 Gate，Stage 16 的团队商业交付毕业模拟，Stage 17 的付费 Discovery 合同到验收，Stage 18 的 Design Partner 获取与签约预检，Stage 19 的付费 Discovery 现场执行，Stage 20 的客户验收与 Pilot 投资，以及 Stage 21 的受控 Shadow Pilot 运行**。后续阶段按新需求继续扩展。
+这是一个可复现的模拟客户项目。目前完成 **Stage 1–7 的海川工业泵发现、构建和试点运营演练，Stage 8 的启航设备售后与双客户产品化，Stage 9–14 的交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 的商务交付 Gate，Stage 16 的团队商业交付毕业模拟，Stage 17 的付费 Discovery 合同到验收，Stage 18 的 Design Partner 获取与签约预检，Stage 19 的付费 Discovery 现场执行，Stage 20 的客户验收与 Pilot 投资，Stage 21 的受控 Shadow Pilot 运行，以及 Stage 22 的 Pilot 验收与生产决策**。后续阶段按新需求继续扩展。
 
 企业、联系人、邮件、设备、型号、订单和指标均为教学虚构。样本中的数值用于练习分析，不是客户真实业务事实，也不是泵选型或设备维修依据。
 
@@ -9,13 +9,13 @@
 需要 Python 3.10 或更新版本，无第三方依赖、API Key 或网络要求。在本文件所在目录打开终端：
 
 ```bash
-python3 stage_pipeline.py all --output-root outputs/my-stage-1-21-run
+python3 stage_pipeline.py all --output-root outputs/my-stage-1-22-run
 python3 -m unittest discover -s tests -v
 ```
 
 `--output-root` 建议每次使用新目录；历史审核记录与当前代码版本不同时，流水线会按设计拒绝覆盖。
 
-`all` 依次运行二十一个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–8 完成抽取、推荐、知识、Pilot 和双客户产品化，Stage 9–14 检查交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 校验商务交易档案与 A–F Gate，Stage 16 评分团队和个人技术责任证据，Stage 17–19 推进付费 Discovery 的合同、Design Partner 和现场执行，Stage 20 校验客户验收与 Pilot 投资，Stage 21 校验受控 Shadow Pilot 的启动、运行、暂停恢复和证据结算。结果保存在 `outputs/stage-01/` 至 `outputs/stage-21/`，另有 `outputs/stage-08-vertical/`。
+`all` 依次运行二十二个阶段：Stage 1–3 生成 Discovery 与数据审计，Stage 4–8 完成抽取、推荐、知识、Pilot 和双客户产品化，Stage 9–14 检查交付强化、客户接入、运行、模型、现场与集成控制，Stage 15 校验商务交易档案与 A–F Gate，Stage 16 评分团队和个人技术责任证据，Stage 17–19 推进付费 Discovery 的合同、Design Partner 和现场执行，Stage 20 校验客户验收与 Pilot 投资，Stage 21 校验受控 Shadow Pilot，Stage 22 校验 Pilot 验收、残余风险、生产准备和 Steering 决策。结果保存在 `outputs/stage-01/` 至 `outputs/stage-22/`，另有 `outputs/stage-08-vertical/`。
 
 分析自己的演练记录：
 
@@ -25,7 +25,7 @@ python3 run.py analyze --input stages/01-discovery/data/simulation.json --output
 
 Stage 1 输入规范见 [数据说明](stages/01-discovery/data/README.md)。`run.py` 的退出码 `0` 表示检查通过或报告成功生成；`2` 表示数据无效；`3` 表示报告已生成但 Stage 1 退出条件尚未齐全。`stage_pipeline.py` 的 `0` 表示教学流程与回归检查已完成；Stage 4 会如实报告未达门槛字段。设计审计通过不表示已达到产品发布门槛。
 
-Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)、[Delivery Room](stage11.py)、[模型安全 Canary](stage12.py)、[现场试点准备](stage13.py)、[集成实验室](stage14.py)、[商务交付室](stage15.py)、[团队毕业模拟](stage16.py)、[付费 Discovery 交付控制](stage17.py)、[Design Partner 签约预检](stage18.py)、[Live Discovery 执行](stage19.py)、[客户验收与 Pilot 投资门](stage20.py) 和 [受控 Shadow Pilot 运行](stage21.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
+Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本地页面、命令行或 HTTP 控制台。代码入口依次为 [Stage 1](run.py)、[Stage 4](stage4.py)、[Stage 5](stage5.py)、[Stage 6](stage6.py)、[Stage 7](stage7.py)、[Stage 8](stage8.py)、[双案例纵向演练](stage8_vertical.py)、[交付强化](stage9.py)、[客户接入](stage10.py)、[Delivery Room](stage11.py)、[模型安全 Canary](stage12.py)、[现场试点准备](stage13.py)、[集成实验室](stage14.py)、[商务交付室](stage15.py)、[团队毕业模拟](stage16.py)、[付费 Discovery 交付控制](stage17.py)、[Design Partner 签约预检](stage18.py)、[Live Discovery 执行](stage19.py)、[客户验收与 Pilot 投资门](stage20.py)、[受控 Shadow Pilot 运行](stage21.py) 和 [Pilot 验收与生产决策](stage22.py)；默认不调用外部大模型，生成结果可以追溯到本地输入。
 
 ## 建议阅读和练习顺序
 
@@ -59,6 +59,7 @@ Stage 1–3 资料可用任意 Markdown 阅读器浏览；后续阶段提供本�
 28. [Stage 19 Live Paid Discovery Execution](stages/19-live-discovery-execution/README.md)：执行八类现场活动、事实/推断/假设治理、基线冻结、依赖、变更、实际成本和六项交付物验收准备。
 29. [Stage 20 Customer Acceptance & Pilot Investment](stages/20-acceptance-investment/README.md)：演练附条件验收、整改、内容绑定、Steering、Business Case、开票释放、Pilot SOW 和 Mobilization Gate。
 30. [Stage 21 Controlled Shadow Pilot Operations](stages/21-shadow-pilot-operations/README.md)：演练人工启动、排班、版本锁定、Daily Gate、Pause/Resume、人工决定、指标和 Evidence Bundle。
+31. [Stage 22 Pilot Acceptance & Production Decision](stages/22-pilot-acceptance-production-decision/README.md)：演练 Pilot 验收、条件整改、残余风险、四类 Steering 决策、生产准备与上线回退计划。
 
 [模拟场景流程图](stages/01-discovery/guides/observed-workflow.md) 展示正常路径、专家升级和客户澄清回路。
 
@@ -93,13 +94,14 @@ stages/18-design-partner-contracting/ 候选资格、报价、签约清单、外
 stages/19-live-discovery-execution/ 现场活动、证据、冻结基线、依赖、变更、成本与验收准备
 stages/20-acceptance-investment/ 客户验收、整改、投资决定、开票与 Pilot Mobilization
 stages/21-shadow-pilot-operations/ 人工启动、每日门禁、Pause/Resume、指标与 Pilot 证据包
+stages/22-pilot-acceptance-production-decision/ Pilot 验收、残余风险、生产准备与决策资料
 src/fde_discovery/            校验、指标计算、报告与阶段检查代码
 src/fde_stage3/               Stage 2/3 资料审计代码
 src/fde_platform/             Sprint 1–3 抽取、推荐、知识、草稿、审核与评估代码
 scripts/                      合成资料与评估集重建脚本
 tests/                        指标计算、无效输入与阶段边界测试
 run.py                        命令行入口
-stage_pipeline.py             二十一阶段离线检查入口
+stage_pipeline.py             二十二阶段离线检查入口
 stage4.py                     Sprint 1 demo / eval / review / process 命令入口
 stage5.py                     Sprint 2 demo / eval / recommend / from-stage4 / review 入口
 stage6.py                     Sprint 3 demo / eval / draft / review 入口
@@ -120,7 +122,8 @@ stage18.py                    Design Partner 候选 / 外部签约证据 / Kicko
 stage19.py                    Live Discovery 现场执行 / 外部证据 / 验收前预检入口
 stage20.py                    客户验收 / Steering / Pilot SOW / Mobilization 预检入口
 stage21.py                    受控 Shadow Pilot / Pause-Resume / 外部运行证据预检入口
+stage22.py                    Pilot 验收 / 生产准备 / Steering 决策预检入口
 outputs/                      本地演练结果（不纳入版本管理）
 ```
 
-二十一个阶段的“交付”是可追溯的问题定义、治理决定与可运行的技术、运营、商务和团队责任演练。Stage 14 依然使用本地集成 Lab；Stage 15–21 的公开交易、合同、客户事件、金额、人员、验收、投资决定、Pilot 运行和签核均为教学虚构。Stage 18–21 支持仓库外真实记录的结构预检，但代码不能代替授权客户现场测试、真实 Pilot 成效、有效合同、真实发票/回款、客户验收或生产授权。
+二十二个阶段的“交付”是可追溯的问题定义、治理决定与可运行的技术、运营、商务和团队责任演练。Stage 14 依然使用本地集成 Lab；Stage 15–22 的公开交易、合同、客户事件、金额、人员、验收、投资决定、Pilot 运行和签核均为教学虚构。Stage 18–22 支持仓库外真实记录的结构预检，但代码不能代替授权客户现场测试、真实 Pilot 成效、有效合同、真实发票/回款、客户验收或生产授权。

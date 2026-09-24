@@ -90,11 +90,15 @@
 
 把 Stage 20 的启动条件落实到有限用户、有限案例和无外部副作用的 Shadow Pilot：五方人工授权绑定范围，Roster 与五类运行版本逐案校验，Daily Gate 控制开班，真实演练一次 Pause、Remediation 和 Resume。三十个合成案例记录七类人工决定、审核时间、专家负担和成本，六项指标与 Evidence Bundle 内容绑定。仓库外真实记录通过预检后仍只能进入人工 Pilot 验收和生产决策。见 [Stage 21 手册](../stages/21-shadow-pilot-operations/README.md)。
 
+## Stage 22：Pilot Acceptance & Production Decision
+
+把 Stage 21 Evidence Bundle 转成 Pilot 验收、Steering 投资决定和生产授权三个独立 Gate。六项指标、验收条件、残余风险和签核均内容绑定；Steering 在 Stop、Iterate、Extend Shadow、Production Evaluation 中选择。生产评估还需要十项准备控制和人工 Canary/回退计划，全部 Ready 也只能提交人工生产授权评审。见 [Stage 22 手册](../stages/22-pilot-acceptance-production-decision/README.md)。
+
 ## 后续路线
 
 | 阶段 | 要回答的问题 | 可能产物 |
 |---|---|---|
-| 后续：Pilot 验收与生产决策 | Stage 21 的有限 Shadow 证据是否足以停止、迭代、扩围或进入生产评估？ | 客户验收、缺陷与风险关闭、生产 SLO、安全评审、容量与成本、上线和回退计划、人工生产授权 |
+| 后续：受控生产上线 | Stage 22 的准备证据如何转成有限生产授权并安全扩大？ | 版本化授权、生产 Canary、双人发布、实时 SLO、回退演练、客户通知、阶段扩围和上线验收 |
 | 后续：技术战略与组合 | 哪个 Domain 和客户群值得投入？ | 真实交付成本、买方证据、技术债容量与取舍记录 |
 
 更远阶段只是学习路线建议，不预先承诺阶段编号、技术栈或范围。

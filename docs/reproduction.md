@@ -113,3 +113,9 @@ python3 run.py analyze --input outputs/practice.json --output outputs/practice-r
 运行 `python3 stage21.py demo --check-baseline`，核对 `outputs/stage-21/stage21-report.json`：30 个合成案例、5 个受控用户、6 个 Daily Gate、1 次 Pause/Remediation/Resume；字段质量和证据覆盖均为 0.9867，采用率 0.9000，审核中位数 12.50 分钟，单案成本 CNY 22.00，危险动作、外部发送和客户写入均为 0。
 
 运行 `python3 stage21.py prepare --output /secure/path/shadow-pilot` 生成仓库外运行资料包。填入权威系统引用并重新绑定启动授权和 Evidence Bundle 后，执行 `python3 stage21.py preflight --manifest /secure/path/shadow-pilot/external-shadow-pilot.json`。删除 Mobilization 或签核、让暂停日处理案例、改变逐案版本或租户、记录外发/写入、保留未解决事故、使用姓名邮箱或修改内容但不重签都应失败。完整记录通过也只进入人工 Pilot 验收评审，不自动授权生产。完整练习见 [Stage 21 手册](../stages/21-shadow-pilot-operations/README.md)。
+
+## Stage 22：Pilot Acceptance & Production Decision
+
+运行 `python3 stage22.py demo --check-baseline`，核对 `outputs/stage-22/stage22-report.json`：六项指标全部验收、两项条件关闭、三个残余风险中一个保持开放、Steering 决定进入生产评估、十项生产准备完成 7 项；生产、自动外发和客户系统写入授权均为 false。
+
+运行 `python3 stage22.py prepare --output /secure/path/pilot-acceptance` 生成仓库外验收资料包。填入真实聚合指标和权威引用，重新绑定 Acceptance 与 Production Decision 摘要后运行 `python3 stage22.py preflight --manifest /secure/path/pilot-acceptance/external-pilot-acceptance.json`。指标未达标、开放验收条件、Critical 风险、准备控制缺失、签核摘要过期、提前开启外发或写入、在仓库内存放记录都应失败。十项控制齐全也只到人工生产授权评审。完整练习见 [Stage 22 手册](../stages/22-pilot-acceptance-production-decision/README.md)。

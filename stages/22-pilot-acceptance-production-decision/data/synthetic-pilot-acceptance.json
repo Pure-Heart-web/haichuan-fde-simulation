@@ -1,0 +1,310 @@
+{
+  "mode": "counterfactual_pilot_acceptance_rehearsal",
+  "progression_mode": "synthetic_stage21_evidence_branch",
+  "source_stage21_path": "21-shadow-pilot-operations/data/synthetic-shadow-pilot.json",
+  "source_stage21_sha256": "d6828fc44a1c2679f1d2afc89ae88359661a5f5bad6f1c849b050b7ab570cddb",
+  "pilot_summary": {
+    "pilot_id": "PILOT-SIM-021",
+    "evidence_bundle_id": "PILOT-EVIDENCE-SIM-021",
+    "evidence_bundle_sha256": "58e00c20c82d251d713018e9a23c95b66c3e17b4a695fbefff5efc95a2691d6f",
+    "case_count": 30,
+    "user_count": 5,
+    "external_sent_count": 0,
+    "customer_write_count": 0,
+    "unsafe_action_count": 0
+  },
+  "acceptance_criteria": [
+    {
+      "criterion_id": "field_quality",
+      "direction": "min",
+      "target": 0.95,
+      "actual": 0.9867,
+      "denominator_policy": "all eligible reviewed fields",
+      "source_ref": "STAGE21-REPORT-SIM:field_quality",
+      "decision": "simulated_accepted"
+    },
+    {
+      "criterion_id": "evidence_coverage",
+      "direction": "min",
+      "target": 0.98,
+      "actual": 0.9867,
+      "denominator_policy": "all material claims",
+      "source_ref": "STAGE21-REPORT-SIM:evidence_coverage",
+      "decision": "simulated_accepted"
+    },
+    {
+      "criterion_id": "unsafe_action_rate",
+      "direction": "max",
+      "target": 0,
+      "actual": 0,
+      "denominator_policy": "all processed cases",
+      "source_ref": "STAGE21-REPORT-SIM:unsafe_action_rate",
+      "decision": "simulated_accepted"
+    },
+    {
+      "criterion_id": "operator_adoption",
+      "direction": "min",
+      "target": 0.6,
+      "actual": 0.9,
+      "denominator_policy": "all assigned eligible cases",
+      "source_ref": "STAGE21-REPORT-SIM:operator_adoption",
+      "decision": "simulated_accepted"
+    },
+    {
+      "criterion_id": "review_cycle_time",
+      "direction": "max",
+      "target": 20,
+      "actual": 12.5,
+      "denominator_policy": "completed human review tasks",
+      "source_ref": "STAGE21-REPORT-SIM:review_cycle_time",
+      "decision": "simulated_accepted"
+    },
+    {
+      "criterion_id": "cost_per_case",
+      "direction": "max",
+      "target": 35,
+      "actual": 22.0,
+      "denominator_policy": "all eligible processed cases",
+      "source_ref": "STAGE21-REPORT-SIM:cost_per_case",
+      "decision": "simulated_accepted"
+    }
+  ],
+  "acceptance_conditions": [
+    {
+      "condition_id": "PAC-001",
+      "description": "publish final operator edit taxonomy",
+      "owner_role": "fde_delivery_owner",
+      "due_date": "2026-11-28",
+      "status": "simulated_closed",
+      "closure_evidence_ref": "CLOSURE-SIM:PAC-001",
+      "closed_at": "2026-11-27"
+    },
+    {
+      "condition_id": "PAC-002",
+      "description": "confirm connector scope incident follow-up",
+      "owner_role": "customer_security_owner",
+      "due_date": "2026-11-29",
+      "status": "simulated_closed",
+      "closure_evidence_ref": "CLOSURE-SIM:PAC-002",
+      "closed_at": "2026-11-28"
+    }
+  ],
+  "residual_risks": [
+    {
+      "risk_id": "RISK-022-01",
+      "severity": "high",
+      "status": "mitigated",
+      "owner_role": "customer_security_owner",
+      "mitigation": "complete threat-model workshop before authorization",
+      "due_date": "2026-12-05",
+      "evidence_ref": "RISK-SIM:01"
+    },
+    {
+      "risk_id": "RISK-022-02",
+      "severity": "medium",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "mitigation": "validate production SLO under fault and load",
+      "due_date": "2026-12-08",
+      "evidence_ref": "RISK-SIM:02"
+    },
+    {
+      "risk_id": "RISK-022-03",
+      "severity": "medium",
+      "status": "accepted",
+      "owner_role": "customer_process_owner",
+      "mitigation": "retain mandatory human review for initial production cohorts",
+      "due_date": "2026-12-10",
+      "evidence_ref": "RISK-SIM:03"
+    }
+  ],
+  "acceptance_record": {
+    "record_id": "PILOT-ACCEPT-SIM-022",
+    "content_sha256": "bd7ca2343ec455fb978a971635f5ec0e18cfde294124dd59b5015c770504df4c",
+    "approvals": [
+      {
+        "role": "customer_sponsor",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-29",
+        "content_sha256": "bd7ca2343ec455fb978a971635f5ec0e18cfde294124dd59b5015c770504df4c",
+        "evidence_ref": "ACCEPT-APPROVAL-SIM:customer_sponsor"
+      },
+      {
+        "role": "customer_process_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-29",
+        "content_sha256": "bd7ca2343ec455fb978a971635f5ec0e18cfde294124dd59b5015c770504df4c",
+        "evidence_ref": "ACCEPT-APPROVAL-SIM:customer_process_owner"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "simulated_approved",
+        "approved_at": "2026-11-29",
+        "content_sha256": "bd7ca2343ec455fb978a971635f5ec0e18cfde294124dd59b5015c770504df4c",
+        "evidence_ref": "ACCEPT-APPROVAL-SIM:fde_delivery_owner"
+      }
+    ]
+  },
+  "production_readiness": [
+    {
+      "control_id": "security_threat_model",
+      "status": "open",
+      "owner_role": "customer_security_owner",
+      "evidence_ref": "READINESS-SIM:security_threat_model",
+      "exit_criterion": "approved evidence for security_threat_model"
+    },
+    {
+      "control_id": "privacy_and_retention",
+      "status": "simulated_ready",
+      "owner_role": "fde_security_owner",
+      "evidence_ref": "READINESS-SIM:privacy_and_retention",
+      "exit_criterion": "approved evidence for privacy_and_retention"
+    },
+    {
+      "control_id": "data_governance",
+      "status": "simulated_ready",
+      "owner_role": "customer_process_owner",
+      "evidence_ref": "READINESS-SIM:data_governance",
+      "exit_criterion": "approved evidence for data_governance"
+    },
+    {
+      "control_id": "identity_and_access",
+      "status": "simulated_ready",
+      "owner_role": "customer_security_owner",
+      "evidence_ref": "READINESS-SIM:identity_and_access",
+      "exit_criterion": "approved evidence for identity_and_access"
+    },
+    {
+      "control_id": "reliability_slo",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "READINESS-SIM:reliability_slo",
+      "exit_criterion": "approved evidence for reliability_slo"
+    },
+    {
+      "control_id": "capacity_and_performance",
+      "status": "simulated_ready",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "READINESS-SIM:capacity_and_performance",
+      "exit_criterion": "approved evidence for capacity_and_performance"
+    },
+    {
+      "control_id": "support_and_oncall",
+      "status": "simulated_ready",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "READINESS-SIM:support_and_oncall",
+      "exit_criterion": "approved evidence for support_and_oncall"
+    },
+    {
+      "control_id": "deployment_and_rollback",
+      "status": "simulated_ready",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "READINESS-SIM:deployment_and_rollback",
+      "exit_criterion": "approved evidence for deployment_and_rollback"
+    },
+    {
+      "control_id": "observability",
+      "status": "simulated_ready",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "READINESS-SIM:observability",
+      "exit_criterion": "approved evidence for observability"
+    },
+    {
+      "control_id": "commercial_and_legal",
+      "status": "open",
+      "owner_role": "fde_commercial_owner",
+      "evidence_ref": "READINESS-SIM:commercial_and_legal",
+      "exit_criterion": "approved evidence for commercial_and_legal"
+    }
+  ],
+  "launch_plan": {
+    "strategy": "human_approved_canary",
+    "cohorts": [
+      {
+        "cohort_id": "C1",
+        "user_cap": 5,
+        "case_cap": 100
+      },
+      {
+        "cohort_id": "C2",
+        "user_cap": 12,
+        "case_cap": 500
+      }
+    ],
+    "rollback_triggers": [
+      "unsafe_action",
+      "cross_tenant_access",
+      "slo_breach",
+      "evidence_loss"
+    ],
+    "rollback_rto_minutes": 15,
+    "automatic_external_send": false,
+    "customer_system_write": false,
+    "change_window_ref": "CHANGE-WINDOW-SIM-022",
+    "rollback_owner_role": "fde_delivery_owner"
+  },
+  "production_decision": {
+    "decision": "production_evaluation",
+    "decided_at": "2026-11-30T15:00:00+08:00",
+    "rationale": "Pilot met six acceptance criteria; three production controls remain open.",
+    "dissent": [
+      {
+        "role": "customer_security_owner",
+        "concern": "Threat model must close before any production authorization.",
+        "disposition": "accepted_as_blocker"
+      }
+    ],
+    "decision_record": {
+      "record_id": "PROD-DECISION-SIM-022",
+      "content_sha256": "f08cc8e5f612a7f9e8c853101d91d423ea4c1d5f3af7b0a47c26f165e443bab3",
+      "approvals": [
+        {
+          "role": "customer_sponsor",
+          "status": "simulated_approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "f08cc8e5f612a7f9e8c853101d91d423ea4c1d5f3af7b0a47c26f165e443bab3",
+          "evidence_ref": "PROD-APPROVAL-SIM:customer_sponsor"
+        },
+        {
+          "role": "customer_process_owner",
+          "status": "simulated_approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "f08cc8e5f612a7f9e8c853101d91d423ea4c1d5f3af7b0a47c26f165e443bab3",
+          "evidence_ref": "PROD-APPROVAL-SIM:customer_process_owner"
+        },
+        {
+          "role": "customer_security_owner",
+          "status": "simulated_approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "f08cc8e5f612a7f9e8c853101d91d423ea4c1d5f3af7b0a47c26f165e443bab3",
+          "evidence_ref": "PROD-APPROVAL-SIM:customer_security_owner"
+        },
+        {
+          "role": "fde_delivery_owner",
+          "status": "simulated_approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "f08cc8e5f612a7f9e8c853101d91d423ea4c1d5f3af7b0a47c26f165e443bab3",
+          "evidence_ref": "PROD-APPROVAL-SIM:fde_delivery_owner"
+        },
+        {
+          "role": "fde_commercial_owner",
+          "status": "simulated_approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "f08cc8e5f612a7f9e8c853101d91d423ea4c1d5f3af7b0a47c26f165e443bab3",
+          "evidence_ref": "PROD-APPROVAL-SIM:fde_commercial_owner"
+        }
+      ]
+    }
+  },
+  "production_authorization": {
+    "authorized": false,
+    "authorization_ref": null
+  },
+  "real_world_assertions": {
+    "real_pilot_accepted": false,
+    "real_production_authorized": false,
+    "real_customer_users": 0,
+    "real_customer_actions": 0,
+    "real_revenue_recognized_cny": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "SYNTHETIC_PILOT_ACCEPTED_PRODUCTION_EVALUATION_OPEN",
+  "accepted_criteria_count": 6,
+  "closed_condition_count": 2,
+  "residual_risk_count": 3,
+  "open_risk_count": 1,
+  "blocking_risk_count": 0,
+  "production_decision": "production_evaluation",
+  "production_readiness_ready_count": 7,
+  "production_readiness_count": 10,
+  "real_pilot_verified_by_code": false,
+  "pilot_acceptance_verified_by_code": false,
+  "production_authorized": false,
+  "automatic_external_send_authorized": false,
+  "customer_system_write_authorized": false,
+  "next_gate": "HUMAN_PRODUCTION_AUTHORIZATION_AND_CONTROLLED_GO_LIVE"
+}

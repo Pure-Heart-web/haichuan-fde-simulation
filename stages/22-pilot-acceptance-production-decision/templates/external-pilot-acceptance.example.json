@@ -1,0 +1,314 @@
+{
+  "mode": "external_pilot_acceptance_record",
+  "pilot_summary": {
+    "pilot_id": "REPLACE_WITH_PILOT_REFERENCE",
+    "evidence_bundle_id": "REPLACE_WITH_BUNDLE_ID",
+    "evidence_bundle_sha256": "REPLACE_WITH_BUNDLE_SHA256",
+    "case_count": "REPLACE_WITH_CASE_COUNT",
+    "user_count": "REPLACE_WITH_USER_COUNT",
+    "external_sent_count": 0,
+    "customer_write_count": 0,
+    "unsafe_action_count": 0
+  },
+  "acceptance_criteria": [
+    {
+      "criterion_id": "field_quality",
+      "direction": "min",
+      "target": 0.95,
+      "actual": "REPLACE_WITH_ACTUAL",
+      "denominator_policy": "all eligible reviewed fields",
+      "source_ref": "REPLACE_WITH_METRIC_SOURCE",
+      "decision": "accepted"
+    },
+    {
+      "criterion_id": "evidence_coverage",
+      "direction": "min",
+      "target": 0.98,
+      "actual": "REPLACE_WITH_ACTUAL",
+      "denominator_policy": "all material claims",
+      "source_ref": "REPLACE_WITH_METRIC_SOURCE",
+      "decision": "accepted"
+    },
+    {
+      "criterion_id": "unsafe_action_rate",
+      "direction": "max",
+      "target": 0,
+      "actual": "REPLACE_WITH_ACTUAL",
+      "denominator_policy": "all processed cases",
+      "source_ref": "REPLACE_WITH_METRIC_SOURCE",
+      "decision": "accepted"
+    },
+    {
+      "criterion_id": "operator_adoption",
+      "direction": "min",
+      "target": 0.6,
+      "actual": "REPLACE_WITH_ACTUAL",
+      "denominator_policy": "all assigned eligible cases",
+      "source_ref": "REPLACE_WITH_METRIC_SOURCE",
+      "decision": "accepted"
+    },
+    {
+      "criterion_id": "review_cycle_time",
+      "direction": "max",
+      "target": 20,
+      "actual": "REPLACE_WITH_ACTUAL",
+      "denominator_policy": "completed human review tasks",
+      "source_ref": "REPLACE_WITH_METRIC_SOURCE",
+      "decision": "accepted"
+    },
+    {
+      "criterion_id": "cost_per_case",
+      "direction": "max",
+      "target": 35,
+      "actual": "REPLACE_WITH_ACTUAL",
+      "denominator_policy": "all eligible processed cases",
+      "source_ref": "REPLACE_WITH_METRIC_SOURCE",
+      "decision": "accepted"
+    }
+  ],
+  "acceptance_conditions": [
+    {
+      "condition_id": "PAC-001",
+      "description": "publish final operator edit taxonomy",
+      "owner_role": "fde_delivery_owner",
+      "due_date": "2026-11-28",
+      "status": "closed",
+      "closure_evidence_ref": "REPLACE_WITH_CLOSURE_EVIDENCE",
+      "closed_at": "2026-11-27"
+    },
+    {
+      "condition_id": "PAC-002",
+      "description": "confirm connector scope incident follow-up",
+      "owner_role": "customer_security_owner",
+      "due_date": "2026-11-29",
+      "status": "closed",
+      "closure_evidence_ref": "REPLACE_WITH_CLOSURE_EVIDENCE",
+      "closed_at": "2026-11-28"
+    }
+  ],
+  "residual_risks": [
+    {
+      "risk_id": "RISK-022-01",
+      "severity": "high",
+      "status": "mitigated",
+      "owner_role": "customer_security_owner",
+      "mitigation": "complete threat-model workshop before authorization",
+      "due_date": "2026-12-05",
+      "evidence_ref": "REPLACE_WITH_RISK_EVIDENCE"
+    },
+    {
+      "risk_id": "RISK-022-02",
+      "severity": "medium",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "mitigation": "validate production SLO under fault and load",
+      "due_date": "2026-12-08",
+      "evidence_ref": "REPLACE_WITH_RISK_EVIDENCE"
+    },
+    {
+      "risk_id": "RISK-022-03",
+      "severity": "medium",
+      "status": "accepted",
+      "owner_role": "customer_process_owner",
+      "mitigation": "retain mandatory human review for initial production cohorts",
+      "due_date": "2026-12-10",
+      "evidence_ref": "REPLACE_WITH_RISK_EVIDENCE"
+    }
+  ],
+  "acceptance_record": {
+    "record_id": "PILOT-ACCEPT-SIM-022",
+    "content_sha256": "PENDING_REBIND",
+    "approvals": [
+      {
+        "role": "customer_sponsor",
+        "status": "approved",
+        "approved_at": "2026-11-29",
+        "content_sha256": "PENDING_REBIND",
+        "evidence_ref": "REPLACE_WITH_ACCEPTANCE_APPROVAL"
+      },
+      {
+        "role": "customer_process_owner",
+        "status": "approved",
+        "approved_at": "2026-11-29",
+        "content_sha256": "PENDING_REBIND",
+        "evidence_ref": "REPLACE_WITH_ACCEPTANCE_APPROVAL"
+      },
+      {
+        "role": "fde_delivery_owner",
+        "status": "approved",
+        "approved_at": "2026-11-29",
+        "content_sha256": "PENDING_REBIND",
+        "evidence_ref": "REPLACE_WITH_ACCEPTANCE_APPROVAL"
+      }
+    ]
+  },
+  "production_readiness": [
+    {
+      "control_id": "security_threat_model",
+      "status": "open",
+      "owner_role": "customer_security_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for security_threat_model"
+    },
+    {
+      "control_id": "privacy_and_retention",
+      "status": "open",
+      "owner_role": "fde_security_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for privacy_and_retention"
+    },
+    {
+      "control_id": "data_governance",
+      "status": "open",
+      "owner_role": "customer_process_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for data_governance"
+    },
+    {
+      "control_id": "identity_and_access",
+      "status": "open",
+      "owner_role": "customer_security_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for identity_and_access"
+    },
+    {
+      "control_id": "reliability_slo",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for reliability_slo"
+    },
+    {
+      "control_id": "capacity_and_performance",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for capacity_and_performance"
+    },
+    {
+      "control_id": "support_and_oncall",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for support_and_oncall"
+    },
+    {
+      "control_id": "deployment_and_rollback",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for deployment_and_rollback"
+    },
+    {
+      "control_id": "observability",
+      "status": "open",
+      "owner_role": "fde_delivery_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for observability"
+    },
+    {
+      "control_id": "commercial_and_legal",
+      "status": "open",
+      "owner_role": "fde_commercial_owner",
+      "evidence_ref": "REPLACE_WITH_READINESS_EVIDENCE",
+      "exit_criterion": "approved evidence for commercial_and_legal"
+    }
+  ],
+  "launch_plan": {
+    "strategy": "human_approved_canary",
+    "cohorts": [
+      {
+        "cohort_id": "C1",
+        "user_cap": 5,
+        "case_cap": 100
+      },
+      {
+        "cohort_id": "C2",
+        "user_cap": 12,
+        "case_cap": 500
+      }
+    ],
+    "rollback_triggers": [
+      "unsafe_action",
+      "cross_tenant_access",
+      "slo_breach",
+      "evidence_loss"
+    ],
+    "rollback_rto_minutes": 15,
+    "automatic_external_send": false,
+    "customer_system_write": false,
+    "change_window_ref": "REPLACE_WITH_CHANGE_WINDOW",
+    "rollback_owner_role": "fde_delivery_owner"
+  },
+  "production_decision": {
+    "decision": "production_evaluation",
+    "decided_at": "2026-11-30T15:00:00+08:00",
+    "rationale": "Pilot met six acceptance criteria; three production controls remain open.",
+    "dissent": [
+      {
+        "role": "customer_security_owner",
+        "concern": "Threat model must close before any production authorization.",
+        "disposition": "accepted_as_blocker"
+      }
+    ],
+    "decision_record": {
+      "record_id": "PROD-DECISION-SIM-022",
+      "content_sha256": "PENDING_REBIND",
+      "approvals": [
+        {
+          "role": "customer_sponsor",
+          "status": "approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "PENDING_REBIND",
+          "evidence_ref": "REPLACE_WITH_DECISION_APPROVAL"
+        },
+        {
+          "role": "customer_process_owner",
+          "status": "approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "PENDING_REBIND",
+          "evidence_ref": "REPLACE_WITH_DECISION_APPROVAL"
+        },
+        {
+          "role": "customer_security_owner",
+          "status": "approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "PENDING_REBIND",
+          "evidence_ref": "REPLACE_WITH_DECISION_APPROVAL"
+        },
+        {
+          "role": "fde_delivery_owner",
+          "status": "approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "PENDING_REBIND",
+          "evidence_ref": "REPLACE_WITH_DECISION_APPROVAL"
+        },
+        {
+          "role": "fde_commercial_owner",
+          "status": "approved",
+          "approved_at": "2026-11-30",
+          "content_sha256": "PENDING_REBIND",
+          "evidence_ref": "REPLACE_WITH_DECISION_APPROVAL"
+        }
+      ]
+    }
+  },
+  "production_authorization": {
+    "authorized": false,
+    "authorization_ref": null
+  },
+  "partner_public_label": "REPLACE_WITH_APPROVED_PUBLIC_LABEL",
+  "stage21_release": {
+    "status": "READY_FOR_HUMAN_PILOT_ACCEPTANCE_REVIEW",
+    "evidence_bundle_ref": "REPLACE_WITH_STAGE21_BUNDLE_REFERENCE",
+    "human_verified": false,
+    "verified_by_role": "REPLACE_WITH_VERIFIER_ROLE",
+    "verified_at": "REPLACE_WITH_VERIFICATION_TIME"
+  },
+  "privacy_assertions": {
+    "contains_raw_customer_content": false,
+    "contains_person_names_or_emails": false,
+    "contains_credentials": false,
+    "copied_into_source_repository": false
+  }
+}
